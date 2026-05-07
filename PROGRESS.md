@@ -1,4 +1,4 @@
-# PROGRESS.md — Build Log
+﻿# PROGRESS.md â€” Build Log
 
 A running log of what's been completed, decisions made, and what comes next. Update this every session.
 
@@ -6,26 +6,26 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Phase 1 — MVP Catalog  
-**Next Up:** Phase 1C — Filters and database caching
+**Active Phase:** Phase 1 â€” MVP Catalog  
+**Next Up:** Phase 1C â€” Filters and database caching
 
 ---
 
-## Phase 0 — Foundation ✅
+## Phase 0 â€” Foundation âœ…
 
 ### Completed
 - [x] GitHub repo structure created
-- [x] `README.md` — full project overview and setup guide
-- [x] `CLAUDE.md` — AI agent instructions and project context
-- [x] `PROGRESS.md` — this file
-- [x] `ROADMAP.md` — full feature backlog
-- [x] `.env.example` — all required environment variables documented
-- [x] `.gitignore` — comprehensive ignore rules
-- [x] `docs/architecture.md` — technology decisions explained
-- [x] `docs/api.md` — external API reference
-- [x] `database/migrations/` — folder ready for SQL migrations
-- [x] `database/seeds/` — folder ready for seed scripts
-- [x] `.github/workflows/deploy.yml` — CI/CD pipeline scaffold
+- [x] `README.md` â€” full project overview and setup guide
+- [x] `CLAUDE.md` â€” AI agent instructions and project context
+- [x] `PROGRESS.md` â€” this file
+- [x] `ROADMAP.md` â€” full feature backlog
+- [x] `.env.example` â€” all required environment variables documented
+- [x] `.gitignore` â€” comprehensive ignore rules
+- [x] `docs/architecture.md` â€” technology decisions explained
+- [x] `docs/api.md` â€” external API reference
+- [x] `database/migrations/` â€” folder ready for SQL migrations
+- [x] `database/seeds/` â€” folder ready for seed scripts
+- [x] `.github/workflows/deploy.yml` â€” CI/CD pipeline scaffold
 - [x] Frontend folder scaffolded
 - [x] Backend folder scaffolded
 
@@ -39,7 +39,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 1 — MVP Catalog 🔲
+## Phase 1 â€” MVP Catalog ðŸ”²
 
 ### Completed in Phase 1A
 - [x] Next.js app initialised manually inside `/frontend`
@@ -71,13 +71,13 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [ ] Genre, year, and status filters
 - [ ] "Where to Watch" link system
 - [ ] "Where to Read" link system
-- [ ] Anime ↔ Manga cross-reference display
+- [ ] Anime â†” Manga cross-reference display
 - [ ] Database caching for Jikan data
 - [ ] Deployed to Vercel + Railway
 
 ---
 
-## Phase 2 — User Accounts & Community 🔲
+## Phase 2 â€” User Accounts & Community ðŸ”²
 
 ### To Build
 - [ ] NextAuth.js setup (Google + Discord)
@@ -91,7 +91,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 3 — Monetization 🔲
+## Phase 3 â€” Monetization ðŸ”²
 
 ### To Build
 - [ ] Ad slot placements in layout
@@ -102,7 +102,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 4 — Growth & SEO 🔲
+## Phase 4 â€” Growth & SEO ðŸ”²
 
 ### To Build
 - [ ] Dynamic sitemap generation
@@ -117,7 +117,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 5 — Licensing & Partnerships 🔲
+## Phase 5 â€” Licensing & Partnerships ðŸ”²
 
 ### To Build
 - [ ] Embedded licensed video player
@@ -136,3 +136,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-07 | Phase 1A working skeleton prepared: frontend, backend, Jikan routes, Prisma schema, homepage, anime/manga pages |
 | 2026-05-07 | Phase 1A merged into `main`; created rollback-safe beta tag `v0.1.0-beta.1`; added documentation plan for beta versioning and rollback workflow |
 | 2026-05-07 | Phase 1B prepared: detail pages, clickable cards, combined search, and expanded Jikan metadata mapping |
+| 2026-05-07 | Disabled deployment jobs until Vercel/Railway hosting is configured; lint/type-check remains active in GitHub Actions |
+
