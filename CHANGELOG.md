@@ -1,4 +1,4 @@
-﻿# CHANGELOG
+# CHANGELOG
 
 All notable changes to AniManga Hub are logged here.
 Every agent or developer MUST add an entry before pushing to `main`.
@@ -22,6 +22,22 @@ Format:
 ### Notes
 - Any decisions made, blockers, or context for next agent
 ```
+
+---
+
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
 
 ---
 ## [2026-05-07] - Phase 1C: Local SQLite database caching
@@ -49,6 +65,22 @@ Format:
 
 ---
 
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
+
+---
+
 ## [2026-05-07] - Deployment jobs disabled until hosting setup
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Project Operations
@@ -61,6 +93,22 @@ Format:
 - Deployment is deferred until Vercel/Railway hosting is intentionally configured.
 - Future required secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `RAILWAY_TOKEN`.
 - Local development and GitHub quality checks continue normally.
+
+---
+
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
 
 ---
 
@@ -92,6 +140,22 @@ Format:
 
 ---
 
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
+
+---
+
 ## [2026-05-07] - Deployment jobs disabled until hosting setup
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Project Operations
@@ -104,6 +168,22 @@ Format:
 - Deployment is deferred until Vercel/Railway hosting is intentionally configured.
 - Future required secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `RAILWAY_TOKEN`.
 - Local development and GitHub quality checks continue normally.
+
+---
+
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
 
 ---
 
@@ -125,6 +205,22 @@ Format:
 
 ---
 
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
+
+---
+
 ## [2026-05-07] - Deployment jobs disabled until hosting setup
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Project Operations
@@ -137,6 +233,22 @@ Format:
 - Deployment is deferred until Vercel/Railway hosting is intentionally configured.
 - Future required secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `RAILWAY_TOKEN`.
 - Local development and GitHub quality checks continue normally.
+
+---
+
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
 
 ---
 
@@ -183,6 +295,22 @@ Format:
 
 ---
 
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
+
+---
+
 ## [2026-05-07] - Deployment jobs disabled until hosting setup
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Project Operations
@@ -195,6 +323,22 @@ Format:
 - Deployment is deferred until Vercel/Railway hosting is intentionally configured.
 - Future required secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, `RAILWAY_TOKEN`.
 - Local development and GitHub quality checks continue normally.
+
+---
+
+## [2026-05-07] - Reusable PowerShell development workflow
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add reusable PowerShell development workflow`
+
+### Added
+- `scripts/dev-workflow.ps1` - reusable PowerShell 7 helper for branch start, validation, post-merge cleanup, tagging, and status checks.
+- `docs/workflow.md` - documented mandatory branch, PR, validation, cleanup, and beta-tag workflow.
+
+### Notes
+- PR title and PR description are mandatory for future project work.
+- PowerShell 7 is the required shell for local patch and workflow scripts.
+- The helper script reduces repeated manual Git and validation commands.
 
 ---
 
@@ -221,5 +365,6 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
+
 
 

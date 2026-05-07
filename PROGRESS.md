@@ -1,4 +1,4 @@
-﻿# PROGRESS.md â€” Build Log
+# PROGRESS.md â€” Build Log
 
 A running log of what's been completed, decisions made, and what comes next. Update this every session.
 
@@ -139,3 +139,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-07 | Disabled deployment jobs until Vercel/Railway hosting is configured; lint/type-check remains active in GitHub Actions |
 
 | 2026-05-07 | Phase 1C local SQLite caching added with Prisma ApiCache, cache-first Jikan fetching, local migration, and validation workflow |
+| 2026-05-07 | Added reusable PowerShell 7 development workflow script and documented mandatory PR, validation, cleanup, and beta-tag process |
+
