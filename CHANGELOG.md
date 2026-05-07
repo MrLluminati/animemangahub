@@ -25,6 +25,27 @@ Format:
 
 ---
 
+## [2026-05-07] - Phase 1E: Frontend cache debug visibility
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1E - Frontend Cache Debug Visibility
+**Commit:** `feat: add phase 1e frontend cache debug visibility`
+
+### Added
+- Development-only frontend cache debug panel.
+- Frontend cache health and stats API helpers.
+- Cache health/stat response types.
+- `docs/frontend-cache-debug.md`.
+
+### Changed
+- Root layout now renders the cache debug panel during local development only.
+
+### Notes
+- Debug UI is hidden outside `NODE_ENV=development`.
+- This helps inspect SQLite cache behavior without exposing debug controls to normal users.
+
+---
+
+
 ## [2026-05-07] - Workflow verify action
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Project Operations
@@ -403,6 +424,7 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
+
 
 
 
