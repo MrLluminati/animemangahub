@@ -140,4 +140,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 | 2026-05-07 | Phase 1C local SQLite caching added with Prisma ApiCache, cache-first Jikan fetching, local migration, and validation workflow |
 | 2026-05-07 | Added reusable PowerShell 7 development workflow script and documented mandatory PR, validation, cleanup, and beta-tag process |
+| 2026-05-07 | Phase 1D cache observability added: cache health, stats, clear endpoints, cache logs, and documentation |
 

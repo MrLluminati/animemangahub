@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import { animeRouter } from "./routes/anime";
+import { cacheRouter } from "./routes/cache";
 import { mangaRouter } from "./routes/manga";
 import { searchRouter } from "./routes/search";
 
@@ -21,13 +22,14 @@ app.get("/api/health", (_req, res) => {
   res.json({
     status: "ok",
     service: "animanga-hub-backend",
-    phase: "1B"
+    phase: "1D"
   });
 });
 
 app.use("/api/anime", animeRouter);
 app.use("/api/manga", mangaRouter);
 app.use("/api/search", searchRouter);
+app.use("/api/cache", cacheRouter);
 
 app.use((_req, res) => {
   res.status(404).json({ message: "Route not found" });
