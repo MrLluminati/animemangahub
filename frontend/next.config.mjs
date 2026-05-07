@@ -8,6 +8,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "myanimelist.net",
+      },
+      {
+        protocol: "https",
         hostname: "images.weserv.nl",
       },
     ],
