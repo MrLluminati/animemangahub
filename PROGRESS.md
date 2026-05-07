@@ -142,4 +142,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-07 | Added reusable PowerShell 7 development workflow script and documented mandatory PR, validation, cleanup, and beta-tag process |
 | 2026-05-07 | Phase 1D cache observability added: cache health, stats, clear endpoints, cache logs, and documentation |
 | 2026-05-07 | Added verify action to reusable PowerShell workflow for one-command repository, branch, commit, and tag verification |
+| 2026-05-07 | Phase 1E frontend cache debug visibility added with development-only cache panel, frontend cache API helpers, and documentation |
 
