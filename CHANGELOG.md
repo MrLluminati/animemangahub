@@ -25,6 +25,34 @@ Format:
 
 ---
 
+## [2026-05-07] — Phase 1B: Detail pages and search
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati  
+**Phase:** Phase 1 — MVP Catalog  
+**Commit:** `feat: phase 1b detail pages and search`
+
+### Added
+- Backend anime detail route: `GET /api/anime/:id`
+- Backend manga detail route: `GET /api/manga/:id`
+- Backend search route: `GET /api/search?q=...`
+- Frontend anime detail page: `/anime/[id]`
+- Frontend manga detail page: `/manga/[id]`
+- Frontend search page: `/search?q=...`
+- Reusable `SearchBox` component
+- Reusable `DetailHero` component
+
+### Changed
+- Catalog cards are now clickable and route to detail pages.
+- Header and homepage include search entry points.
+- Jikan mapper now supports detail metadata such as genres, themes, demographics, rating, source, episodes, chapters, and volumes.
+- Backend health endpoint now reports Phase `1B`.
+
+### Notes
+- This phase still uses live Jikan public API data.
+- Local database caching remains pending for a later Phase 1B/1C iteration.
+- After merge and verification, create `v0.1.0-beta.2` as the next rollback-safe beta tag.
+
+---
+
 ## [2026-05-07] — Versioning and rollback workflow
 **Agent/Author:** ChatGPT + Human: MrLluminati  
 **Phase:** Phase 1 — MVP Catalog / Project Operations  

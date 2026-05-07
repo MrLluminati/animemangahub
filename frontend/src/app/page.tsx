@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SearchBox } from "@/components/search/SearchBox";
 import { TitleCard } from "@/components/ui/TitleCard";
 import { getTrendingAnime, getTopManga } from "@/lib/api";
 
@@ -20,6 +21,9 @@ export default async function HomePage() {
         <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
           Search titles, explore trending anime and manga, and build toward a legal watch/read directory with community reviews and personal lists.
         </p>
+        <div className="mt-8">
+          <SearchBox />
+        </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/anime" className="rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-400">
             Explore Anime

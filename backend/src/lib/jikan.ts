@@ -5,7 +5,11 @@ type JikanImageSet = {
   webp?: { image_url?: string; large_image_url?: string };
 };
 
-type JikanTitle = {
+type NamedJikanResource = {
+  name?: string;
+};
+
+export type JikanTitle = {
   mal_id: number;
   title?: string;
   title_english?: string | null;
@@ -14,10 +18,22 @@ type JikanTitle = {
   year?: number | null;
   status?: string | null;
   synopsis?: string | null;
+  genres?: NamedJikanResource[];
+  themes?: NamedJikanResource[];
+  demographics?: NamedJikanResource[];
+  rating?: string | null;
+  source?: string | null;
+  episodes?: number | null;
+  chapters?: number | null;
+  volumes?: number | null;
 };
 
-type JikanResponse = {
+export type JikanListResponse = {
   data: JikanTitle[];
+};
+
+export type JikanSingleResponse = {
+  data: JikanTitle;
 };
 
 const JIKAN_BASE_URL = process.env.JIKAN_API_BASE ?? "https://api.jikan.moe/v4";
@@ -37,7 +53,7 @@ async function waitForRateLimit() {
   lastRequestAt = Date.now();
 }
 
-export async function jikanFetch(path: string): Promise<JikanResponse> {
+export async function jikanFetch<T>(path: string): Promise<T> {
   await waitForRateLimit();
 
   const response = await fetch(`${JIKAN_BASE_URL}${path}`);
@@ -46,7 +62,11 @@ export async function jikanFetch(path: string): Promise<JikanResponse> {
     throw new Error(`Jikan request failed: ${response.status} ${response.statusText}`);
   }
 
-  return response.json() as Promise<JikanResponse>;
+  return response.json() as Promise<T>;
+}
+
+function mapNames(items?: NamedJikanResource[]) {
+  return items?.map((item) => item.name).filter(Boolean) ?? [];
 }
 
 export function mapJikanTitle(item: JikanTitle, type: JikanTitleKind) {
@@ -58,6 +78,14 @@ export function mapJikanTitle(item: JikanTitle, type: JikanTitleKind) {
     score: item.score ?? null,
     year: item.year ?? null,
     status: item.status ?? null,
-    synopsis: item.synopsis ?? null
+    synopsis: item.synopsis ?? null,
+    genres: mapNames(item.genres),
+    themes: mapNames(item.themes),
+    demographics: mapNames(item.demographics),
+    rating: item.rating ?? null,
+    source: item.source ?? null,
+    episodes: item.episodes ?? null,
+    chapters: item.chapters ?? null,
+    volumes: item.volumes ?? null
   };
 }

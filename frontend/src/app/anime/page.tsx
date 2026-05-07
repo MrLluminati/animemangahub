@@ -10,7 +10,7 @@ export default async function AnimePage() {
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Catalog</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight">Anime</h1>
         <p className="mt-3 max-w-2xl text-slate-300">
-          Phase 1A uses Jikan public API data. Filters, detail pages, and local database caching come next.
+          Browse currently airing anime from Jikan public API data. Click any card to open its Phase 1B detail page.
         </p>
       </section>
 

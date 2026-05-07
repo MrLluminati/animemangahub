@@ -1,6 +1,8 @@
 import { Router } from "express";
-import { getTrendingAnime } from "../controllers/animeController";
+import { getAnimeById, getTrendingAnime, searchAnimeTitles } from "../controllers/animeController";
 
 export const animeRouter = Router();
 
 animeRouter.get("/trending", getTrendingAnime);
+animeRouter.get("/search", searchAnimeTitles);
+animeRouter.get("/:id", getAnimeById);
