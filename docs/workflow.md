@@ -217,3 +217,25 @@ The PR description must include:
 - Notes or rollback information where relevant
 
 No feature, fix, chore, or documentation branch should be merged without a clear PR title and PR description.
+
+---
+
+## Verify Local and Remote State
+
+After post-merge cleanup and beta tagging, run:
+
+```powershell
+pwsh .\scripts\dev-workflow.ps1 -Action verify
+```
+
+This checks:
+
+```text
+git status
+current branch
+local branches
+latest local commit
+local tags
+remote tags
+main/origin main sync status when running on main
+```

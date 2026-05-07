@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet("start", "validate", "postmerge", "tag", "status")]
+    [ValidateSet("start", "validate", "postmerge", "tag", "status", "verify")]
     [string]$Action,
 
     [string]$BranchName,
@@ -197,10 +197,67 @@ function Show-ProjectStatus {
     git tag
 }
 
+
+function Verify-ProjectState {
+    Go-Root
+
+    Write-Host ""
+    Write-Host "==> Repository status" -ForegroundColor Cyan
+    git status
+
+    Write-Host ""
+    Write-Host "==> Current branch" -ForegroundColor Cyan
+    git branch --show-current
+
+    Write-Host ""
+    Write-Host "==> Local branches" -ForegroundColor Cyan
+    git branch
+
+    Write-Host ""
+    Write-Host "==> Latest local commit" -ForegroundColor Cyan
+    git log -1 --oneline
+
+    Write-Host ""
+    Write-Host "==> Local tags" -ForegroundColor Cyan
+    git tag
+
+    Write-Host ""
+    Write-Host "==> Remote tags" -ForegroundColor Cyan
+    git ls-remote --tags origin
+
+    $currentBranch = git branch --show-current
+
+    if ($currentBranch -eq "main") {
+        Write-Host ""
+        Write-Host "==> main sync check" -ForegroundColor Cyan
+        git fetch origin main
+
+        if ($LASTEXITCODE -ne 0) {
+            throw "Could not fetch origin/main for sync check."
+        }
+
+        $localMain = git rev-parse main
+        $remoteMain = git rev-parse origin/main
+
+        if ($localMain -eq $remoteMain) {
+            Write-Host "main is synced with origin/main." -ForegroundColor Green
+        }
+        else {
+            Write-Host "main is NOT synced with origin/main." -ForegroundColor Yellow
+            Write-Host "local main:  $localMain"
+            Write-Host "origin/main: $remoteMain"
+        }
+    }
+
+    Write-Host ""
+    Write-Host "Verification complete." -ForegroundColor Green
+}
 switch ($Action) {
     "start" { Start-Branch }
     "validate" { Validate-Project }
     "postmerge" { Post-Merge-Cleanup }
     "tag" { Create-BetaTag }
     "status" { Show-ProjectStatus }
+    "verify" { Verify-ProjectState }
 }
+
