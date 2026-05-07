@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Anime {
+  id          String           @id @default(cuid())
+  malId       Int              @unique
+  title       String
+  synopsis    String?
+  coverImage  String?
+  genres      String[]
+  score       Float?
+  episodes    Int?
+  status      String?
+  year        Int?
+  watchLinks  WatchLink[]
+  mangaLinks  AnimeMangaLink[]
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model Manga {
+  id          String           @id @default(cuid())
+  malId       Int              @unique
+  title       String
+  synopsis    String?
+  coverImage  String?
+  genres      String[]
+  score       Float?
+  chapters    Int?
+  volumes     Int?
+  status      String?
+  year        Int?
+  readLinks   ReadLink[]
+  animeLinks  AnimeMangaLink[]
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model WatchLink {
+  id           String   @id @default(cuid())
+  animeId      String
+  platformName String
+  url          String
+  isFree       Boolean  @default(false)
+  region       String?
+  anime        Anime    @relation(fields: [animeId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
+
+model ReadLink {
+  id           String   @id @default(cuid())
+  mangaId      String
+  platformName String
+  url          String
+  isFree       Boolean  @default(false)
+  region       String?
+  manga        Manga    @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
+
+model AnimeMangaLink {
+  id        String   @id @default(cuid())
+  animeId   String
+  mangaId   String
+  relation  String?
+  anime     Anime    @relation(fields: [animeId], references: [id], onDelete: Cascade)
+  manga     Manga    @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([animeId, mangaId])
+}
