@@ -24,6 +24,30 @@ Format:
 ```
 
 ---
+## [2026-05-07] - Phase 1C: Local SQLite database caching
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog
+**Commit:** `feat: add phase 1c database caching`
+
+### Added
+- Local SQLite datasource for Prisma development.
+- `ApiCache` model for cache-first Jikan responses.
+- Prisma migration for local cache storage.
+- `backend/src/services/cacheService.ts` cache helper.
+- Cache-first anime and manga service methods.
+
+### Changed
+- Anime, manga, detail, and search service calls now use cache-first fetching.
+- `.env.example` now documents local SQLite development.
+- `.gitignore` now excludes local SQLite database files.
+- `PROGRESS.md` updated for Phase 1C.
+
+### Notes
+- This keeps development free and local.
+- Hosted PostgreSQL remains a future deployment step.
+- After merge and local verification, tag this build as `v0.1.0-beta.5`.
+
+---
 
 ## [2026-05-07] - Deployment jobs disabled until hosting setup
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
@@ -197,4 +221,5 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
+
 
