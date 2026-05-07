@@ -127,3 +127,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 |---|---|
 | Phase 0 start | Repo structure, all foundation files created |
 | 2026-05-07 | Phase 1A working skeleton prepared: frontend, backend, Jikan routes, Prisma schema, homepage, anime/manga pages |
+| 2026-05-07 | Phase 1A merged into `main`; created rollback-safe beta tag `v0.1.0-beta.1`; added documentation plan for beta versioning and rollback workflow |
