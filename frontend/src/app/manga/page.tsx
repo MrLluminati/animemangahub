@@ -10,7 +10,7 @@ export default async function MangaPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Catalog</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight">Manga</h1>
         <p className="mt-3 max-w-2xl text-slate-300">
-          Phase 1A introduces a basic manga catalog surface using public metadata before database-backed features.
+          Browse top manga from Jikan public API data. Click any card to open its Phase 1B detail page.
         </p>
       </section>
 

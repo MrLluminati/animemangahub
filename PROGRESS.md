@@ -7,7 +7,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ## Current Status
 
 **Active Phase:** Phase 1 — MVP Catalog  
-**Next Up:** Phase 1B — Detail pages, search, filters, and DB caching
+**Next Up:** Phase 1C — Filters and database caching
 
 ---
 
@@ -56,11 +56,18 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Header/footer layout added
 - [x] Initial Prisma schema defined
 
+### Completed in Phase 1B
+- [x] Anime detail API route added at `/api/anime/:id`
+- [x] Manga detail API route added at `/api/manga/:id`
+- [x] Combined search API route added at `/api/search?q=...`
+- [x] Anime detail page added at `/anime/[id]`
+- [x] Manga detail page added at `/manga/[id]`
+- [x] Search results page added at `/search?q=...`
+- [x] Catalog cards made clickable
+- [x] Search box added to header and homepage
+
 ### To Build Next
 - [ ] First migration run
-- [ ] Anime detail page
-- [ ] Manga detail page
-- [ ] Search bar with live results
 - [ ] Genre, year, and status filters
 - [ ] "Where to Watch" link system
 - [ ] "Where to Read" link system
@@ -128,3 +135,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | Phase 0 start | Repo structure, all foundation files created |
 | 2026-05-07 | Phase 1A working skeleton prepared: frontend, backend, Jikan routes, Prisma schema, homepage, anime/manga pages |
 | 2026-05-07 | Phase 1A merged into `main`; created rollback-safe beta tag `v0.1.0-beta.1`; added documentation plan for beta versioning and rollback workflow |
+| 2026-05-07 | Phase 1B prepared: detail pages, clickable cards, combined search, and expanded Jikan metadata mapping |
