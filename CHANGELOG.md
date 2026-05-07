@@ -25,6 +25,21 @@ Format:
 
 ---
 
+## [2026-05-07] - Workflow verify action
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Project Operations
+**Commit:** `chore: add verification action to dev workflow`
+
+### Added
+- `verify` action in `scripts/dev-workflow.ps1`.
+- Documentation for one-command local and remote repository verification.
+
+### Notes
+- This reduces repeated manual verification commands after cleanup and beta tagging.
+
+---
+
+
 ## [2026-05-07] - Phase 1D: Cache observability
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1D - Cache Observability
@@ -388,6 +403,7 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
+
 
 
 
