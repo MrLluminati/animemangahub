@@ -25,6 +25,29 @@ Format:
 
 ---
 
+## [2026-05-07] - Phase 1D: Cache observability
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1D - Cache Observability
+**Commit:** `feat: add phase 1d cache observability`
+
+### Added
+- `GET /api/cache/health` cache health endpoint.
+- `GET /api/cache/stats` cache stats endpoint.
+- `DELETE /api/cache` and `POST /api/cache/clear` local cache clear endpoints.
+- `docs/cache-observability.md` with local cache debugging instructions.
+
+### Changed
+- Backend health endpoint now reports Phase 1D.
+- Cache service now logs cache hit, miss, and stale events.
+- Cache service now exposes health, stats, and clear helpers.
+
+### Notes
+- Cache clearing is blocked when `NODE_ENV=production`.
+- This phase improves local developer observability before adding admin UI.
+
+---
+
+
 ## [2026-05-07] - Reusable PowerShell development workflow
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Project Operations
@@ -365,6 +388,7 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
+
 
 
 
