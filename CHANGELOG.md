@@ -25,6 +25,24 @@ Format:
 
 ---
 
+## [2026-05-07] — Versioning and rollback workflow
+**Agent/Author:** ChatGPT + Human: MrLluminati  
+**Phase:** Phase 1 — MVP Catalog / Project Operations  
+**Commit:** `docs: add beta versioning and rollback workflow`
+
+### Added
+- `docs/versioning.md` — beta release tag policy, rollback workflow, PowerShell Git commands, and safe recovery rules.
+
+### Changed
+- `PROGRESS.md` — noted Phase 1A merge and `v0.1.0-beta.1` rollback tag.
+
+### Notes
+- `v0.1.0-beta.1` is the first rollback-safe beta release.
+- Project workflow is PowerShell-first for Windows local development.
+- Future milestones should be merged through PRs and tagged after stable verification.
+
+---
+
 ## [2026-05-07] — Phase 1A: Working skeleton
 **Agent/Author:** GPT-5.5 Thinking
 **Phase:** Phase 1 — MVP Catalog
