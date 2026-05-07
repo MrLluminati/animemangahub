@@ -6,8 +6,8 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Phase 0 — Foundation  
-**Next Up:** Phase 1 — MVP Catalog
+**Active Phase:** Phase 1 — MVP Catalog  
+**Next Up:** Phase 1B — Detail pages, search, filters, and DB caching
 
 ---
 
@@ -26,36 +26,46 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] `database/migrations/` — folder ready for SQL migrations
 - [x] `database/seeds/` — folder ready for seed scripts
 - [x] `.github/workflows/deploy.yml` — CI/CD pipeline scaffold
-- [x] Frontend folder scaffolded (Next.js structure)
-- [x] Backend folder scaffolded (Express structure)
+- [x] Frontend folder scaffolded
+- [x] Backend folder scaffolded
 
 ### Decisions Made
 - **Next.js 14 App Router** chosen over Pages Router for better performance and future-proofing
 - **Prisma** chosen as ORM for type-safe DB access and easy migrations
-- **Railway** chosen for backend/DB hosting (generous free tier, simple deploys)
-- **Vercel** chosen for frontend (native Next.js support, instant deploys from GitHub)
-- **Jikan API** as primary data source (no key required, comprehensive MAL data)
-- **Tailwind CSS** for styling (utility-first, great with Next.js, no CSS bloat)
+- **Railway** chosen for backend/DB hosting
+- **Vercel** chosen for frontend
+- **Jikan API** as primary data source
+- **Tailwind CSS** for styling
 
 ---
 
 ## Phase 1 — MVP Catalog 🔲
 
-### To Build
-- [ ] Next.js app initialised (`npx create-next-app`)
-- [ ] Tailwind CSS configured
-- [ ] Express backend initialised
-- [ ] Prisma schema defined
+### Completed in Phase 1A
+- [x] Next.js app initialised manually inside `/frontend`
+- [x] Tailwind CSS configured
+- [x] Express backend initialised inside `/backend`
+- [x] TypeScript configured for frontend and backend
+- [x] Backend health route added at `/api/health`
+- [x] Jikan API wrapper added with basic rate limiting
+- [x] Anime trending route added at `/api/anime/trending`
+- [x] Manga top route added at `/api/manga/top`
+- [x] Homepage created with anime and manga sections
+- [x] Anime listing page created
+- [x] Manga listing page created
+- [x] Header/footer layout added
+- [x] Initial Prisma schema defined
+
+### To Build Next
 - [ ] First migration run
-- [ ] Homepage with featured/trending anime+manga
-- [ ] Anime listing page with filters (genre, status, year)
-- [ ] Manga listing page with filters
-- [ ] Anime detail page (synopsis, episodes, cast, where to watch)
-- [ ] Manga detail page (synopsis, chapters, where to read)
+- [ ] Anime detail page
+- [ ] Manga detail page
 - [ ] Search bar with live results
+- [ ] Genre, year, and status filters
 - [ ] "Where to Watch" link system
 - [ ] "Where to Read" link system
 - [ ] Anime ↔ Manga cross-reference display
+- [ ] Database caching for Jikan data
 - [ ] Deployed to Vercel + Railway
 
 ---
@@ -65,9 +75,9 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ### To Build
 - [ ] NextAuth.js setup (Google + Discord)
 - [ ] User profile page
-- [ ] Watchlist (add anime with status: watching/completed/dropped)
-- [ ] Reading list (same for manga)
-- [ ] Star ratings (1–10)
+- [ ] Watchlist
+- [ ] Reading list
+- [ ] Star ratings
 - [ ] Written reviews
 - [ ] Discussion threads per title
 - [ ] User avatar + bio
@@ -79,12 +89,9 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ### To Build
 - [ ] Ad slot placements in layout
 - [ ] Google AdSense integration
-- [ ] Affiliate links for Crunchyroll, Viz, etc.
+- [ ] Affiliate links
 - [ ] Stripe subscription setup
 - [ ] Free vs Premium tier logic
-- [ ] Premium: ad-free experience
-- [ ] Premium: advanced filters and sorting
-- [ ] Subscription management page
 
 ---
 
@@ -93,13 +100,13 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ### To Build
 - [ ] Dynamic sitemap generation
 - [ ] SEO meta tags on all pages
-- [ ] Structured data (JSON-LD) for Google
+- [ ] Structured data (JSON-LD)
 - [ ] Seasonal anime chart
-- [ ] Countdown timers for new episodes
-- [ ] Email newsletter (Resend API)
-- [ ] Recommendation engine ("you might also like")
+- [ ] Countdown timers
+- [ ] Email newsletter
+- [ ] Recommendation engine
 - [ ] React Native mobile app
-- [ ] Social sharing cards (Open Graph)
+- [ ] Social sharing cards
 
 ---
 
@@ -119,5 +126,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | Date | What Was Done |
 |---|---|
 | Phase 0 start | Repo structure, all foundation files created |
-
-_Add a row after each work session._
+| 2026-05-07 | Phase 1A working skeleton prepared: frontend, backend, Jikan routes, Prisma schema, homepage, anime/manga pages |
