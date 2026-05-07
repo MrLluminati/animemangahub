@@ -25,6 +25,26 @@ Format:
 
 ---
 
+## [2026-05-07] - Documentation summary through beta 9
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Project Documentation
+**Commit:** `docs: summarize progress through beta 9`
+
+### Added
+- `docs/project-summary.md` summarizing work completed through `v0.1.0-beta.9`.
+
+### Changed
+- Updated `README.md` with current stable beta and local development status.
+- Updated `PROGRESS.md` with completed Phase 1C, Phase 1D, and Phase 1E work.
+- Updated `ROADMAP.md` with Phase 1 progress snapshot and remaining priorities.
+
+### Notes
+- Current stable beta is `v0.1.0-beta.9`.
+- Next recommended maintenance task is workflow idempotency for cleanup and tagging.
+
+---
+
+
 ## [2026-05-07] - Phase 1E: Frontend cache debug visibility
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1E - Frontend Cache Debug Visibility
@@ -424,6 +444,7 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
+
 
 
 
