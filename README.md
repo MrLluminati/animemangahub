@@ -12,6 +12,25 @@ AniManga Hub is a catalog-first platform where users can:
 - Follow seasonal charts and new releases
 - (Phase 5+) Stream licensed content with a subscription
 
+
+## Current Development Status
+
+Current stable beta: `v0.1.0-beta.9`
+
+Completed through Phase 1E:
+
+- Working Next.js frontend and Express backend
+- Jikan-powered anime and manga catalog
+- Detail pages and search
+- Local SQLite cache using Prisma
+- Cache health, stats, and clear endpoints
+- Development-only frontend cache debug panel
+- PowerShell 7 workflow automation for validation, cleanup, tagging, and verification
+
+Deployment is intentionally deferred until Vercel/Railway hosting and production secrets are ready.
+
+See `docs/project-summary.md` and `PROGRESS.md` for the current build state.
+
 ## Live Site
 
 > _Coming soon — will be updated once deployed_
@@ -140,3 +159,4 @@ Branch naming: `feature/`, `fix/`, `docs/`, `chore/`
 ## License
 
 MIT — see LICENSE file.
+

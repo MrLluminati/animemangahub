@@ -28,6 +28,33 @@ Core value: search anything, find where to watch/read it.
 
 ---
 
+
+## Phase 1 Progress Snapshot
+
+Current stable beta: `v0.1.0-beta.9`
+
+Completed within Phase 1:
+
+- Initial MVP catalog skeleton
+- Anime and manga listing pages
+- Anime and manga detail pages
+- Combined search
+- Clickable catalog cards
+- Local SQLite caching for Jikan responses
+- Cache observability endpoints
+- Development-only frontend cache debug panel
+
+Remaining Phase 1 priorities:
+
+- Workflow hardening for idempotent cleanup/tagging
+- Genre, year, and status filters
+- Legal “Where to Watch” links
+- Legal “Where to Read” links
+- Anime ↔ manga cross-reference display
+- Catalog pagination and sorting improvements
+- Deployment when hosting budget and secrets are ready
+
+---
 ## Phase 2 — User Accounts & Community
 
 Core value: make it personal and social.
@@ -125,3 +152,4 @@ These are good ideas that don't fit current phases yet:
 - User-submitted piracy links
 - Torrent tracking
 - Anything that puts the platform at legal risk
+

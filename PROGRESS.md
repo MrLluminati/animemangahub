@@ -6,8 +6,8 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Phase 1 â€” MVP Catalog  
-**Next Up:** Phase 1C â€” Filters and database caching
+**Active Phase:** Phase 1 — MVP Catalog
+**Next Up:** Workflow hardening, then filters and legal watch/read links
 
 ---
 
@@ -66,14 +66,33 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Catalog cards made clickable
 - [x] Search box added to header and homepage
 
+
+### Completed in Phase 1C
+- [x] Prisma `ApiCache` model added
+- [x] Local SQLite cache added for Jikan API responses
+- [x] Cache-first fetching added to anime and manga services
+- [x] Local database migration added
+
+### Completed in Phase 1D
+- [x] Cache health endpoint added at `/api/cache/health`
+- [x] Cache stats endpoint added at `/api/cache/stats`
+- [x] Local cache clear endpoints added at `/api/cache` and `/api/cache/clear`
+- [x] Cache hit, miss, and stale logs added
+- [x] Cache observability documentation added
+
+### Completed in Phase 1E
+- [x] Development-only frontend cache debug panel added
+- [x] Frontend cache health/stats API helpers added
+- [x] Cache response types added
+- [x] Local visual cache debug test completed
 ### To Build Next
-- [ ] First migration run
+- [ ] Make workflow cleanup and tagging idempotent
 - [ ] Genre, year, and status filters
 - [ ] "Where to Watch" link system
 - [ ] "Where to Read" link system
-- [ ] Anime â†” Manga cross-reference display
-- [ ] Database caching for Jikan data
-- [ ] Deployed to Vercel + Railway
+- [ ] Anime ↔ Manga cross-reference display
+- [ ] Catalog pagination and sorting improvements
+- [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
 
 ---
 
@@ -143,4 +162,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-07 | Phase 1D cache observability added: cache health, stats, clear endpoints, cache logs, and documentation |
 | 2026-05-07 | Added verify action to reusable PowerShell workflow for one-command repository, branch, commit, and tag verification |
 | 2026-05-07 | Phase 1E frontend cache debug visibility added with development-only cache panel, frontend cache API helpers, and documentation |
+| 2026-05-07 | Summarized completed work through `v0.1.0-beta.9` and documented remaining Phase 1 priorities |
 
