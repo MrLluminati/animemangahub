@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Epilogue, Hanken_Grotesk, Space_Grotesk } from "next/font/google";
 
 import { CacheDebugPanel } from "@/components/debug/CacheDebugPanel";
 import { Footer } from "@/components/layout/Footer";
@@ -8,6 +9,24 @@ import { ThemeBootScript } from "@/components/theme/ThemeBootScript";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 import "./globals.css";
+
+const epilogue = Epilogue({
+  subsets: ["latin"],
+  variable: "--font-epilogue",
+  display: "swap"
+});
+
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken-grotesk",
+  display: "swap"
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: "AniManga Hub",
@@ -24,7 +43,7 @@ export default function RootLayout({
       <head>
         <ThemeBootScript />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className={`${epilogue.variable} ${hankenGrotesk.variable} ${spaceGrotesk.variable} min-h-screen antialiased`}>
         <ThemeProvider>
           <GlowBackground />
           <Header />
