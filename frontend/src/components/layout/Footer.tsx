@@ -1,9 +1,11 @@
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/20">
-      <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-sm text-slate-400 sm:px-6 lg:px-8">
-        <p className="font-semibold text-slate-300">AniManga Hub</p>
-        <p>Phase 1A skeleton. Data shown through public metadata APIs. No unlicensed anime or manga content is hosted.</p>
+    <footer className="relative border-t border-[var(--ap-border)] bg-[var(--ap-surface-glass)]">
+      <div className="mx-auto flex max-w-[1800px] flex-col gap-2 px-4 py-8 text-sm text-[var(--ap-text-muted)] sm:px-6 lg:px-12">
+        <p className="font-display font-black text-[var(--ap-text)]">AniManga Hub</p>
+        <p>
+          Built with the AniPulse theme foundation. Data is shown through public metadata APIs, with official-source discovery and no hosted anime or manga content.
+        </p>
       </div>
     </footer>
   );

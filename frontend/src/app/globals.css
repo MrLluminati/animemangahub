@@ -4,22 +4,308 @@
 
 :root {
   color-scheme: dark;
+  --ap-background: #131315;
+  --ap-surface: #131315;
+  --ap-surface-dim: #131315;
+  --ap-surface-bright: #39393b;
+  --ap-surface-container-lowest: #0e0e10;
+  --ap-surface-container-low: #1c1b1d;
+  --ap-surface-container: #201f21;
+  --ap-surface-container-high: #2a2a2c;
+  --ap-surface-container-highest: #353437;
+  --ap-surface-glass: rgba(32, 31, 33, 0.72);
+  --ap-text: #e5e1e4;
+  --ap-text-muted: #b9cacb;
+  --ap-inverse-surface: #e5e1e4;
+  --ap-inverse-text: #313032;
+  --ap-outline: #849495;
+  --ap-border: rgba(0, 240, 255, 0.16);
+  --ap-border-strong: rgba(0, 240, 255, 0.32);
+  --ap-primary: #dbfcff;
+  --ap-primary-active: #00f0ff;
+  --ap-on-primary: #00363a;
+  --ap-secondary: #fface8;
+  --ap-secondary-active: #ff24e4;
+  --ap-tertiary: #fff4e8;
+  --ap-tertiary-active: #ffd386;
+  --ap-shadow-soft: 0 0 30px rgba(0, 240, 255, 0.1);
+  --ap-shadow-strong: 0 0 42px rgba(255, 36, 228, 0.16);
+  --ap-radius-card: 0.5rem;
+  --ap-radius-control: 0.75rem;
+  --ap-font-display: Epilogue, Inter, ui-sans-serif, system-ui, sans-serif;
+  --ap-font-body: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  --ap-font-label: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --ap-background: #f9f6f0;
+  --ap-surface: #fffdf7;
+  --ap-surface-dim: #f8f1e3;
+  --ap-surface-bright: #ffffff;
+  --ap-surface-container-lowest: #fffdf7;
+  --ap-surface-container-low: #fff7ea;
+  --ap-surface-container: #ffffff;
+  --ap-surface-container-high: #f2eadc;
+  --ap-surface-container-highest: #e7d8c4;
+  --ap-surface-glass: rgba(255, 253, 247, 0.88);
+  --ap-text: #2d3e50;
+  --ap-text-muted: #667085;
+  --ap-inverse-surface: #2d3e50;
+  --ap-inverse-text: #fffdf7;
+  --ap-outline: #2d3e50;
+  --ap-border: rgba(45, 62, 80, 0.24);
+  --ap-border-strong: rgba(45, 62, 80, 0.5);
+  --ap-primary: #bc243c;
+  --ap-primary-active: #bc243c;
+  --ap-on-primary: #fffdf7;
+  --ap-secondary: #2d3e50;
+  --ap-secondary-active: #2d3e50;
+  --ap-tertiary: #7d5800;
+  --ap-tertiary-active: #d4af37;
+  --ap-shadow-soft: 3px 3px 0 rgba(212, 175, 55, 0.45);
+  --ap-shadow-strong: 4px 4px 0 rgba(212, 175, 55, 0.55);
+  --ap-radius-card: 0.125rem;
+  --ap-radius-control: 0.125rem;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  background: var(--ap-background);
+}
+
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(249, 115, 22, 0.12), transparent 32rem),
-    radial-gradient(circle at top right, rgba(59, 130, 246, 0.10), transparent 28rem),
-    #050816;
-  color: #f8fafc;
+  min-width: 320px;
+  background: var(--ap-background);
+  color: var(--ap-text);
+  font-family: var(--ap-font-body);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.font-display {
+  font-family: var(--ap-font-display);
+}
+
+.anipulse-heading {
+  color: var(--ap-text);
+  font-family: var(--ap-font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.anipulse-label {
+  font-family: var(--ap-font-label);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.anipulse-background {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.anipulse-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(72px);
+}
+
+.anipulse-orb-primary {
+  left: -10rem;
+  top: -8rem;
+  width: 32rem;
+  height: 32rem;
+  background: color-mix(in srgb, var(--ap-primary-active) 18%, transparent);
+}
+
+.anipulse-orb-secondary {
+  right: -10rem;
+  top: 14rem;
+  width: 34rem;
+  height: 34rem;
+  background: color-mix(in srgb, var(--ap-secondary-active) 14%, transparent);
+}
+
+.anipulse-orb-tertiary {
+  bottom: -12rem;
+  left: 35%;
+  width: 32rem;
+  height: 32rem;
+  background: color-mix(in srgb, var(--ap-tertiary-active) 12%, transparent);
+}
+
+.anipulse-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--ap-primary-active) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--ap-secondary-active) 5%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.35;
+}
+
+:root[data-theme="light"] .anipulse-grid {
+  background-image: radial-gradient(color-mix(in srgb, var(--ap-tertiary-active) 45%, transparent) 0.65px, transparent 0.65px);
+  background-size: 18px 18px;
+  opacity: 0.32;
+}
+
+.anipulse-surface {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ap-border);
+  border-radius: var(--ap-radius-card);
+  background: var(--ap-surface-glass);
+  box-shadow: var(--ap-shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+:root[data-theme="light"] .anipulse-surface::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translate(3px, 3px);
+  border: 1px solid color-mix(in srgb, var(--ap-tertiary-active) 38%, transparent);
+  content: "";
+}
+
+.anipulse-surface-elevated {
+  border-color: var(--ap-border-strong);
+  box-shadow: var(--ap-shadow-strong);
+}
+
+.anipulse-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--ap-radius-control);
+  font-family: var(--ap-font-label);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.anipulse-button-primary {
+  border: 1px solid color-mix(in srgb, var(--ap-primary-active) 35%, transparent);
+  background: var(--ap-primary-active);
+  color: var(--ap-on-primary);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--ap-primary-active) 38%, transparent);
+}
+
+.anipulse-button-secondary {
+  border: 1px solid var(--ap-border);
+  background: color-mix(in srgb, var(--ap-surface-bright) 10%, transparent);
+  color: var(--ap-text);
+}
+
+:root[data-theme="light"] .anipulse-button-primary,
+:root[data-theme="light"] .anipulse-button-secondary {
+  border: 2px solid var(--ap-secondary-active);
+  box-shadow: var(--ap-shadow-soft);
+}
+
+:root[data-theme="light"] .anipulse-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.anipulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  border: 1px solid var(--ap-border);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
+  padding: 0.45rem 0.75rem;
+  color: var(--ap-primary);
+  font-family: var(--ap-font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+:root[data-theme="light"] .anipulse-badge {
+  border-radius: var(--ap-radius-control);
+  background: var(--ap-surface-container-low);
+  color: var(--ap-secondary-active);
+}
+
+.anipulse-brand-mark {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--ap-primary-active) 30%, transparent);
+  border-radius: var(--ap-radius-control);
+  background: var(--ap-primary-active);
+  color: var(--ap-on-primary);
+  font-family: var(--ap-font-display);
+  font-size: 0.875rem;
+  font-weight: 900;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--ap-primary-active) 45%, transparent);
+}
+
+:root[data-theme="light"] .anipulse-brand-mark {
+  border: 2px solid var(--ap-secondary-active);
+  background: var(--ap-primary-active);
+  color: var(--ap-on-primary);
+  box-shadow: 3px 3px 0 var(--ap-tertiary-active);
+}
+
+.anipulse-icon-button {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid var(--ap-border);
+  border-radius: var(--ap-radius-control);
+  background: color-mix(in srgb, var(--ap-surface-bright) 10%, transparent);
+  color: var(--ap-text);
+}
+
+.anipulse-nav-link {
+  border-radius: var(--ap-radius-control);
+  padding: 0.6rem 0.85rem;
+  color: var(--ap-text-muted);
+  font-family: var(--ap-font-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.anipulse-nav-link:hover {
+  background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
+  color: var(--ap-text);
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
 }
