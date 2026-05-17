@@ -170,3 +170,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-17 | Added genre, year, and status filters for anime and manga catalog pages |
 | 2026-05-17 | Added official-platform legal watch/read discovery links to anime and manga detail pages |
 | 2026-05-17 | Added AniPulse reusable theme foundation with dark/light mode support |
+| 2026-05-17 | Stabilized AniPulse live verification issues for theme persistence, header responsiveness, mobile navigation, search accessibility, and app icon support |

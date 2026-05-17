@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { SearchBox } from "@/components/search/SearchBox";
 import { mainNavigation } from "@/theme/navigation";
 
 import { BrandMark } from "./BrandMark";
@@ -12,7 +13,7 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -23,8 +24,8 @@ export function MobileNav() {
       </button>
 
       {open ? (
-        <div className="fixed inset-0 z-50 bg-[var(--ap-background)]/95 p-4 backdrop-blur-xl">
-          <div className="flex items-center justify-between">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-[var(--ap-background)]/96 p-4 backdrop-blur-xl">
+          <div className="flex items-center justify-between gap-4">
             <BrandMark />
             <button
               type="button"
@@ -36,7 +37,11 @@ export function MobileNav() {
             </button>
           </div>
 
-          <nav className="mt-10 grid gap-3">
+          <div className="mt-6">
+            <SearchBox compact />
+          </div>
+
+          <nav className="mt-6 grid gap-3">
             {mainNavigation.map((item) => (
               <Link
                 key={item.href}

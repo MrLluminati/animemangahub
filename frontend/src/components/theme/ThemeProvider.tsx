@@ -15,7 +15,7 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 const STORAGE_KEY = "anipulse-theme-mode";
 
-function getInitialMode(): AniPulseMode {
+function getStoredMode(): AniPulseMode {
   if (typeof window === "undefined") {
     return "dark";
   }
@@ -28,18 +28,30 @@ function getInitialMode(): AniPulseMode {
   return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 }
 
+function applyMode(mode: AniPulseMode) {
+  document.documentElement.dataset.theme = mode;
+  document.documentElement.style.colorScheme = mode;
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setModeState] = useState<AniPulseMode>("dark");
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    setModeState(getInitialMode());
+    const initialMode = getStoredMode();
+    setModeState(initialMode);
+    applyMode(initialMode);
+    setIsReady(true);
   }, []);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = mode;
-    document.documentElement.style.colorScheme = mode;
+    if (!isReady) {
+      return;
+    }
+
+    applyMode(mode);
     window.localStorage.setItem(STORAGE_KEY, mode);
-  }, [mode]);
+  }, [mode, isReady]);
 
   const value = useMemo<ThemeContextValue>(() => {
     return {
