@@ -25,6 +25,29 @@ Format:
 
 ---
 
+## [2026-05-17] - AniPulse client interaction repair
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI/Product Polish
+**Commit:** `fix: repair AniPulse client interactions`
+
+### Fixed
+- Theme toggle now updates the DOM and localStorage immediately.
+- Mobile navigation drawer is hydrated through the client header shell and has improved overlay behavior.
+- SearchBox now has a GET fallback while preserving client-side navigation.
+- Theme mode is applied before hydration through `ThemeBootScript`.
+
+### Changed
+- Header is now a client component so the app shell hydrates as one interactive unit.
+- Footer now has grouped navigation for Explore, Future sections, and Policies.
+
+### Added
+- `docs/anipulse-client-interactions.md`.
+
+### Notes
+- No backend logic, database schema, or content-safety policy changed.
+- If extension-injected hydration warnings remain, test in an incognito window with extensions disabled.
+
+---
 ## [2026-05-17] - AniPulse live verification hotfix
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - UI/Product Polish
