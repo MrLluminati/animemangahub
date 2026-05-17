@@ -25,6 +25,29 @@ Format:
 
 ---
 
+## [2026-05-17] - AniPulse reusable theme foundation
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI/Product Polish
+**Commit:** `style: add AniPulse theme foundation`
+
+### Added
+- AniPulse theme tokens for Tokyo Night dark mode and Vintage Day light mode.
+- `ThemeProvider` with persisted dark/light mode preference.
+- `ThemeToggle` for switching between AniPulse modes.
+- `GlowBackground`, `SurfaceCard`, `SectionHeader`, `ThemeButton`, `ThemeBadge`, `BrandMark`, and `MobileNav` primitives.
+- `docs/anipulse-theme-foundation.md`.
+
+### Changed
+- Updated global CSS with AniPulse design variables, responsive background layers, buttons, badges, cards, and navigation utilities.
+- Updated app layout to wrap the application in the AniPulse theme provider.
+- Updated header and footer to use the AniPulse foundation.
+
+### Notes
+- This is a theme foundation and app-shell styling pass.
+- Homepage, catalog pages, and detail pages will be converted in separate reviewable PRs.
+- No backend logic, database schema, API behavior, or content-safety policy changed.
+
+---
 ## [2026-05-17] - Legal watch and read discovery links
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog and Legal Discovery
