@@ -32,9 +32,9 @@
   --ap-shadow-strong: 0 0 42px rgba(255, 36, 228, 0.16);
   --ap-radius-card: 0.5rem;
   --ap-radius-control: 0.75rem;
-  --ap-font-display: Epilogue, Inter, ui-sans-serif, system-ui, sans-serif;
-  --ap-font-body: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
-  --ap-font-label: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  --ap-font-display: var(--font-epilogue), Epilogue, Inter, ui-sans-serif, system-ui, sans-serif;
+  --ap-font-body: var(--font-hanken-grotesk), "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  --ap-font-label: var(--font-space-grotesk), "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
 :root[data-theme="light"] {
@@ -48,20 +48,20 @@
   --ap-surface-container: #ffffff;
   --ap-surface-container-high: #f2eadc;
   --ap-surface-container-highest: #e7d8c4;
-  --ap-surface-glass: rgba(255, 253, 247, 0.88);
-  --ap-text: #2d3e50;
-  --ap-text-muted: #667085;
+  --ap-surface-glass: rgba(255, 253, 247, 0.92);
+  --ap-text: #1f2933;
+  --ap-text-muted: #4b5563;
   --ap-inverse-surface: #2d3e50;
   --ap-inverse-text: #fffdf7;
   --ap-outline: #2d3e50;
-  --ap-border: rgba(45, 62, 80, 0.24);
-  --ap-border-strong: rgba(45, 62, 80, 0.5);
+  --ap-border: rgba(45, 62, 80, 0.32);
+  --ap-border-strong: rgba(45, 62, 80, 0.62);
   --ap-primary: #bc243c;
   --ap-primary-active: #bc243c;
   --ap-on-primary: #fffdf7;
   --ap-secondary: #2d3e50;
   --ap-secondary-active: #2d3e50;
-  --ap-tertiary: #7d5800;
+  --ap-tertiary: #5f4300;
   --ap-tertiary-active: #d4af37;
   --ap-shadow-soft: 3px 3px 0 rgba(212, 175, 55, 0.45);
   --ap-shadow-strong: 4px 4px 0 rgba(212, 175, 55, 0.55);
@@ -171,6 +171,7 @@ a {
   border-radius: var(--ap-radius-card);
   background: var(--ap-surface-glass);
   box-shadow: var(--ap-shadow-soft);
+  color: var(--ap-text);
   backdrop-filter: blur(16px);
 }
 
@@ -302,6 +303,27 @@ a {
 .anipulse-nav-link:hover {
   background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
   color: var(--ap-text);
+}
+
+.anipulse-input {
+  min-width: 0;
+  border: 1px solid var(--ap-border);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--ap-surface-container-lowest) 88%, transparent);
+  color: var(--ap-text);
+  outline: none;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.anipulse-input::placeholder {
+  color: var(--ap-text-muted);
+}
+
+.anipulse-input:focus {
+  border-color: var(--ap-primary-active);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ap-primary-active) 18%, transparent);
 }
 
 @media (min-width: 1920px) {

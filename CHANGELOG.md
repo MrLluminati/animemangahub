@@ -25,6 +25,25 @@ Format:
 
 ---
 
+## [2026-05-17] - AniPulse readability drawer and fonts hotfix
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI/Product Polish
+**Commit:** `fix: improve AniPulse readability drawer and fonts`
+
+### Fixed
+- AniPulse now loads Epilogue, Hanken Grotesk, and Space Grotesk through `next/font/google`.
+- Theme boot script now uses `beforeInteractive` loading to reduce light-mode refresh flash.
+- Mobile navigation now opens as a right-side portal drawer instead of being trapped inside the header.
+- Homepage, search, and title cards now use AniPulse theme variables for improved light-mode readability.
+
+### Added
+- `docs/anipulse-readability-drawer-fonts.md`.
+
+### Notes
+- No backend logic, database schema, or content-safety policy changed.
+- This does not complete the full AniPulse page redesign; it stabilizes the shell and readability before the larger visual pass.
+
+---
 ## [2026-05-17] - AniPulse client interaction repair
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - UI/Product Polish

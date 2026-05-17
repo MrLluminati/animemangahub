@@ -172,3 +172,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-17 | Added AniPulse reusable theme foundation with dark/light mode support |
 | 2026-05-17 | Stabilized AniPulse live verification issues for theme persistence, header responsiveness, mobile navigation, search accessibility, and app icon support |
 | 2026-05-17 | Repaired AniPulse client interactions for theme toggle, mobile drawer, search fallback, and footer completeness |
+| 2026-05-17 | Improved AniPulse fonts, light-mode readability, pre-hydration theme loading, and mobile drawer behavior |

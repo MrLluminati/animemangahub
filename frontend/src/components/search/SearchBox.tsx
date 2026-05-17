@@ -46,12 +46,9 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Search anime or manga..."
-        className="min-w-0 flex-1 rounded-full border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-orange-300"
+        className="anipulse-input flex-1 px-4 py-3 text-sm"
       />
-      <button
-        type="submit"
-        className="rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-400"
-      >
+      <button type="submit" className="anipulse-button anipulse-button-primary px-5 py-3 text-sm">
         Search
       </button>
     </form>
