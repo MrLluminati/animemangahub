@@ -7,7 +7,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ## Current Status
 
 **Active Phase:** Phase 1 — MVP Catalog
-**Next Up:** Legal watch/read links, anime ↔ manga cross-reference display, and catalog pagination/sorting
+**Next Up:** Anime ↔ manga cross-reference display, then catalog pagination and sorting
 
 ---
 
@@ -168,3 +168,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-17 | Merged Anime Culture Platform strategy into AniManga Hub as a single-platform direction |
 | 2026-05-17 | Made workflow cleanup and tagging idempotent for repeated post-merge and beta-tag commands |
 | 2026-05-17 | Added genre, year, and status filters for anime and manga catalog pages |
+| 2026-05-17 | Added official-platform legal watch/read discovery links to anime and manga detail pages |

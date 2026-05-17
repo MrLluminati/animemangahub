@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { LegalAvailabilityLinks } from "@/components/catalog/LegalAvailabilityLinks";
 import { DetailHero } from "@/components/ui/DetailHero";
 import { getAnimeById } from "@/lib/api";
 
@@ -25,12 +26,7 @@ export default async function AnimeDetailPage({ params }: AnimeDetailPageProps) 
 
       <DetailHero item={anime} />
 
-      <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
-        <h2 className="text-xl font-bold text-white">Legal availability placeholder</h2>
-        <p className="mt-3 text-sm leading-7 text-slate-300">
-          Phase 1B adds the detail page layer. Future phases will connect official streaming platforms, availability regions, and partner links.
-        </p>
-      </section>
+      <LegalAvailabilityLinks item={anime} />
     </div>
   );
 }

@@ -25,6 +25,26 @@ Format:
 
 ---
 
+## [2026-05-17] - Legal watch and read discovery links
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog and Legal Discovery
+**Commit:** `feat: add legal watch and read links`
+
+### Added
+- `frontend/src/components/catalog/LegalAvailabilityLinks.tsx` for official-platform legal discovery links.
+- Legal anime watch discovery links on anime detail pages.
+- Legal manga read discovery links on manga detail pages.
+
+### Changed
+- Replaced Phase 1B legal availability placeholders with official-platform discovery sections.
+- Updated `PROGRESS.md`.
+
+### Notes
+- Links are discovery shortcuts to official/lawful platforms and do not claim title-specific licensing or region availability.
+- No piracy links, torrent links, unofficial readers, hentai platforms, adult redirects, or explicit-content discovery features were added.
+- Region-aware verified availability remains a future database-backed enhancement.
+
+---
 ## [2026-05-17] - Catalog genre year and status filters
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog and Legal Discovery
