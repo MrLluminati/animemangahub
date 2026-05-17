@@ -8,11 +8,11 @@ import { mainNavigation } from "@/theme/navigation";
 
 export function Header() {
   return (
-    <header className="sticky top-3 z-40 mx-auto w-[calc(100%-2rem)] max-w-[1800px] border border-[var(--ap-border)] bg-[var(--ap-surface-glass)] px-4 py-3 shadow-[var(--ap-shadow-soft)] backdrop-blur-xl md:top-4 md:w-[calc(100%-3rem)] lg:px-5">
-      <div className="flex items-center justify-between gap-4">
+    <header className="sticky top-2 z-40 mx-auto w-[calc(100%-1rem)] max-w-[1800px] border border-[var(--ap-border)] bg-[var(--ap-surface-glass)] px-3 py-3 shadow-[var(--ap-shadow-soft)] backdrop-blur-xl sm:top-3 sm:w-[calc(100%-2rem)] sm:px-4 lg:top-4 lg:px-5">
+      <div className="flex items-center justify-between gap-3">
         <BrandMark />
 
-        <nav className="hidden items-center gap-2 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {mainNavigation.map((item) => (
             <Link key={item.href} href={item.href} className="anipulse-nav-link">
               {item.label}
@@ -20,12 +20,19 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <SearchBox compact />
-          <ThemeToggle />
-        </div>
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="hidden xl:block">
+            <SearchBox compact />
+          </div>
 
-        <MobileNav />
+          <ThemeToggle />
+
+          <MobileNav />
+        </div>
+      </div>
+
+      <div className="mt-3 xl:hidden">
+        <SearchBox compact />
       </div>
     </header>
   );

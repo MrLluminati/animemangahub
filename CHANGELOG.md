@@ -25,6 +25,26 @@ Format:
 
 ---
 
+## [2026-05-17] - AniPulse live verification hotfix
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI/Product Polish
+**Commit:** `fix: stabilize AniPulse theme shell`
+
+### Fixed
+- Theme preference now avoids overwriting the saved user mode before client-side initialization completes.
+- Theme toggle remains visible across mobile, tablet, desktop, and large-screen layouts.
+- Mobile navigation includes search and improved viewport behavior.
+- Search fields now include `id`, `name`, `type`, `role`, `aria-label`, and hidden label support for browser accessibility checks.
+- Added a Next.js app icon to stop `/favicon.ico` style missing-icon requests.
+
+### Added
+- `docs/anipulse-live-verification.md`.
+
+### Notes
+- Browser extension-injected attributes may still cause a non-app hydration warning in Chrome/Edge. Verify in incognito with extensions disabled if needed.
+- No backend logic, database schema, or content-safety policy changed.
+
+---
 ## [2026-05-17] - AniPulse reusable theme foundation
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - UI/Product Polish

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useId, useState } from "react";
 import { useRouter } from "next/navigation";
 
 type SearchBoxProps = {
@@ -10,6 +10,7 @@ type SearchBoxProps = {
 
 export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps) {
   const router = useRouter();
+  const inputId = useId();
   const [query, setQuery] = useState(defaultValue);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -26,8 +27,20 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
   }
 
   return (
-    <form onSubmit={handleSubmit} className={compact ? "flex w-full max-w-xs gap-2" : "flex w-full max-w-2xl gap-3"}>
+    <form
+      onSubmit={handleSubmit}
+      className={compact ? "flex w-full max-w-xs gap-2" : "flex w-full max-w-2xl gap-3"}
+      role="search"
+      aria-label="Search anime and manga"
+    >
+      <label htmlFor={inputId} className="sr-only">
+        Search anime or manga
+      </label>
       <input
+        id={inputId}
+        name="q"
+        type="search"
+        autoComplete="off"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Search anime or manga..."
