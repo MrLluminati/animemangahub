@@ -153,7 +153,9 @@ After the PR is merged:
 pwsh .\scripts\dev-workflow.ps1 -Action postmerge -BranchName "feature/example-branch"
 ```
 
-If the remote branch was already deleted on GitHub, use:
+If the local or remote branch has already been deleted, the command reports a warning and continues instead of failing.
+
+Use `-SkipRemoteDelete` only when you intentionally want to leave the remote branch untouched:
 
 ```powershell
 pwsh .\scripts\dev-workflow.ps1 -Action postmerge -BranchName "feature/example-branch" -SkipRemoteDelete
@@ -171,6 +173,14 @@ pwsh .\scripts\dev-workflow.ps1 -Action tag -TagName "v0.1.0-beta.6" -TagMessage
 
 Use annotated beta tags for rollback points.
 
+The tag action is idempotent:
+
+- If the local tag already exists and points to the current `main`, it is accepted.
+- If the remote tag already exists and matches the local tag, it is accepted.
+- If the tag is missing locally, it is created.
+- If the tag is missing remotely, it is pushed.
+- If an existing local or remote tag points to a different commit, the command fails.
+
 ---
 
 ## Current Tag Sequence
@@ -181,6 +191,10 @@ v0.1.0-beta.2 = Phase 1B initial build
 v0.1.0-beta.3 = Phase 1B image-host hotfix
 v0.1.0-beta.4 = Phase 1B CI-safe local-development build
 v0.1.0-beta.5 = Phase 1C database caching build
+v0.1.0-beta.6 = Reusable PowerShell workflow build
+v0.1.0-beta.7 = Phase 1D cache observability build
+v0.1.0-beta.8 = Workflow verification build
+v0.1.0-beta.9 = Phase 1E frontend cache debug visibility
 ```
 
 ---

@@ -7,7 +7,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ## Current Status
 
 **Active Phase:** Phase 1 — MVP Catalog
-**Next Up:** Merge Anime Culture Platform strategy, then workflow hardening, filters, and legal watch/read links
+**Next Up:** Workflow hardening, then filters and legal watch/read links
 
 ---
 
@@ -86,9 +86,9 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Cache response types added
 - [x] Local visual cache debug test completed
 ### To Build Next
-- [ ] Merge Anime Culture Platform strategy into AniManga Hub as a single-platform direction
-- [ ] Add content safety policy, editorial policy, moderation policy, and legal watch/read link policy
-- [ ] Make workflow cleanup and tagging idempotent
+- [x] Merge Anime Culture Platform strategy into AniManga Hub as a single-platform direction
+- [x] Add content safety policy, editorial policy, moderation policy, and legal watch/read link policy
+- [x] Make workflow cleanup and tagging idempotent
 - [ ] Genre, year, and status filters
 - [ ] "Where to Watch" link system
 - [ ] "Where to Read" link system
@@ -166,4 +166,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-07 | Phase 1E frontend cache debug visibility added with development-only cache panel, frontend cache API helpers, and documentation |
 | 2026-05-07 | Summarized completed work through `v0.1.0-beta.9` and documented remaining Phase 1 priorities |
 | 2026-05-17 | Merged Anime Culture Platform strategy into AniManga Hub as a single-platform direction |
-
+| 2026-05-17 | Made workflow cleanup and tagging idempotent for repeated post-merge and beta-tag commands |

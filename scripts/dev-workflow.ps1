@@ -85,6 +85,100 @@ function Ensure-BackendEnvForLocalSqlite {
     }
 }
 
+function Test-LocalBranchExists {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    Go-Root
+    git show-ref --verify --quiet "refs/heads/$Name"
+    return ($LASTEXITCODE -eq 0)
+}
+
+function Test-RemoteBranchExists {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    Go-Root
+    $remoteBranch = git ls-remote --heads origin $Name
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "Could not check remote branch: $Name"
+    }
+
+    return [bool]$remoteBranch
+}
+
+function Test-LocalTagExists {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    Go-Root
+    git show-ref --tags --verify --quiet "refs/tags/$Name"
+    return ($LASTEXITCODE -eq 0)
+}
+
+function Get-LocalTagTargetSha {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    Go-Root
+    $targetSha = git rev-parse "$Name^{}"
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "Could not resolve local tag target: $Name"
+    }
+
+    return $targetSha.Trim()
+}
+
+function Get-RemoteTagTargetSha {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    Go-Root
+    $remoteTags = git ls-remote --tags origin $Name
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "Could not check remote tag: $Name"
+    }
+
+    if (-not $remoteTags) {
+        return $null
+    }
+
+    $peeledTag = $remoteTags | Where-Object { $_ -match "refs/tags/$([regex]::Escape($Name))\^\{\}$" } | Select-Object -First 1
+    if ($peeledTag) {
+        return (($peeledTag -split "\s+")[0]).Trim()
+    }
+
+    $directTag = $remoteTags | Where-Object { $_ -match "refs/tags/$([regex]::Escape($Name))$" } | Select-Object -First 1
+    if (-not $directTag) {
+        return $null
+    }
+
+    $directSha = (($directTag -split "\s+")[0]).Trim()
+    $localObjectType = git cat-file -t $directSha 2>$null
+
+    if ($LASTEXITCODE -eq 0 -and $localObjectType -eq "tag") {
+        $resolvedSha = git rev-parse "$directSha^{}"
+        if ($LASTEXITCODE -eq 0) {
+            return $resolvedSha.Trim()
+        }
+    }
+
+    return $directSha
+}
+
 function Start-Branch {
     if (-not $BranchName) {
         throw "BranchName is required for start action."
@@ -145,18 +239,24 @@ function Post-Merge-Cleanup {
     Invoke-CommandStep "Switch to main" { git checkout main }
     Invoke-CommandStep "Pull latest main" { git pull origin main }
 
-    $localBranches = git branch --format "%(refname:short)"
-    if ($localBranches -contains $BranchName) {
+    if (Test-LocalBranchExists -Name $BranchName) {
         Invoke-CommandStep "Delete local branch $BranchName" { git branch -d $BranchName }
     }
     else {
-        Write-Host "Local branch not found: $BranchName" -ForegroundColor Yellow
+        Write-Host "Local branch already absent: $BranchName" -ForegroundColor Yellow
     }
 
-    if (-not $SkipRemoteDelete) {
+    if ($SkipRemoteDelete) {
+        Write-Host "Skipping remote branch deletion for: $BranchName" -ForegroundColor Yellow
+    }
+    elseif (Test-RemoteBranchExists -Name $BranchName) {
         Invoke-CommandStep "Delete remote branch $BranchName" { git push origin --delete $BranchName }
     }
+    else {
+        Write-Host "Remote branch already absent: $BranchName" -ForegroundColor Yellow
+    }
 
+    git fetch origin --prune
     git status
     Write-Host "Post-merge cleanup completed." -ForegroundColor Green
 }
@@ -172,18 +272,45 @@ function Create-BetaTag {
 
     Assert-CleanMain
 
-    $existingTags = git tag
-    if ($existingTags -contains $TagName) {
-        throw "Tag already exists locally: $TagName"
+    $currentMainSha = (git rev-parse HEAD).Trim()
+    if ($LASTEXITCODE -ne 0) {
+        throw "Could not resolve current main commit."
     }
 
-    Invoke-CommandStep "Create tag $TagName" { git tag -a $TagName -m $TagMessage }
-    Invoke-CommandStep "Push tag $TagName" { git push origin $TagName }
+    $localTagExists = Test-LocalTagExists -Name $TagName
+    $remoteTagTargetSha = Get-RemoteTagTargetSha -Name $TagName
+    $remoteTagExists = [bool]$remoteTagTargetSha
+
+    if ($localTagExists) {
+        $localTagTargetSha = Get-LocalTagTargetSha -Name $TagName
+
+        if ($localTagTargetSha -ne $currentMainSha) {
+            throw "Local tag $TagName points to $localTagTargetSha, but current main is $currentMainSha."
+        }
+
+        Write-Host "Local tag already exists and points to current main: $TagName" -ForegroundColor Green
+    }
+    else {
+        Invoke-CommandStep "Create tag $TagName" { git tag -a $TagName -m $TagMessage }
+    }
+
+    $localTagTargetSha = Get-LocalTagTargetSha -Name $TagName
+
+    if ($remoteTagExists) {
+        if ($remoteTagTargetSha -ne $localTagTargetSha) {
+            throw "Remote tag $TagName points to $remoteTagTargetSha, but local tag points to $localTagTargetSha."
+        }
+
+        Write-Host "Remote tag already exists and matches local tag: $TagName" -ForegroundColor Green
+    }
+    else {
+        Invoke-CommandStep "Push tag $TagName" { git push origin $TagName }
+    }
 
     git status
     git tag
     git ls-remote --tags origin
-    Write-Host "Created and pushed tag: $TagName" -ForegroundColor Green
+    Write-Host "Tag is available locally and remotely: $TagName" -ForegroundColor Green
 }
 
 function Show-ProjectStatus {
@@ -196,7 +323,6 @@ function Show-ProjectStatus {
     Write-Host "Tags:" -ForegroundColor Cyan
     git tag
 }
-
 
 function Verify-ProjectState {
     Go-Root
@@ -252,6 +378,7 @@ function Verify-ProjectState {
     Write-Host ""
     Write-Host "Verification complete." -ForegroundColor Green
 }
+
 switch ($Action) {
     "start" { Start-Branch }
     "validate" { Validate-Project }
@@ -260,4 +387,3 @@ switch ($Action) {
     "status" { Show-ProjectStatus }
     "verify" { Verify-ProjectState }
 }
-
