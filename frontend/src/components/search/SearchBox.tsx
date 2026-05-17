@@ -28,6 +28,8 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
 
   return (
     <form
+      action="/search"
+      method="get"
       onSubmit={handleSubmit}
       className={compact ? "flex w-full max-w-xs gap-2" : "flex w-full max-w-2xl gap-3"}
       role="search"

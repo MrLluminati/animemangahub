@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import { SearchBox } from "@/components/search/SearchBox";
@@ -12,7 +14,7 @@ export function Header() {
       <div className="flex items-center justify-between gap-3">
         <BrandMark />
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
           {mainNavigation.map((item) => (
             <Link key={item.href} href={item.href} className="anipulse-nav-link">
               {item.label}

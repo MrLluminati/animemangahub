@@ -4,6 +4,7 @@ import { CacheDebugPanel } from "@/components/debug/CacheDebugPanel";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { GlowBackground } from "@/components/theme/GlowBackground";
+import { ThemeBootScript } from "@/components/theme/ThemeBootScript";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 import "./globals.css";
@@ -20,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <ThemeBootScript />
+      </head>
       <body className="min-h-screen antialiased">
         <ThemeProvider>
           <GlowBackground />

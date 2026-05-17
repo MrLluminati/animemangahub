@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 import { aniPulsePresets } from "@/theme/aniPulse";
 import type { AniPulseMode, AniPulseThemePreset } from "@/theme/themeTypes";
@@ -15,13 +15,17 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 const STORAGE_KEY = "anipulse-theme-mode";
 
-function getStoredMode(): AniPulseMode {
+function isAniPulseMode(value: string | null): value is AniPulseMode {
+  return value === "dark" || value === "light";
+}
+
+function getPreferredMode(): AniPulseMode {
   if (typeof window === "undefined") {
     return "dark";
   }
 
   const savedMode = window.localStorage.getItem(STORAGE_KEY);
-  if (savedMode === "dark" || savedMode === "light") {
+  if (isAniPulseMode(savedMode)) {
     return savedMode;
   }
 
@@ -35,32 +39,41 @@ function applyMode(mode: AniPulseMode) {
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setModeState] = useState<AniPulseMode>("dark");
-  const [isReady, setIsReady] = useState(false);
 
-  useEffect(() => {
-    const initialMode = getStoredMode();
-    setModeState(initialMode);
-    applyMode(initialMode);
-    setIsReady(true);
+  const setMode = useCallback((nextMode: AniPulseMode) => {
+    setModeState(nextMode);
+
+    if (typeof window !== "undefined") {
+      applyMode(nextMode);
+      window.localStorage.setItem(STORAGE_KEY, nextMode);
+    }
+  }, []);
+
+  const toggleMode = useCallback(() => {
+    setModeState((currentMode) => {
+      const nextMode = currentMode === "dark" ? "light" : "dark";
+
+      if (typeof window !== "undefined") {
+        applyMode(nextMode);
+        window.localStorage.setItem(STORAGE_KEY, nextMode);
+      }
+
+      return nextMode;
+    });
   }, []);
 
   useEffect(() => {
-    if (!isReady) {
-      return;
-    }
-
-    applyMode(mode);
-    window.localStorage.setItem(STORAGE_KEY, mode);
-  }, [mode, isReady]);
+    setMode(getPreferredMode());
+  }, [setMode]);
 
   const value = useMemo<ThemeContextValue>(() => {
     return {
       mode,
       theme: aniPulsePresets[mode],
-      setMode: setModeState,
-      toggleMode: () => setModeState((currentMode) => (currentMode === "dark" ? "light" : "dark"))
+      setMode,
+      toggleMode
     };
-  }, [mode]);
+  }, [mode, setMode, toggleMode]);
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
