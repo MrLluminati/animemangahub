@@ -28,41 +28,36 @@ export type JikanTitle = {
   volumes?: number | null;
 };
 
-export type JikanListResponse = {
-  data: JikanTitle[];
-};
-
-export type JikanSingleResponse = {
-  data: JikanTitle;
-};
+export type JikanListResponse = { data: JikanTitle[] };
+export type JikanSingleResponse = { data: JikanTitle };
 
 const JIKAN_BASE_URL = process.env.JIKAN_API_BASE ?? "https://api.jikan.moe/v4";
-const RATE_LIMIT_MS = 350;
-
+const RATE_LIMIT_MS = 450;
+let requestQueue = Promise.resolve();
 let lastRequestAt = 0;
 
 async function waitForRateLimit() {
-  const now = Date.now();
-  const elapsed = now - lastRequestAt;
+  const elapsed = Date.now() - lastRequestAt;
   const waitMs = Math.max(0, RATE_LIMIT_MS - elapsed);
-
-  if (waitMs > 0) {
-    await new Promise((resolve) => setTimeout(resolve, waitMs));
-  }
-
+  if (waitMs > 0) await new Promise((resolve) => setTimeout(resolve, waitMs));
   lastRequestAt = Date.now();
 }
 
+async function runRateLimited<T>(operation: () => Promise<T>) {
+  const run = requestQueue.then(async () => {
+    await waitForRateLimit();
+    return operation();
+  });
+  requestQueue = run.then(() => undefined, () => undefined);
+  return run;
+}
+
 export async function jikanFetch<T>(path: string): Promise<T> {
-  await waitForRateLimit();
-
-  const response = await fetch(`${JIKAN_BASE_URL}${path}`);
-
-  if (!response.ok) {
-    throw new Error(`Jikan request failed: ${response.status} ${response.statusText}`);
-  }
-
-  return response.json() as Promise<T>;
+  return runRateLimited(async () => {
+    const response = await fetch(`${JIKAN_BASE_URL}${path}`);
+    if (!response.ok) throw new Error(`Jikan request failed: ${response.status} ${response.statusText}`);
+    return response.json() as Promise<T>;
+  });
 }
 
 function mapNames(items?: NamedJikanResource[]) {

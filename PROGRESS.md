@@ -93,7 +93,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Genre, year, and status filters
 - [x] "Where to Watch" official-source discovery links
 - [x] "Where to Read" official-source discovery links
-- [ ] Improve short search query handling
+- [x] Improve short search query handling
 - [ ] Anime ↔ Manga cross-reference display
 - [ ] Catalog pagination and sorting improvements
 - [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
@@ -177,3 +177,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-17 | Improved AniPulse fonts, light-mode readability, pre-hydration theme loading, and mobile drawer behavior |
 | 2026-05-17 | Live-verified and tagged AniPulse theme foundation as `v0.1.0-beta.13` |
 | 2026-05-18 | Synchronized documentation through `v0.1.0-beta.13`; next issue is short search query handling |
+| 2026-05-18 | Improved short search query handling with resilient combined search, serialized Jikan requests, no-store frontend search fetches, and clearer single-character query behavior |

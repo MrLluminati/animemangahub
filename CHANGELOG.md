@@ -25,7 +25,28 @@ Format:
 
 ---
 
-## [2026-05-18] - Documentation sync through beta 13
+## [2026-05-18] - Short search query handling
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog
+**Commit:** `fix: improve short search query handling`
+
+### Fixed
+- Combined search no longer fails the whole response if only anime or manga search fails.
+- Jikan API requests are serialized through a rate-limit queue to reduce transient API pacing failures.
+- Search frontend fetches now use `cache: "no-store"` to avoid preserving stale empty responses.
+- Short but meaningful queries use a higher backend result limit.
+- Single-character queries are intentionally ignored with clearer UI feedback.
+
+### Changed
+- Updated search page styling to use AniPulse theme surfaces and text variables.
+- Added `docs/short-search-query-handling.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- No database schema or content-safety policy changed.
+- Verify with `One Piece`, `One`, `Naruto`, `Jo`, and a single-character query.
+
+---## [2026-05-18] - Documentation sync through beta 13
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Documentation
 **Commit:** `docs: sync progress through beta 13`
