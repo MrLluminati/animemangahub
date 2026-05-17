@@ -25,6 +25,23 @@ Format:
 
 ---
 
+## [2026-05-18] - Documentation sync through beta 13
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Documentation
+**Commit:** `docs: sync progress through beta 13`
+
+### Changed
+- Updated `README.md` current stable beta and completed-feature summary through `v0.1.0-beta.13`.
+- Updated `PROGRESS.md` current status, next steps, completed official-source discovery links, and beta 13 session log.
+- Updated `ROADMAP.md` Phase 1 snapshot to reflect completed filters, official-source links, workflow hardening, and AniPulse foundation.
+- Rewrote `docs/project-summary.md` through `v0.1.0-beta.13`.
+
+### Notes
+- This is a documentation-only sync.
+- No application code, backend logic, database schema, or content-safety policy changed.
+- Next implementation task remains short search query handling.
+
+---
 ## [2026-05-17] - AniPulse readability drawer and fonts hotfix
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - UI/Product Polish

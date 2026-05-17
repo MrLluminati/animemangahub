@@ -23,15 +23,15 @@ Core value: search anything, find where to watch/read it.
 - Anime ↔ Manga cross-links ("based on the manga by...")
 - Search with instant results
 - Genre, year, and status filters
-- Responsive design (mobile-first)
-- Dark mode
+- Responsive design (mobile-first through large/TV screens)
+- AniPulse dark/light theme system
 
 ---
 
 
 ## Phase 1 Progress Snapshot
 
-Current stable beta: `v0.1.0-beta.9`
+Current stable beta: `v0.1.0-beta.13`
 
 Completed within Phase 1:
 
@@ -43,16 +43,19 @@ Completed within Phase 1:
 - Local SQLite caching for Jikan responses
 - Cache observability endpoints
 - Development-only frontend cache debug panel
+- Workflow hardening for idempotent cleanup/tagging
+- Genre, year, and status filters
+- Official-source "Where to Watch" discovery sections
+- Official-source "Where to Read" discovery sections
+- AniPulse theme foundation with dark/light modes and responsive app shell
 
 Remaining Phase 1 priorities:
 
-- Workflow hardening for idempotent cleanup/tagging
-- Genre, year, and status filters
-- Legal “Where to Watch” links
-- Legal “Where to Read” links
-- Anime ↔ manga cross-reference display
-- Catalog pagination and sorting improvements
-- Deployment when hosting budget and secrets are ready
+- Improve short search query handling.
+- Continue AniPulse visual polish across catalog and detail pages.
+- Anime ↔ manga cross-reference display.
+- Catalog pagination and sorting improvements.
+- Deployment when hosting budget and secrets are ready.
 
 ---
 ## Content, Safety, and Legal Discovery Tracks
@@ -192,4 +195,3 @@ These are good ideas that don't fit current phases yet:
 - Schoolgirl/schoolboy sexualized content
 - Teen-coded sexual content
 - Incest, rape, coercion, non-consensual sexual themes, bestiality, or abuse-themed sexual content
-
