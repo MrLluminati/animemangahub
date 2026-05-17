@@ -25,6 +25,22 @@ Format:
 
 ---
 
+## [2026-05-17] - Agent instruction sync
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Project Documentation
+**Commit:** `docs: update agent instructions`
+
+### Added
+- `AGENTS.md` as a general AI-agent instruction file aligned with the current AniManga Hub direction.
+
+### Changed
+- Synced agent instructions with the merged Anime Culture Platform strategy, content safety rules, Indian compliance caution, and current Phase 1 state.
+
+### Notes
+- The old stashed `AGENTS.md` was not restored because it was outdated and still described the project as Phase 0/Foundation.
+- `.codex/config.toml` remains local and is intentionally not included in this documentation PR.
+
+---
 ## [2026-05-17] - Anime Culture Platform strategy merge
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Product Strategy and Documentation
