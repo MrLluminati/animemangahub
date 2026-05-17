@@ -25,6 +25,23 @@ Format:
 
 ---
 
+## [2026-05-17] - Workflow cleanup and tagging idempotency
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Project Operations
+**Commit:** `chore: make workflow cleanup and tagging idempotent`
+
+### Changed
+- Updated `scripts/dev-workflow.ps1` so `postmerge` treats missing local/remote branches as warnings instead of fatal errors.
+- Updated `scripts/dev-workflow.ps1` so `tag` accepts already-existing matching local/remote tags and only creates or pushes missing tags.
+- Updated `docs/workflow.md` with idempotent cleanup and tagging behavior.
+- Updated `docs/versioning.md` with the current beta tag table through `v0.1.0-beta.9`.
+- Updated `PROGRESS.md` to mark workflow cleanup/tagging idempotency complete.
+
+### Notes
+- Existing tags pointing to a different commit still fail deliberately.
+- This is workflow tooling hardening and may be tagged as `v0.1.0-beta.10` after merge if local verification passes.
+
+---
 ## [2026-05-17] - Agent instruction sync
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Project Documentation
@@ -485,4 +502,3 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
-

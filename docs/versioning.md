@@ -1,4 +1,4 @@
-﻿# Versioning and Rollback Workflow
+# Versioning and Rollback Workflow
 
 AniManga Hub uses beta release tags to preserve safe rollback points after stable milestones.
 
@@ -11,6 +11,14 @@ This project is developed in small, reviewable phases. Each working milestone sh
 | Tag | Meaning |
 |---|---|
 | `v0.1.0-beta.1` | Phase 1A working skeleton: Next.js frontend, Express backend, Jikan API wrapper, Prisma schema, and initial catalog UI |
+| `v0.1.0-beta.2` | Phase 1B initial detail pages and search build |
+| `v0.1.0-beta.3` | Phase 1B image-host handling hotfix |
+| `v0.1.0-beta.4` | Phase 1B CI-safe local-development build |
+| `v0.1.0-beta.5` | Phase 1C local SQLite database caching |
+| `v0.1.0-beta.6` | Reusable PowerShell workflow tooling |
+| `v0.1.0-beta.7` | Phase 1D cache observability |
+| `v0.1.0-beta.8` | Workflow verification tooling |
+| `v0.1.0-beta.9` | Phase 1E frontend cache debug visibility |
 
 ---
 
@@ -77,11 +85,12 @@ After a stable milestone is merged into `main`, create an annotated tag:
 git checkout main
 git pull origin main
 
-git tag -a v0.1.0-beta.2 -m "Phase 1B beta release"
-git push origin v0.1.0-beta.2
+pwsh .\scripts\dev-workflow.ps1 -Action tag -TagName "v0.1.0-beta.10" -TagMessage "Workflow idempotency beta release"
 ```
 
 Annotated tags are preferred because they preserve a message and release context.
+
+The workflow tag command is safe to re-run. If the local and remote tags already exist and point to the current `main`, the command reports success instead of failing. If either tag points to a different commit, the command fails to avoid silently moving rollback points.
 
 ---
 
