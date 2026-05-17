@@ -70,22 +70,22 @@ function getMangaLinks(title: string): LegalPlatformLink[] {
 
 export function LegalAvailabilityLinks({ item }: LegalAvailabilityLinksProps) {
   const links = item.type === "anime" ? getAnimeLinks(item.title) : getMangaLinks(item.title);
-  const heading = item.type === "anime" ? "Where to watch legally" : "Where to read legally";
+  const heading = item.type === "anime" ? "Where to watch" : "Where to read";
   const note =
     item.type === "anime"
-      ? "These links search official or lawful anime platforms. Availability can vary by region and may change over time."
-      : "These links search official or lawful manga publishers, stores, and reading platforms. Availability can vary by region and may change over time.";
+      ? "Check streaming platforms and official sources. Availability can vary by region and may change over time."
+      : "Check publishers, stores, and official reading platforms. Availability can vary by region and may change over time.";
 
   return (
     <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Legal discovery</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Availability</p>
           <h2 className="mt-3 text-2xl font-black text-white">{heading}</h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-300">{note}</p>
         </div>
         <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
-          Official links only
+          Official sources
         </span>
       </div>
 
@@ -110,8 +110,8 @@ export function LegalAvailabilityLinks({ item }: LegalAvailabilityLinksProps) {
       </div>
 
       <div className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-4 text-sm leading-7 text-amber-100">
-        AniManga Hub does not link to piracy sites, torrent mirrors, unofficial readers, hentai platforms, or adult redirects.
-        These buttons are discovery shortcuts and do not guarantee that this title is licensed on every platform or in every region.
+        AniManga Hub only points users toward official sources and safe discovery options.
+        These buttons are discovery shortcuts and do not guarantee that every title is available on every platform or in every region.
       </div>
     </section>
   );
