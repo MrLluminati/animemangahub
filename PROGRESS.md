@@ -6,8 +6,9 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Phase 1 — MVP Catalog
-**Next Up:** Apply AniPulse theme to homepage and catalog pages, then anime ↔ manga cross-reference display
+**Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
+**Current stable beta:** `v0.1.0-beta.13`
+**Next Up:** Improve short search query handling, then continue AniPulse page polish and anime ↔ manga cross-reference display
 
 ---
 
@@ -90,8 +91,9 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Add content safety policy, editorial policy, moderation policy, and legal watch/read link policy
 - [x] Make workflow cleanup and tagging idempotent
 - [x] Genre, year, and status filters
-- [ ] "Where to Watch" link system
-- [ ] "Where to Read" link system
+- [x] "Where to Watch" official-source discovery links
+- [x] "Where to Read" official-source discovery links
+- [ ] Improve short search query handling
 - [ ] Anime ↔ Manga cross-reference display
 - [ ] Catalog pagination and sorting improvements
 - [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
@@ -173,3 +175,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-17 | Stabilized AniPulse live verification issues for theme persistence, header responsiveness, mobile navigation, search accessibility, and app icon support |
 | 2026-05-17 | Repaired AniPulse client interactions for theme toggle, mobile drawer, search fallback, and footer completeness |
 | 2026-05-17 | Improved AniPulse fonts, light-mode readability, pre-hydration theme loading, and mobile drawer behavior |
+| 2026-05-17 | Live-verified and tagged AniPulse theme foundation as `v0.1.0-beta.13` |
+| 2026-05-18 | Synchronized documentation through `v0.1.0-beta.13`; next issue is short search query handling |

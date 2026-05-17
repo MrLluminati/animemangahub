@@ -1,6 +1,6 @@
 # AniManga Hub Project Summary
 
-Current stable beta: `v0.1.0-beta.9`
+Current stable beta: `v0.1.0-beta.13`
 
 This document summarizes the work completed so far and the next planned tasks for AniManga Hub.
 
@@ -36,6 +36,7 @@ This document summarizes the work completed so far and the next planned tasks fo
 - Catalog cards made clickable.
 - Search box added to header and homepage.
 - Next.js image host configuration fixed for MyAnimeList image URLs.
+- Rollback tags: `v0.1.0-beta.2` through `v0.1.0-beta.4`.
 
 ### Phase 1C — Local SQLite Database Caching
 
@@ -62,6 +63,38 @@ This document summarizes the work completed so far and the next planned tasks fo
 - Local visual test confirmed the panel shows cache totals, fresh entries, expired entries, and recent cache keys.
 - Rollback tag: `v0.1.0-beta.9`.
 
+### Phase 1F — Workflow Hardening
+
+- Reusable PowerShell workflow made safer for repeated cleanup and tagging.
+- Post-merge cleanup handles already-deleted branches.
+- Tagging handles existing local/remote tags idempotently.
+- Rollback tag: `v0.1.0-beta.10`.
+
+### Phase 1G — Catalog Filters
+
+- Genre, year, and status filters added to anime and manga catalog pages.
+- Frontend catalog pages support query-string filter state.
+- Backend filter routes added for anime and manga.
+- Rollback tag: `v0.1.0-beta.11`.
+
+### Phase 1H — Official-Source Discovery Links
+
+- Anime detail pages include "Where to watch" official-source discovery links.
+- Manga detail pages include "Where to read" official-source discovery links.
+- UI wording was softened to avoid heavy compliance language while preserving safe-link direction.
+- Rollback tag: `v0.1.0-beta.12`.
+
+### Phase 1I — AniPulse Theme Foundation
+
+- AniPulse theme direction selected as the reusable commercial theme system.
+- Dark mode: Tokyo Night / Modern Japan Night Life.
+- Light mode: Vintage Day / Vintage Japan Day Life.
+- Theme provider, theme toggle, app shell, responsive header, mobile drawer, footer, global tokens, and theme primitives added.
+- Epilogue, Hanken Grotesk, and Space Grotesk loaded through `next/font/google`.
+- Light-mode readability improved for the homepage, search box, and catalog title cards.
+- Live testing confirmed toggle behavior, persisted mode, right-side mobile drawer, readable light mode, and no `_next/static/chunks` client-hydration errors after a clean dev restart.
+- Rollback tag: `v0.1.0-beta.13`.
+
 ### Project Operations
 
 - PowerShell 7 workflow script added at `scripts/dev-workflow.ps1`.
@@ -73,12 +106,12 @@ This document summarizes the work completed so far and the next planned tasks fo
 
 ## Current Stable State
 
-`main` is stable through Phase 1E.
+`main` is stable through the AniPulse theme foundation.
 
 The current rollback-safe beta tag is:
 
 ```text
-v0.1.0-beta.9
+v0.1.0-beta.13
 ```
 
 Current local development status:
@@ -87,6 +120,10 @@ Current local development status:
 - Frontend runs on `http://localhost:3000`.
 - SQLite cache is active for local development.
 - Development-only cache debug panel appears in frontend development mode.
+- AniPulse dark/light mode is active in the app shell.
+- Theme preference persists across refresh.
+- Mobile navigation opens as a right-side drawer.
+- Homepage and catalog title cards are readable in light mode.
 
 ---
 
@@ -94,13 +131,24 @@ Current local development status:
 
 Recommended next tasks:
 
-1. Make workflow cleanup and tagging idempotent.
-2. Add genre, year, and status filters.
-3. Add legal “Where to Watch” links.
-4. Add legal “Where to Read” links.
-5. Add anime-to-manga cross-reference display.
-6. Improve catalog pagination and sorting.
-7. Keep deployment deferred until hosting budget and secrets are ready.
+1. Improve short search query handling.
+2. Continue AniPulse visual polish across catalog and detail pages.
+3. Add anime-to-manga cross-reference display.
+4. Improve catalog pagination and sorting.
+5. Keep deployment deferred until hosting budget and secrets are ready.
+
+---
+
+## Known Issues
+
+### Short search query handling
+
+Current verified behavior:
+
+- Search for `One Piece` returns results.
+- Search for `One` may return no results.
+
+This should be investigated as a separate backend/frontend search-handling task.
 
 ---
 

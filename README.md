@@ -23,9 +23,9 @@ The project owner is based in India, so Indian legal and cyber-law risk must be 
 
 ## Current Development Status
 
-Current stable beta: `v0.1.0-beta.9`
+Current stable beta: `v0.1.0-beta.13`
 
-Completed through Phase 1E:
+Completed through `v0.1.0-beta.13`:
 
 - Working Next.js frontend and Express backend
 - Jikan-powered anime and manga catalog
@@ -34,10 +34,13 @@ Completed through Phase 1E:
 - Cache health, stats, and clear endpoints
 - Development-only frontend cache debug panel
 - PowerShell 7 workflow automation for validation, cleanup, tagging, and verification
+- Genre, year, and status filters for anime and manga catalog pages
+- Official-source "Where to watch" and "Where to read" discovery sections
+- AniPulse theme foundation with dark/light modes, loaded theme fonts, readable light mode, and responsive mobile drawer
 
 Deployment is intentionally deferred until Vercel/Railway hosting and production secrets are ready.
 
-See `docs/project-summary.md`, `PROGRESS.md`, `docs/content-safety-policy.md`, and `docs/anime-culture-platform-merge-plan.md` for the current build state.
+See `docs/project-summary.md`, `PROGRESS.md`, `ROADMAP.md`, `docs/anipulse-theme-foundation.md`, `docs/content-safety-policy.md`, and `docs/anime-culture-platform-merge-plan.md` for the current build state.
 
 ## Live Site
 
@@ -167,4 +170,3 @@ Branch naming: `feature/`, `fix/`, `docs/`, `chore/`
 ## License
 
 MIT — see LICENSE file.
-
