@@ -25,6 +25,29 @@ Format:
 
 ---
 
+## [2026-05-17] - Catalog genre year and status filters
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog and Legal Discovery
+**Commit:** `feat: add catalog filters`
+
+### Added
+- `GET /api/anime/filter` for anime genre, year, and status filtering.
+- `GET /api/manga/filter` for manga genre, year, and status filtering.
+- `frontend/src/components/catalog/CatalogFilters.tsx` shared catalog filter form.
+
+### Changed
+- Updated anime and manga services with cache-backed filtered Jikan requests.
+- Updated anime and manga controllers with safe filter parsing and validation.
+- Updated anime and manga pages to show genre/year/status controls and filtered result counts.
+- Updated frontend API helpers for catalog filter requests.
+- Updated `PROGRESS.md`.
+
+### Notes
+- Filters use safe catalog metadata only.
+- No piracy, explicit content, adult redirects, or prohibited mature-content discovery features were added.
+- Legal watch/read links remain the next Phase 1 product priority.
+
+---
 ## [2026-05-17] - Workflow cleanup and tagging idempotency
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Project Operations
