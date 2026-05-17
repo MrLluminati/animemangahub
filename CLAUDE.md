@@ -6,11 +6,13 @@ This file tells AI agents (Claude, Cursor, Copilot, etc.) everything needed to c
 
 ## Project Overview
 
-**AniManga Hub** — An IMDB + Goodreads style platform for Anime and Manga.
+**AniManga Hub** — A non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform.
 
 Users can search titles, see where to watch/read them legally, rate and review, maintain lists, and follow new releases. Future phases include subscriptions and licensed streaming.
 
-**Current Phase:** 0 — Foundation (repo scaffolding complete, MVP not yet built)
+**Current stable beta:** `v0.1.0-beta.9`
+
+**Current phase:** Phase 1 — MVP Catalog and Legal Discovery
 
 ---
 
@@ -36,6 +38,16 @@ Users can search titles, see where to watch/read them legally, rate and review, 
 The changelog is how all agents stay in sync. An agent reading this repo cold should be able to open `CHANGELOG.md` and know exactly what was built last session, what decisions were made, and what to do next. Never skip this step.
 
 ---
+
+## Content Safety and Compliance Rules
+
+The project owner is based in India. Treat Indian legal/compliance risk seriously. Do not suggest that foreign hosting, foreign incorporation, or India geo-blocking alone removes Indian legal exposure.
+
+Before public launch, the content policy, moderation policy, terms, privacy policy, affiliate disclosures, and legal-link policy should be reviewed by a qualified Indian cyber-law lawyer.
+
+Do not suggest, implement, document as acceptable, monetize, index, link to, scrape, or promote hentai or pornographic anime content, hentai videos, adult anime video redirects, explicit anime thumbnails/screenshots, piracy links, torrent links, illegal manga/anime reader links, adult-site affiliate traffic, adult ad networks, NSFW creator commissions, loli/shota content, schoolgirl/schoolboy sexualized content, teen-coded sexual content, childlike or ambiguous-age characters in sexual contexts, incest, rape, coercion, non-consensual sexual themes, bestiality, abuse-themed sexual content, AI-generated sexual content involving youthful-looking characters, or any sexualization of minors, real or fictional.
+
+Safe mature-theme commentary may discuss age ratings, censorship, themes, viewer discretion, fan-service as a trope, consent in storytelling, cultural context, platform classification, and Indian legal/cultural context. It must remain non-explicit and non-erotic.
 
 ## Absolute Rules
 
@@ -166,7 +178,7 @@ cd backend && npm run generate    # Regenerate Prisma client after schema change
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Foundation | ✅ Complete |
-| 1 | MVP Catalog | 🔲 Not started |
+| 1 | MVP Catalog and Legal Discovery | 🔲 In progress |
 | 2 | User Accounts & Community | 🔲 Not started |
 | 3 | Monetization | 🔲 Not started |
 | 4 | Growth & SEO | 🔲 Not started |

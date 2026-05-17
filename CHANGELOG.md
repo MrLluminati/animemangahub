@@ -25,6 +25,31 @@ Format:
 
 ---
 
+## [2026-05-17] - Anime Culture Platform strategy merge
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Product Strategy and Documentation
+**Commit:** `docs: merge anime culture platform strategy`
+
+### Added
+- `docs/content-safety-policy.md`.
+- `docs/editorial-policy.md`.
+- `docs/moderation-policy.md`.
+- `docs/legal-watch-read-link-policy.md`.
+- `docs/anime-culture-platform-merge-plan.md`.
+
+### Changed
+- Updated `README.md` to position AniManga Hub as a catalog, legal discovery, review, and anime culture publication platform.
+- Updated `ROADMAP.md` with content/culture, moderation, legal watch/read, and safe marketplace direction.
+- Updated `CLAUDE.md` with strict content safety and Indian compliance instructions.
+- Updated `PROGRESS.md` with the merged single-platform strategy direction.
+
+### Notes
+- AniManga Hub remains one unified platform.
+- The project must remain legal, non-explicit, non-piracy, and safety-first.
+- Public comments, marketplace features, and mature-theme community features must not launch before moderation and policy controls exist.
+- Before launch, policies and public legal pages should be reviewed by a qualified Indian cyber-law lawyer.
+
+---
 ## [2026-05-07] - Documentation summary through beta 9
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Project Documentation
@@ -444,10 +469,4 @@ Format:
 
 ### Notes
 - Phase 1 (MVP Catalog) is ready to begin.
-
-
-
-
-
-
 

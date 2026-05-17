@@ -6,7 +6,7 @@ All planned features, prioritized by phase. Items move to `PROGRESS.md` when act
 
 ## Vision
 
-AniManga Hub becomes the definitive reference platform for anime and manga — the place every fan opens when they want to discover, track, or discuss. Not just a listing site, but a living community with the depth of MAL, the design of Letterboxd, and the utility of IMDB.
+AniManga Hub becomes a non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform. It combines catalog discovery, legal watch/read links, reviews, user tracking, editorial anime culture articles, censorship/media-literacy commentary, safe fandom education, and future community tools with strong moderation.
 
 ---
 
@@ -18,7 +18,7 @@ Core value: search anything, find where to watch/read it.
 - Manga catalog with metadata from MangaDex/Jikan
 - Anime detail pages (synopsis, trailer embed, cast, episodes, score)
 - Manga detail pages (synopsis, volumes, chapters, author, score)
-- "Where to Watch" links (Crunchyroll, Netflix, Funimation, etc.)
+- "Where to Watch" links (Crunchyroll, Netflix, etc.)
 - "Where to Read" links (Viz, MangaDex, etc.)
 - Anime ↔ Manga cross-links ("based on the manga by...")
 - Search with instant results
@@ -55,7 +55,36 @@ Remaining Phase 1 priorities:
 - Deployment when hosting budget and secrets are ready
 
 ---
-## Phase 2 — User Accounts & Community
+## Content, Safety, and Legal Discovery Tracks
+
+Before expanding community features, AniManga Hub must add and preserve these tracks:
+
+- Content & Culture publication.
+- Compliance & Moderation.
+- Legal Watch/Read Directory.
+- Future Safe Marketplace / Creator Directory with strict safety rules.
+
+Public comments, marketplace submissions, and mature-theme community features must not launch before reporting and moderation tools exist.
+
+---
+
+## Phase 2 — Editorial Content and Guides
+
+Core value: turn AniManga Hub into a safe anime/manga culture publication.
+
+- Article system
+- Article categories and tags
+- Author profiles
+- Editorial review workflow
+- Spoiler flags
+- Content rating labels
+- Mature-theme non-explicit labels
+- Legal platform guide pages
+- Safe SEO metadata
+
+---
+
+## Phase 3 — User Accounts & Moderated Community
 
 Core value: make it personal and social.
 
@@ -73,7 +102,7 @@ Core value: make it personal and social.
 
 ---
 
-## Phase 3 — Monetization
+## Phase 4 — Monetization
 
 Core value: generate revenue to sustain and grow.
 
@@ -90,7 +119,7 @@ Core value: generate revenue to sustain and grow.
 
 ---
 
-## Phase 4 — Growth & SEO
+## Phase 5 — Growth & SEO
 
 Core value: acquire users organically and keep them engaged.
 
@@ -110,7 +139,7 @@ Core value: acquire users organically and keep them engaged.
 
 ---
 
-## Phase 5 — Licensing & Partnerships
+## Phase 6 — Licensing & Partnerships
 
 Core value: become a destination, not just a directory.
 
@@ -152,4 +181,15 @@ These are good ideas that don't fit current phases yet:
 - User-submitted piracy links
 - Torrent tracking
 - Anything that puts the platform at legal risk
+- Hentai or pornographic anime hosting
+- Pornographic redirects
+- Adult anime video indexing
+- Explicit thumbnails or screenshots
+- Adult ad network monetization
+- NSFW commission marketplace
+- Sexualized minor-coded content
+- Loli/shota content
+- Schoolgirl/schoolboy sexualized content
+- Teen-coded sexual content
+- Incest, rape, coercion, non-consensual sexual themes, bestiality, or abuse-themed sexual content
 

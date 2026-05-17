@@ -1,17 +1,25 @@
 # 🎌 AniManga Hub
 
-> The IMDB + Goodreads for Anime and Manga — one platform to discover, track, review, and find where to watch or read everything.
+> A non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform.
 
 ## What is this?
 
-AniManga Hub is a catalog-first platform where users can:
+AniManga Hub is a catalog-first and culture-aware platform where users can:
 - Search and discover anime and manga in one place
 - See cross-links ("this anime is based on this manga")
 - Find out exactly where to watch or read legally
 - Rate, review, and maintain watchlists/readlists
 - Follow seasonal charts and new releases
-- (Phase 5+) Stream licensed content with a subscription
+- Read editorial anime culture articles and non-explicit mature-theme media-literacy commentary
 
+
+## Safety and Compliance Position
+
+AniManga Hub is not a hentai website, pornographic anime website, piracy website, torrent index, adult-video redirect site, or scraping/indexing platform for explicit anime content.
+
+The project must not host, redirect to, embed, scrape, index, promote, or monetize hentai or pornographic anime content, piracy links, torrent links, illegal readers, explicit thumbnails, adult-site affiliate traffic, NSFW commissions, loli/shota content, sexualized minor-coded content, or any sexualization of minors, real or fictional.
+
+The project owner is based in India, so Indian legal and cyber-law risk must be treated seriously. Foreign hosting, foreign incorporation, or India geo-blocking must not be treated as a complete risk shield. Before public launch, content policy, moderation policy, terms, privacy policy, affiliate disclosures, and legal-link policy should be reviewed by a qualified Indian cyber-law lawyer.
 
 ## Current Development Status
 
@@ -29,7 +37,7 @@ Completed through Phase 1E:
 
 Deployment is intentionally deferred until Vercel/Railway hosting and production secrets are ready.
 
-See `docs/project-summary.md` and `PROGRESS.md` for the current build state.
+See `docs/project-summary.md`, `PROGRESS.md`, `docs/content-safety-policy.md`, and `docs/anime-culture-platform-merge-plan.md` for the current build state.
 
 ## Live Site
 
