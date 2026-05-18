@@ -19,22 +19,28 @@ function getTitleHref(item: CatalogTitle) {
 export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps) {
   const router = useRouter();
   const inputId = useId();
-  const containerRef = useRef<HTMLFormElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const latestQueryRef = useRef("");
   const [query, setQuery] = useState(defaultValue);
   const [suggestions, setSuggestions] = useState<CatalogTitle[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [hasFocus, setHasFocus] = useState(false);
   const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false);
 
   useEffect(() => {
     setQuery(defaultValue);
+    setSuggestions([]);
+    setIsOpen(false);
   }, [defaultValue]);
 
   useEffect(() => {
     const trimmedQuery = query.trim();
+    latestQueryRef.current = trimmedQuery;
 
-    if (trimmedQuery.length < 2) {
+    if (!hasFocus || trimmedQuery.length < 2) {
       setSuggestions([]);
       setIsOpen(false);
+      setIsLoadingSuggestions(false);
       return;
     }
 
@@ -43,9 +49,9 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
       setIsLoadingSuggestions(true);
       const nextSuggestions = await getSearchSuggestions(trimmedQuery);
 
-      if (!cancelled) {
+      if (!cancelled && latestQueryRef.current === trimmedQuery) {
         setSuggestions(nextSuggestions.slice(0, 3));
-        setIsOpen(nextSuggestions.length > 0);
+        setIsOpen(nextSuggestions.length > 0 || trimmedQuery.length >= 2);
         setIsLoadingSuggestions(false);
       }
     }, 300);
@@ -54,11 +60,12 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
       cancelled = true;
       window.clearTimeout(timeout);
     };
-  }, [query]);
+  }, [query, hasFocus]);
 
   useEffect(() => {
     function handleDocumentClick(event: MouseEvent) {
       if (!containerRef.current?.contains(event.target as Node)) {
+        setHasFocus(false);
         setIsOpen(false);
       }
     }
@@ -77,52 +84,67 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
       return;
     }
 
+    setHasFocus(false);
     setIsOpen(false);
     router.push(`/search?q=${encodeURIComponent(trimmedQuery)}`);
   }
 
   function openSuggestion(item: CatalogTitle) {
+    setHasFocus(false);
     setIsOpen(false);
     router.push(getTitleHref(item));
   }
 
-  return (
-    <form
-      ref={containerRef}
-      action="/search"
-      method="get"
-      onSubmit={handleSubmit}
-      className={`relative ${compact ? "flex w-full max-w-xs gap-2" : "flex w-full max-w-2xl gap-3"}`}
-      role="search"
-      aria-label="Search anime and manga"
-    >
-      <label htmlFor={inputId} className="sr-only">
-        Search anime or manga
-      </label>
-      <input
-        id={inputId}
-        name="q"
-        type="search"
-        autoComplete="off"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        onFocus={() => setIsOpen(suggestions.length > 0)}
-        placeholder="Search anime or manga..."
-        className="anipulse-input flex-1 px-4 py-3 text-sm"
-        aria-autocomplete="list"
-      />
-      <button type="submit" className="anipulse-button anipulse-button-primary px-5 py-3 text-sm">
-        Search
-      </button>
+  const shouldShowSuggestions = hasFocus && (isOpen || isLoadingSuggestions);
+  const wrapperClass = compact ? "w-full max-w-sm" : "w-full max-w-2xl";
 
-      {isOpen || isLoadingSuggestions ? (
-        <div
-          id={`${inputId}-suggestions`}
-          role="listbox"
-          className="anipulse-surface absolute left-0 top-[calc(100%+0.5rem)] z-50 w-full min-w-[18rem] overflow-hidden p-2 shadow-[var(--ap-shadow-strong)]"
-        >
+  return (
+    <div ref={containerRef} className={`relative ${wrapperClass}`}>
+      <form
+        action="/search"
+        method="get"
+        onSubmit={handleSubmit}
+        className="flex w-full min-w-0 items-center gap-3"
+        role="search"
+        aria-label="Search anime and manga"
+      >
+        <label htmlFor={inputId} className="sr-only">
+          Search anime or manga
+        </label>
+        <input
+          id={inputId}
+          name="q"
+          type="search"
+          autoComplete="off"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          onFocus={() => {
+            setHasFocus(true);
+            if (suggestions.length > 0) {
+              setIsOpen(true);
+            }
+          }}
+          placeholder="Search anime or manga..."
+          className="anipulse-input min-h-12 min-w-0 flex-1 px-4 py-3 text-sm"
+          aria-describedby={`${inputId}-hint`}
+        />
+        <button type="submit" className="anipulse-button anipulse-button-primary min-h-12 shrink-0 px-5 py-3 text-sm">
+          Search
+        </button>
+      </form>
+
+      <p id={`${inputId}-hint`} className="sr-only">
+        Type at least two characters to show suggestions. Press Enter to open full search results.
+      </p>
+
+      {shouldShowSuggestions ? (
+        <div className="anipulse-surface absolute left-0 top-[calc(100%+0.5rem)] z-50 w-full overflow-hidden p-2 shadow-[var(--ap-shadow-strong)]">
           {isLoadingSuggestions && suggestions.length === 0 ? (
             <div className="px-3 py-2 text-sm text-[var(--ap-text-muted)]">Finding suggestions...</div>
+          ) : null}
+
+          {!isLoadingSuggestions && suggestions.length === 0 ? (
+            <div className="px-3 py-2 text-sm text-[var(--ap-text-muted)]">No suggestions found. Press Enter to search.</div>
           ) : null}
 
           {suggestions.map((item) => (
@@ -132,8 +154,6 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
               onMouseDown={(event) => event.preventDefault()}
               onClick={() => openSuggestion(item)}
               className="flex w-full items-center gap-3 rounded-[var(--ap-radius-control)] px-3 py-2 text-left transition hover:bg-[color-mix(in_srgb,var(--ap-primary-active)_12%,transparent)]"
-              role="option"
-              aria-selected="false"
             >
               <span className="relative h-14 w-10 shrink-0 overflow-hidden rounded bg-[var(--ap-surface-container-high)]">
                 {item.imageUrl ? (
@@ -152,6 +172,6 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
           ))}
         </div>
       ) : null}
-    </form>
+    </div>
   );
 }

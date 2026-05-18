@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { SearchBox } from "@/components/search/SearchBox";
+import { SearchSortSelect } from "@/components/search/SearchSortSelect";
 import { SurfaceCard } from "@/components/theme/SurfaceCard";
 import { ThemeBadge } from "@/components/theme/ThemeBadge";
 import { TitleCard } from "@/components/ui/TitleCard";
@@ -13,24 +12,12 @@ type SearchPageProps = {
   };
 };
 
-const sortOptions: Array<{ value: SearchSort; label: string }> = [
-  { value: "relevance", label: "Most relevant" },
-  { value: "popularity", label: "Most popular" },
-  { value: "score", label: "Highest rated" },
-  { value: "year", label: "Newest" }
-];
-
 function parseSort(value?: string): SearchSort {
   if (value === "score" || value === "popularity" || value === "year") {
     return value;
   }
 
   return "relevance";
-}
-
-function buildSearchHref(query: string, sort: SearchSort) {
-  const params = new URLSearchParams({ q: query, sort });
-  return `/search?${params.toString()}`;
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
@@ -63,19 +50,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2">
-              {sortOptions.map((option) => (
-                <Link
-                  key={option.value}
-                  href={buildSearchHref(query, option.value)}
-                  className={`anipulse-button px-4 py-2 text-xs ${
-                    sort === option.value ? "anipulse-button-primary" : "anipulse-button-secondary"
-                  }`}
-                >
-                  {option.label}
-                </Link>
-              ))}
-            </div>
+            <SearchSortSelect query={query} currentSort={sort} />
           </div>
 
           {results.length > 0 ? (
