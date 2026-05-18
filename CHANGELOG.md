@@ -25,6 +25,27 @@ Format:
 
 ---
 
+## [2026-05-18] - Search UI and sort dropdown fix
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog / UI Polish
+**Commit:** `fix: improve search UI and sort dropdown`
+
+### Fixed
+- Search input and button no longer visually collapse when suggestions are open.
+- Suggestions now open only while the search field is focused.
+- Search suggestion dropdown no longer opens automatically on the search results page from the default query value.
+- SearchBox accessibility warnings remain resolved.
+
+### Changed
+- Search sort controls now use a dropdown instead of separate buttons.
+- Added `SearchSortSelect`.
+- Added `docs/search-ui-sort-dropdown.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- No backend ranking logic, database schema, or content-safety policy changed.
+
+---
 ## [2026-05-18] - Ranked search suggestions
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog
