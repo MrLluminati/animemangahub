@@ -181,3 +181,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-18 | Added ranked search results, search sort modes, and top-three autocomplete suggestions |
 | 2026-05-18 | Fixed search suggestion layout and replaced separate sort buttons with a dropdown |
 | 2026-05-18 | Moved search suggestions into a portal overlay so dropdowns no longer expand the navbar and match input width only |
+| 2026-05-18 | Strengthened search suggestion portal visibility, z-index, viewport clamping, and pointer handling |
