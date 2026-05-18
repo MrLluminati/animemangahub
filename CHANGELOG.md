@@ -25,6 +25,24 @@ Format:
 
 ---
 
+## [2026-05-18] - Search suggestions close on scroll
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog / UI Polish
+**Commit:** `fix: close search suggestions on scroll`
+
+### Fixed
+- Search suggestion portal no longer remains floating above the navbar/header while the page is scrolled.
+- Suggestions now close on page scroll and can be reopened by focusing the search input again.
+
+### Changed
+- Overlay positioning still updates on resize, but page scroll now closes the dropdown instead of keeping it fixed.
+- Added `docs/search-suggestions-close-on-scroll.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- No backend ranking logic, database schema, or content-safety policy changed.
+
+---
 ## [2026-05-18] - Search suggestion portal visibility fix
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog / UI Polish

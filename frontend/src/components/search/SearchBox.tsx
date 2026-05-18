@@ -50,6 +50,12 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
   const [mounted, setMounted] = useState(false);
   const [overlayRect, setOverlayRect] = useState<SuggestionOverlayRect | null>(null);
 
+  function closeSuggestions() {
+    setHasFocus(false);
+    setIsOpen(false);
+    setOverlayRect(null);
+  }
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -103,13 +109,32 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
         return;
       }
 
-      setHasFocus(false);
-      setIsOpen(false);
+      closeSuggestions();
     }
 
     document.addEventListener("pointerdown", handleDocumentPointerDown);
     return () => document.removeEventListener("pointerdown", handleDocumentPointerDown);
   }, [inputId]);
+
+  useEffect(() => {
+    if (!mounted || !hasFocus || (!isOpen && !isLoadingSuggestions)) {
+      return;
+    }
+
+    function handlePageScroll(event: Event) {
+      const target = event.target as Node | null;
+      const overlay = document.getElementById(`${inputId}-suggestions-overlay`);
+
+      if (overlay && target && overlay.contains(target)) {
+        return;
+      }
+
+      closeSuggestions();
+    }
+
+    window.addEventListener("scroll", handlePageScroll, true);
+    return () => window.removeEventListener("scroll", handlePageScroll, true);
+  }, [mounted, hasFocus, isOpen, isLoadingSuggestions, inputId]);
 
   useEffect(() => {
     function updateOverlayRect() {
@@ -131,11 +156,9 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
     updateOverlayRect();
 
     window.addEventListener("resize", updateOverlayRect);
-    window.addEventListener("scroll", updateOverlayRect, true);
 
     return () => {
       window.removeEventListener("resize", updateOverlayRect);
-      window.removeEventListener("scroll", updateOverlayRect, true);
     };
   }, [mounted, hasFocus, isOpen, isLoadingSuggestions, suggestions.length, query]);
 
@@ -149,14 +172,12 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
       return;
     }
 
-    setHasFocus(false);
-    setIsOpen(false);
+    closeSuggestions();
     router.push(`/search?q=${encodeURIComponent(trimmedQuery)}`);
   }
 
   function openSuggestion(item: CatalogTitle) {
-    setHasFocus(false);
-    setIsOpen(false);
+    closeSuggestions();
     router.push(getTitleHref(item));
   }
 
