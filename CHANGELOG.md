@@ -25,6 +25,26 @@ Format:
 
 ---
 
+## [2026-05-18] - Search suggestion portal visibility fix
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog / UI Polish
+**Commit:** `fix: improve search suggestion portal visibility`
+
+### Fixed
+- Search suggestions now reliably render above sticky headers and page surfaces.
+- Portal-rendered suggestions are treated as inside-click targets so they do not close immediately.
+- Suggestion overlay is clamped to the viewport and remains aligned to the active input.
+- Focusing an input with an existing query reopens suggestions.
+
+### Changed
+- Added `docs/search-suggestion-portal-visibility.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- Backend suggestions endpoint was already working.
+- No backend ranking logic, database schema, or content-safety policy changed.
+
+---
 ## [2026-05-18] - Search suggestion overlay width fix
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog / UI Polish
