@@ -13,8 +13,14 @@ export type JikanTitle = {
   mal_id: number;
   title?: string;
   title_english?: string | null;
+  title_japanese?: string | null;
+  title_synonyms?: string[];
   images?: JikanImageSet;
   score?: number | null;
+  rank?: number | null;
+  popularity?: number | null;
+  members?: number | null;
+  favorites?: number | null;
   year?: number | null;
   status?: string | null;
   synopsis?: string | null;
@@ -28,18 +34,29 @@ export type JikanTitle = {
   volumes?: number | null;
 };
 
-export type JikanListResponse = { data: JikanTitle[] };
-export type JikanSingleResponse = { data: JikanTitle };
+export type JikanListResponse = {
+  data: JikanTitle[];
+};
+
+export type JikanSingleResponse = {
+  data: JikanTitle;
+};
 
 const JIKAN_BASE_URL = process.env.JIKAN_API_BASE ?? "https://api.jikan.moe/v4";
 const RATE_LIMIT_MS = 450;
+
 let requestQueue = Promise.resolve();
 let lastRequestAt = 0;
 
 async function waitForRateLimit() {
-  const elapsed = Date.now() - lastRequestAt;
+  const now = Date.now();
+  const elapsed = now - lastRequestAt;
   const waitMs = Math.max(0, RATE_LIMIT_MS - elapsed);
-  if (waitMs > 0) await new Promise((resolve) => setTimeout(resolve, waitMs));
+
+  if (waitMs > 0) {
+    await new Promise((resolve) => setTimeout(resolve, waitMs));
+  }
+
   lastRequestAt = Date.now();
 }
 
@@ -48,14 +65,23 @@ async function runRateLimited<T>(operation: () => Promise<T>) {
     await waitForRateLimit();
     return operation();
   });
-  requestQueue = run.then(() => undefined, () => undefined);
+
+  requestQueue = run.then(
+    () => undefined,
+    () => undefined
+  );
+
   return run;
 }
 
 export async function jikanFetch<T>(path: string): Promise<T> {
   return runRateLimited(async () => {
     const response = await fetch(`${JIKAN_BASE_URL}${path}`);
-    if (!response.ok) throw new Error(`Jikan request failed: ${response.status} ${response.statusText}`);
+
+    if (!response.ok) {
+      throw new Error(`Jikan request failed: ${response.status} ${response.statusText}`);
+    }
+
     return response.json() as Promise<T>;
   });
 }
@@ -68,9 +94,17 @@ export function mapJikanTitle(item: JikanTitle, type: JikanTitleKind) {
   return {
     malId: item.mal_id,
     title: item.title_english || item.title || "Untitled",
+    nativeTitle: item.title ?? null,
+    titleEnglish: item.title_english ?? null,
+    titleJapanese: item.title_japanese ?? null,
+    titleSynonyms: item.title_synonyms ?? [],
     type,
     imageUrl: item.images?.webp?.large_image_url || item.images?.jpg?.large_image_url || item.images?.jpg?.image_url || null,
     score: item.score ?? null,
+    rank: item.rank ?? null,
+    popularity: item.popularity ?? null,
+    members: item.members ?? null,
+    favorites: item.favorites ?? null,
     year: item.year ?? null,
     status: item.status ?? null,
     synopsis: item.synopsis ?? null,

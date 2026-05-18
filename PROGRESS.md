@@ -8,7 +8,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 **Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
 **Current stable beta:** `v0.1.0-beta.13`
-**Next Up:** Improve short search query handling, then continue AniPulse page polish and anime ↔ manga cross-reference display
+**Next Up:** Live-verify ranked search suggestions, then continue AniPulse page polish and anime ↔ manga cross-reference display
 
 ---
 
@@ -178,3 +178,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-17 | Live-verified and tagged AniPulse theme foundation as `v0.1.0-beta.13` |
 | 2026-05-18 | Synchronized documentation through `v0.1.0-beta.13`; next issue is short search query handling |
 | 2026-05-18 | Improved short search query handling with resilient combined search, serialized Jikan requests, no-store frontend search fetches, and clearer single-character query behavior |
+| 2026-05-18 | Added ranked search results, search sort modes, and top-three autocomplete suggestions |

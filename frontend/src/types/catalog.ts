@@ -1,9 +1,17 @@
 export type CatalogTitle = {
   malId: number;
   title: string;
+  nativeTitle?: string | null;
+  titleEnglish?: string | null;
+  titleJapanese?: string | null;
+  titleSynonyms?: string[];
   type: "anime" | "manga";
   imageUrl: string | null;
   score: number | null;
+  rank?: number | null;
+  popularity?: number | null;
+  members?: number | null;
+  favorites?: number | null;
   year: number | null;
   status: string | null;
   synopsis: string | null;
@@ -15,4 +23,5 @@ export type CatalogTitle = {
   episodes?: number | null;
   chapters?: number | null;
   volumes?: number | null;
+  relevanceScore?: number;
 };

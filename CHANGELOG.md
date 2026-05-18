@@ -25,6 +25,28 @@ Format:
 
 ---
 
+## [2026-05-18] - Ranked search suggestions
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog
+**Commit:** `feat: add ranked search suggestions`
+
+### Added
+- Ranked backend search result scoring for exact matches, title starts-with matches, title contains matches, metadata boosts, and popularity signals.
+- `GET /api/search/suggestions?q=...` endpoint for top-three search suggestions.
+- Search sort modes for relevance, popularity, score, and year.
+- Autocomplete dropdown in `SearchBox` with poster thumbnails, title, type, year, and score.
+- `docs/ranked-search-suggestions.md`.
+
+### Changed
+- Search page now supports sortable ranked results.
+- Search service mapping now includes additional metadata fields used for ranking.
+- Updated `PROGRESS.md`.
+
+### Notes
+- Search remains powered by Jikan public API responses; typo tolerance and local full-text indexing remain future work.
+- No database schema or content-safety policy changed.
+
+---
 ## [2026-05-18] - Short search query handling
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog
