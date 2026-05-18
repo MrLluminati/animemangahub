@@ -6,7 +6,12 @@ const DETAIL_CACHE_TTL_SECONDS = 60 * 60 * 24;
 const SEARCH_CACHE_TTL_SECONDS = 60 * 60;
 const FILTER_CACHE_TTL_SECONDS = 60 * 60;
 
-export type AnimeFilterOptions = { genre?: number; year?: number; status?: "airing" | "complete" | "upcoming"; limit?: number };
+export type AnimeFilterOptions = {
+  genre?: number;
+  year?: number;
+  status?: "airing" | "complete" | "upcoming";
+  limit?: number;
+};
 
 export async function fetchTrendingAnime() {
   return getOrSetCache("anime:trending", LIST_CACHE_TTL_SECONDS, async () => {
@@ -20,11 +25,27 @@ export async function fetchFilteredAnime(options: AnimeFilterOptions = {}) {
   const genreKey = options.genre ?? "any";
   const yearKey = options.year ?? "any";
   const statusKey = options.status ?? "any";
+
   return getOrSetCache(`anime:filter:${genreKey}:${yearKey}:${statusKey}:${limit}`, FILTER_CACHE_TTL_SECONDS, async () => {
-    const searchParams = new URLSearchParams({ limit: String(limit), order_by: "score", sort: "desc" });
-    if (options.genre) searchParams.set("genres", String(options.genre));
-    if (options.year) { searchParams.set("start_date", `${options.year}-01-01`); searchParams.set("end_date", `${options.year}-12-31`); }
-    if (options.status) searchParams.set("status", options.status);
+    const searchParams = new URLSearchParams({
+      limit: String(limit),
+      order_by: "score",
+      sort: "desc"
+    });
+
+    if (options.genre) {
+      searchParams.set("genres", String(options.genre));
+    }
+
+    if (options.year) {
+      searchParams.set("start_date", `${options.year}-01-01`);
+      searchParams.set("end_date", `${options.year}-12-31`);
+    }
+
+    if (options.status) {
+      searchParams.set("status", options.status);
+    }
+
     const payload = await jikanFetch<JikanListResponse>(`/anime?${searchParams.toString()}`);
     return payload.data.map((item) => mapJikanTitle(item, "anime"));
   });
@@ -39,9 +60,17 @@ export async function fetchAnimeById(id: number) {
 
 export async function searchAnime(query: string, limit = 12) {
   const trimmedQuery = query.trim().toLowerCase();
-  const searchLimit = trimmedQuery.length <= 3 ? Math.max(limit, 16) : limit;
-  return getOrSetCache(`anime:search:${trimmedQuery}:${searchLimit}`, SEARCH_CACHE_TTL_SECONDS, async () => {
-    const searchParams = new URLSearchParams({ q: trimmedQuery, limit: String(searchLimit), order_by: "score", sort: "desc", sfw: "true" });
+  const searchLimit = trimmedQuery.length <= 3 ? Math.max(limit, 24) : limit;
+
+  return getOrSetCache(`anime:search:${trimmedQuery}:${searchLimit}:ranked`, SEARCH_CACHE_TTL_SECONDS, async () => {
+    const searchParams = new URLSearchParams({
+      q: trimmedQuery,
+      limit: String(searchLimit),
+      order_by: "members",
+      sort: "desc",
+      sfw: "true"
+    });
+
     const payload = await jikanFetch<JikanListResponse>(`/anime?${searchParams.toString()}`);
     return payload.data.map((item) => mapJikanTitle(item, "anime"));
   });
