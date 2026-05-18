@@ -25,6 +25,25 @@ Format:
 
 ---
 
+## [2026-05-18] - Search suggestion overlay width fix
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog / UI Polish
+**Commit:** `fix: prevent search suggestions from expanding navbar`
+
+### Fixed
+- Header search suggestions no longer visually expand the navbar/header area.
+- Search suggestion dropdown width now matches the input field only instead of covering the search button.
+- Suggestion dropdowns remain positioned under the active search input across the site.
+
+### Changed
+- Search suggestions now render through a React portal to `document.body`.
+- Added `docs/search-suggestion-overlay-width.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- No backend ranking logic, database schema, or content-safety policy changed.
+
+---
 ## [2026-05-18] - Search UI and sort dropdown fix
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog / UI Polish
