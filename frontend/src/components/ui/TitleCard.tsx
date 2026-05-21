@@ -5,9 +5,10 @@ import type { CatalogTitle } from "@/types/catalog";
 
 type TitleCardProps = {
   item: CatalogTitle;
+  priority?: boolean;
 };
 
-export function TitleCard({ item }: TitleCardProps) {
+export function TitleCard({ item, priority = false }: TitleCardProps) {
   const metaParts = [
     item.type,
     item.year ? String(item.year) : null,
@@ -26,6 +27,7 @@ export function TitleCard({ item }: TitleCardProps) {
               alt={item.title}
               fill
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+              priority={priority}
               className="object-cover transition duration-300 group-hover:scale-105"
             />
           </div>

@@ -30,7 +30,15 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "AniManga Hub",
-  description: "Discover anime and manga, explore reviews, and find official watch/read sources."
+  description: "Discover anime and manga, explore reviews, and find official watch/read sources.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.svg"
+  }
 };
 
 export default function RootLayout({

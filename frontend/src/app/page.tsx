@@ -47,7 +47,7 @@ export default async function HomePage() {
           <Link href="/anime" className="text-sm font-semibold text-[var(--ap-primary-active)] hover:underline">View all</Link>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {anime.slice(0, 8).map((item) => <TitleCard key={`anime-${item.malId}`} item={item} />)}
+          {anime.slice(0, 8).map((item, index) => <TitleCard key={`anime-${item.malId}`} item={item} priority={index === 0} />)}
         </div>
       </section>
 
