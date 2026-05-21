@@ -28,6 +28,7 @@ export function TitleCard({ item, priority = false }: TitleCardProps) {
               fill
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
               priority={priority}
+              unoptimized
               className="object-cover transition duration-300 group-hover:scale-105"
             />
           </div>

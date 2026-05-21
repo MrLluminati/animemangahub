@@ -9,7 +9,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 **Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
 **Current stable beta:** `v0.1.0-beta.14`
 **Latest maintenance:** PR #30 — dev console warnings cleanup
-**Next Up:** Anime ↔ manga cross-reference display, then catalog pagination and sorting improvements
+**Next Up:** Complete mobile QA reliability fixes, then anime ↔ manga cross-reference display
 
 ---
 
@@ -193,3 +193,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-18 | Tagged `v0.1.0-beta.14` for ranked search suggestions and began cleanup of non-blocking dev console warnings |
 | 2026-05-21 | Merged PR #30 dev-console cleanup: favicon route, metadata icon declarations, and LCP image priority support |
 | 2026-05-21 | Synchronized documentation after `v0.1.0-beta.14` and PR #30 maintenance |
+| 2026-05-22 | Mobile QA found image optimizer 500s and suggestion 502s; added reliability fixes for external images, stale-cache fallback, and soft-failing suggestions |

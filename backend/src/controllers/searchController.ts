@@ -66,7 +66,7 @@ export async function searchSuggestions(req: Request, res: Response) {
 
     res.json(suggestions);
   } catch (error) {
-    console.error(error);
-    res.status(502).json({ message: "Failed to search suggestions" });
+    console.warn("Search suggestions unavailable; returning empty suggestions.", error);
+    res.json([]);
   }
 }
