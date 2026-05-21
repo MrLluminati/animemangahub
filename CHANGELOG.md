@@ -25,6 +25,27 @@ Format:
 
 ---
 
+## [2026-05-22] - Mobile image and suggestion reliability
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - QA / Reliability
+**Commit:** `fix: improve mobile image and suggestion reliability`
+
+### Fixed
+- Catalog title images no longer route through the local Next.js image optimizer, avoiding `/_next/image` 500 errors for external MAL image URLs during mobile QA.
+- Search suggestion thumbnails also bypass the local image optimizer.
+- Cache refresh failures now fall back to stale cached data when available.
+- Search suggestions now fail soft with an empty array instead of returning `502 Bad Gateway` for temporary upstream failures.
+
+### Changed
+- Added `docs/mobile-image-suggestion-reliability.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- Search ranking logic is unchanged.
+- No database schema or content-safety policy changed.
+- Full search endpoint still surfaces hard backend failure with `502`; only suggestions fail soft because they are non-critical assistance.
+
+---
 ## [2026-05-21] - Documentation sync after beta 14 maintenance
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - Documentation

@@ -7,7 +7,7 @@ export type CacheResult<T> = {
   meta: {
     key: string;
     source: string;
-    cacheStatus: "hit" | "miss" | "stale";
+    cacheStatus: "hit" | "miss" | "stale" | "stale-fallback";
     fetchedAt: string;
     expiresAt: string;
   };
@@ -17,7 +17,7 @@ function buildExpiryDate(ttlSeconds: number) {
   return new Date(Date.now() + ttlSeconds * 1000);
 }
 
-function logCacheEvent(status: "hit" | "miss" | "stale", key: string) {
+function logCacheEvent(status: "hit" | "miss" | "stale" | "stale-fallback", key: string) {
   if (process.env.NODE_ENV !== "test") {
     console.log(`[cache:${status}] ${key}`);
   }
@@ -62,37 +62,57 @@ export async function getOrSetCacheWithMeta<T>(
 
   logCacheEvent(cached ? "stale" : "miss", key);
 
-  const fresh = await factory();
-  const payload = JSON.stringify(fresh);
-  const expiresAt = buildExpiryDate(ttlSeconds);
+  try {
+    const fresh = await factory();
+    const payload = JSON.stringify(fresh);
+    const expiresAt = buildExpiryDate(ttlSeconds);
 
-  const saved = await prisma.apiCache.upsert({
-    where: { key },
-    update: {
-      payload,
-      source,
-      fetchedAt: now,
-      expiresAt
-    },
-    create: {
-      key,
-      payload,
-      source,
-      fetchedAt: now,
-      expiresAt
-    }
-  });
+    const saved = await prisma.apiCache.upsert({
+      where: { key },
+      update: {
+        payload,
+        source,
+        fetchedAt: now,
+        expiresAt
+      },
+      create: {
+        key,
+        payload,
+        source,
+        fetchedAt: now,
+        expiresAt
+      }
+    });
 
-  return {
-    data: fresh,
-    meta: {
-      key,
-      source: saved.source,
-      cacheStatus: cached ? "stale" : "miss",
-      fetchedAt: saved.fetchedAt.toISOString(),
-      expiresAt: saved.expiresAt.toISOString()
+    return {
+      data: fresh,
+      meta: {
+        key,
+        source: saved.source,
+        cacheStatus: cached ? "stale" : "miss",
+        fetchedAt: saved.fetchedAt.toISOString(),
+        expiresAt: saved.expiresAt.toISOString()
+      }
+    };
+  } catch (error) {
+    if (cached) {
+      logCacheEvent("stale-fallback", key);
+      console.warn(`[cache:stale-fallback] ${key}`, error);
+
+      return {
+        data: JSON.parse(cached.payload) as T,
+        meta: {
+          key,
+          source: cached.source,
+          cacheStatus: "stale-fallback",
+          fetchedAt: cached.fetchedAt.toISOString(),
+          expiresAt: cached.expiresAt.toISOString()
+        }
+      };
     }
-  };
+
+    throw error;
+  }
 }
 
 export async function getCacheHealth() {

@@ -214,7 +214,7 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
               >
                 <span className="relative h-14 w-10 shrink-0 overflow-hidden rounded bg-[var(--ap-surface-container-high)]">
                   {item.imageUrl ? (
-                    <Image src={item.imageUrl} alt="" fill sizes="40px" className="object-cover" />
+                    <Image src={item.imageUrl} alt="" fill sizes="40px" unoptimized className="object-cover" />
                   ) : null}
                 </span>
                 <span className="min-w-0 flex-1">
