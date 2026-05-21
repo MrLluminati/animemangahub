@@ -183,3 +183,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-18 | Moved search suggestions into a portal overlay so dropdowns no longer expand the navbar and match input width only |
 | 2026-05-18 | Strengthened search suggestion portal visibility, z-index, viewport clamping, and pointer handling |
 | 2026-05-18 | Updated search suggestions to close on page scroll so portal dropdowns do not float above the navbar |
+| 2026-05-18 | Tagged `v0.1.0-beta.14` for ranked search suggestions and began cleanup of non-blocking dev console warnings |

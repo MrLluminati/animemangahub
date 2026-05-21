@@ -55,8 +55,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
           {results.length > 0 ? (
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {results.map((item) => (
-                <TitleCard key={`${item.type}-${item.malId}`} item={item} />
+              {results.map((item, index) => (
+                <TitleCard key={`${item.type}-${item.malId}`} item={item} priority={index === 0} />
               ))}
             </div>
           ) : (

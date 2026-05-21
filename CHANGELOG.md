@@ -25,6 +25,26 @@ Format:
 
 ---
 
+## [2026-05-18] - Dev console warnings cleanup
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI Polish / Maintenance
+**Commit:** `chore: reduce dev console warnings`
+
+### Fixed
+- Added `/favicon.ico` so the browser no longer reports a missing favicon request.
+- Added priority loading to first above-the-fold title card images to reduce Next.js LCP image warnings.
+
+### Changed
+- Updated metadata icon declarations.
+- Added optional `priority` support to `TitleCard`.
+- Added `docs/dev-console-warnings-cleanup.md`.
+- Updated `PROGRESS.md`.
+
+### Notes
+- No search behavior, backend ranking logic, database schema, or content-safety policy changed.
+- React DevTools / browser-extension instrumentation warnings may still appear in development.
+
+---
 ## [2026-05-18] - Search suggestions close on scroll
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog / UI Polish
