@@ -1,4 +1,4 @@
-# PROGRESS.md â€” Build Log
+# PROGRESS.md — Build Log
 
 A running log of what's been completed, decisions made, and what comes next. Update this every session.
 
@@ -7,26 +7,27 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ## Current Status
 
 **Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
-**Current stable beta:** `v0.1.0-beta.13`
-**Next Up:** Live-verify ranked search suggestions, then continue AniPulse page polish and anime ↔ manga cross-reference display
+**Current stable beta:** `v0.1.0-beta.14`
+**Latest maintenance:** PR #30 — dev console warnings cleanup
+**Next Up:** Anime ↔ manga cross-reference display, then catalog pagination and sorting improvements
 
 ---
 
-## Phase 0 â€” Foundation âœ…
+## Phase 0 — Foundation ✅
 
 ### Completed
 - [x] GitHub repo structure created
-- [x] `README.md` â€” full project overview and setup guide
-- [x] `CLAUDE.md` â€” AI agent instructions and project context
-- [x] `PROGRESS.md` â€” this file
-- [x] `ROADMAP.md` â€” full feature backlog
-- [x] `.env.example` â€” all required environment variables documented
-- [x] `.gitignore` â€” comprehensive ignore rules
-- [x] `docs/architecture.md` â€” technology decisions explained
-- [x] `docs/api.md` â€” external API reference
-- [x] `database/migrations/` â€” folder ready for SQL migrations
-- [x] `database/seeds/` â€” folder ready for seed scripts
-- [x] `.github/workflows/deploy.yml` â€” CI/CD pipeline scaffold
+- [x] `README.md` — full project overview and setup guide
+- [x] `CLAUDE.md` — AI agent instructions and project context
+- [x] `PROGRESS.md` — this file
+- [x] `ROADMAP.md` — full feature backlog
+- [x] `.env.example` — all required environment variables documented
+- [x] `.gitignore` — comprehensive ignore rules
+- [x] `docs/architecture.md` — technology decisions explained
+- [x] `docs/api.md` — external API reference
+- [x] `database/migrations/` — folder ready for SQL migrations
+- [x] `database/seeds/` — folder ready for seed scripts
+- [x] `.github/workflows/deploy.yml` — CI/CD pipeline scaffold
 - [x] Frontend folder scaffolded
 - [x] Backend folder scaffolded
 
@@ -40,7 +41,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 1 â€” MVP Catalog ðŸ”²
+## Phase 1 — MVP Catalog 🔲
 
 ### Completed in Phase 1A
 - [x] Next.js app initialised manually inside `/frontend`
@@ -67,7 +68,6 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Catalog cards made clickable
 - [x] Search box added to header and homepage
 
-
 ### Completed in Phase 1C
 - [x] Prisma `ApiCache` model added
 - [x] Local SQLite cache added for Jikan API responses
@@ -86,21 +86,29 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Frontend cache health/stats API helpers added
 - [x] Cache response types added
 - [x] Local visual cache debug test completed
-### To Build Next
+
+### Completed in Phase 1F
 - [x] Merge Anime Culture Platform strategy into AniManga Hub as a single-platform direction
 - [x] Add content safety policy, editorial policy, moderation policy, and legal watch/read link policy
 - [x] Make workflow cleanup and tagging idempotent
 - [x] Genre, year, and status filters
 - [x] "Where to Watch" official-source discovery links
 - [x] "Where to Read" official-source discovery links
-- [x] Improve short search query handling
+- [x] AniPulse reusable theme foundation
+- [x] Ranked search suggestions
+- [x] Search sort modes: relevance, popularity, score, and year
+- [x] Search UI polish for portal suggestions, dropdown width, scroll behavior, and sort dropdown
+- [x] Dev-console cleanup for favicon and LCP image priority warnings
+
+### To Build Next
 - [ ] Anime ↔ Manga cross-reference display
 - [ ] Catalog pagination and sorting improvements
+- [ ] Continue AniPulse visual polish across catalog and detail pages
 - [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
 
 ---
 
-## Phase 2 â€” User Accounts & Community ðŸ”²
+## Phase 2 — User Accounts & Community 🔲
 
 ### To Build
 - [ ] NextAuth.js setup (Google + Discord)
@@ -114,7 +122,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 3 â€” Monetization ðŸ”²
+## Phase 3 — Monetization 🔲
 
 ### To Build
 - [ ] Ad slot placements in layout
@@ -125,7 +133,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 4 â€” Growth & SEO ðŸ”²
+## Phase 4 — Growth & SEO 🔲
 
 ### To Build
 - [ ] Dynamic sitemap generation
@@ -140,7 +148,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ---
 
-## Phase 5 â€” Licensing & Partnerships ðŸ”²
+## Phase 5 — Licensing & Partnerships 🔲
 
 ### To Build
 - [ ] Embedded licensed video player
@@ -160,7 +168,6 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-07 | Phase 1A merged into `main`; created rollback-safe beta tag `v0.1.0-beta.1`; added documentation plan for beta versioning and rollback workflow |
 | 2026-05-07 | Phase 1B prepared: detail pages, clickable cards, combined search, and expanded Jikan metadata mapping |
 | 2026-05-07 | Disabled deployment jobs until Vercel/Railway hosting is configured; lint/type-check remains active in GitHub Actions |
-
 | 2026-05-07 | Phase 1C local SQLite caching added with Prisma ApiCache, cache-first Jikan fetching, local migration, and validation workflow |
 | 2026-05-07 | Added reusable PowerShell 7 development workflow script and documented mandatory PR, validation, cleanup, and beta-tag process |
 | 2026-05-07 | Phase 1D cache observability added: cache health, stats, clear endpoints, cache logs, and documentation |
@@ -184,3 +191,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-18 | Strengthened search suggestion portal visibility, z-index, viewport clamping, and pointer handling |
 | 2026-05-18 | Updated search suggestions to close on page scroll so portal dropdowns do not float above the navbar |
 | 2026-05-18 | Tagged `v0.1.0-beta.14` for ranked search suggestions and began cleanup of non-blocking dev console warnings |
+| 2026-05-21 | Merged PR #30 dev-console cleanup: favicon route, metadata icon declarations, and LCP image priority support |
+| 2026-05-21 | Synchronized documentation after `v0.1.0-beta.14` and PR #30 maintenance |

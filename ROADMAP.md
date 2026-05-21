@@ -21,7 +21,8 @@ Core value: search anything, find where to watch/read it.
 - "Where to Watch" links (Crunchyroll, Netflix, etc.)
 - "Where to Read" links (Viz, MangaDex, etc.)
 - Anime ↔ Manga cross-links ("based on the manga by...")
-- Search with instant results
+- Ranked search with top-three autocomplete suggestions
+- Search sort modes for relevance, popularity, score, and year
 - Genre, year, and status filters
 - Responsive design (mobile-first through large/TV screens)
 - AniPulse dark/light theme system
@@ -31,7 +32,7 @@ Core value: search anything, find where to watch/read it.
 
 ## Phase 1 Progress Snapshot
 
-Current stable beta: `v0.1.0-beta.13`
+Current stable beta: `v0.1.0-beta.14`
 
 Completed within Phase 1:
 
@@ -48,13 +49,17 @@ Completed within Phase 1:
 - Official-source "Where to Watch" discovery sections
 - Official-source "Where to Read" discovery sections
 - AniPulse theme foundation with dark/light modes and responsive app shell
+- Ranked full search
+- Top-three autocomplete search suggestions
+- Search sort modes for relevance, popularity, score, and year
+- Search UI polish for suggestion overlay behavior and sort dropdown
+- Dev-console cleanup after `v0.1.0-beta.14`
 
 Remaining Phase 1 priorities:
 
-- Improve short search query handling.
-- Continue AniPulse visual polish across catalog and detail pages.
 - Anime ↔ manga cross-reference display.
 - Catalog pagination and sorting improvements.
+- Continue AniPulse visual polish across catalog and detail pages.
 - Deployment when hosting budget and secrets are ready.
 
 ---

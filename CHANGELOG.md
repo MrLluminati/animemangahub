@@ -25,6 +25,23 @@ Format:
 
 ---
 
+## [2026-05-21] - Documentation sync after beta 14 maintenance
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - Documentation
+**Commit:** `docs: sync after beta 14 maintenance`
+
+### Changed
+- Updated `README.md` to reflect `v0.1.0-beta.14` and PR #30 maintenance.
+- Updated `PROGRESS.md` current status, completed items, next tasks, and session log.
+- Updated `ROADMAP.md` Phase 1 progress snapshot.
+- Updated `docs/project-summary.md` through ranked search suggestions and dev-console cleanup.
+
+### Notes
+- Documentation-only change.
+- No app code, backend logic, database schema, or content-safety policy changed.
+- Next implementation target remains anime ↔ manga cross-reference display.
+
+---
 ## [2026-05-18] - Dev console warnings cleanup
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - UI Polish / Maintenance
