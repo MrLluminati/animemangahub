@@ -23,13 +23,15 @@ The project owner is based in India, so Indian legal and cyber-law risk must be 
 
 ## Current Development Status
 
-Current stable beta: `v0.1.0-beta.13`
+Current stable beta: `v0.1.0-beta.14`
 
-Completed through `v0.1.0-beta.13`:
+Completed through `v0.1.0-beta.14`:
 
 - Working Next.js frontend and Express backend
 - Jikan-powered anime and manga catalog
-- Detail pages and search
+- Detail pages and ranked search
+- Top-three autocomplete search suggestions
+- Search sort modes for relevance, popularity, score, and year
 - Local SQLite cache using Prisma
 - Cache health, stats, and clear endpoints
 - Development-only frontend cache debug panel
@@ -37,10 +39,11 @@ Completed through `v0.1.0-beta.13`:
 - Genre, year, and status filters for anime and manga catalog pages
 - Official-source "Where to watch" and "Where to read" discovery sections
 - AniPulse theme foundation with dark/light modes, loaded theme fonts, readable light mode, and responsive mobile drawer
+- Post-beta-14 dev-console cleanup for favicon and LCP image priority warnings
 
 Deployment is intentionally deferred until Vercel/Railway hosting and production secrets are ready.
 
-See `docs/project-summary.md`, `PROGRESS.md`, `ROADMAP.md`, `docs/anipulse-theme-foundation.md`, `docs/content-safety-policy.md`, and `docs/anime-culture-platform-merge-plan.md` for the current build state.
+See `docs/project-summary.md`, `PROGRESS.md`, `ROADMAP.md`, `docs/ranked-search-suggestions.md`, `docs/dev-console-warnings-cleanup.md`, `docs/anipulse-theme-foundation.md`, `docs/content-safety-policy.md`, and `docs/anime-culture-platform-merge-plan.md` for the current build state.
 
 ## Live Site
 

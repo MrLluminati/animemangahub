@@ -1,6 +1,6 @@
 # AniManga Hub Project Summary
 
-Current stable beta: `v0.1.0-beta.13`
+Current stable beta: `v0.1.0-beta.14`
 
 This document summarizes the work completed so far and the next planned tasks for AniManga Hub.
 
@@ -95,6 +95,24 @@ This document summarizes the work completed so far and the next planned tasks fo
 - Live testing confirmed toggle behavior, persisted mode, right-side mobile drawer, readable light mode, and no `_next/static/chunks` client-hydration errors after a clean dev restart.
 - Rollback tag: `v0.1.0-beta.13`.
 
+### Phase 1J — Ranked Search Suggestions
+
+- Short search query handling improved with resilient combined search, serialized Jikan requests, and no-store frontend search fetches.
+- Ranked backend search added for exact title matches, title starts-with matches, title contains matches, metadata boosts, and popularity signals.
+- `GET /api/search/suggestions?q=...` added for top-three autocomplete suggestions.
+- Search sort modes added for relevance, popularity, score, and year.
+- Search box autocomplete dropdown added with poster thumbnail, title, type, year, and score.
+- Search sort controls converted to a dropdown selector.
+- Search suggestion portal behavior stabilized so dropdowns do not expand the navbar, match input width, remain visible above page layers, and close on scroll.
+- Rollback tag: `v0.1.0-beta.14`.
+
+### Post-Beta-14 Maintenance
+
+- Added `/favicon.ico` and metadata icon declarations.
+- Added optional `priority` support to `TitleCard`.
+- Marked first above-the-fold title card images as priority to reduce Next.js LCP image warnings.
+- Added `docs/dev-console-warnings-cleanup.md`.
+
 ### Project Operations
 
 - PowerShell 7 workflow script added at `scripts/dev-workflow.ps1`.
@@ -106,12 +124,12 @@ This document summarizes the work completed so far and the next planned tasks fo
 
 ## Current Stable State
 
-`main` is stable through the AniPulse theme foundation.
+`main` is stable through ranked search suggestions and post-beta-14 dev-console cleanup.
 
 The current rollback-safe beta tag is:
 
 ```text
-v0.1.0-beta.13
+v0.1.0-beta.14
 ```
 
 Current local development status:
@@ -124,6 +142,10 @@ Current local development status:
 - Theme preference persists across refresh.
 - Mobile navigation opens as a right-side drawer.
 - Homepage and catalog title cards are readable in light mode.
+- Ranked search suggestions appear under active search inputs.
+- Search suggestion overlays close on page scroll.
+- Search results can be sorted by relevance, popularity, score, and year.
+- Browser favicon request is satisfied by `/favicon.ico`.
 
 ---
 
@@ -131,24 +153,22 @@ Current local development status:
 
 Recommended next tasks:
 
-1. Improve short search query handling.
-2. Continue AniPulse visual polish across catalog and detail pages.
-3. Add anime-to-manga cross-reference display.
-4. Improve catalog pagination and sorting.
-5. Keep deployment deferred until hosting budget and secrets are ready.
+1. Add anime-to-manga cross-reference display.
+2. Improve catalog pagination and sorting.
+3. Continue AniPulse visual polish across catalog and detail pages.
+4. Keep deployment deferred until hosting budget and secrets are ready.
 
 ---
 
 ## Known Issues
 
-### Short search query handling
+### Development-only console noise
 
-Current verified behavior:
+React DevTools or browser-extension instrumentation warnings may still appear in development. Treat them as non-blocking unless they reproduce in a clean browser profile without extensions.
 
-- Search for `One Piece` returns results.
-- Search for `One` may return no results.
+### Build-time backend fetch warnings
 
-This should be investigated as a separate backend/frontend search-handling task.
+Frontend production builds may show `ECONNREFUSED` fetch messages if the backend is not running during static generation. The build currently completes successfully despite those messages. A future improvement can make build-time catalog fallbacks quieter.
 
 ---
 
