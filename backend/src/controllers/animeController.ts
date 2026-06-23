@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import { fetchAnimeById, fetchFilteredAnime, fetchTrendingAnime, searchAnime } from "../services/animeService";
+import { fetchTitleRelations } from "../services/relationService";
 
 const ANIME_STATUSES = new Set(["airing", "complete", "upcoming"]);
 
@@ -30,6 +31,11 @@ function parseOptionalAnimeStatus(value: unknown) {
 
   const parsed = String(value).trim().toLowerCase();
   return ANIME_STATUSES.has(parsed) ? (parsed as "airing" | "complete" | "upcoming") : null;
+}
+
+function parseRequiredPositiveInteger(value: unknown) {
+  const parsed = Number(value);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : null;
 }
 
 export async function getTrendingAnime(_req: Request, res: Response) {
@@ -72,9 +78,9 @@ export async function getFilteredAnime(req: Request, res: Response) {
 }
 
 export async function getAnimeById(req: Request, res: Response) {
-  const id = Number(req.params.id);
+  const id = parseRequiredPositiveInteger(req.params.id);
 
-  if (!Number.isInteger(id) || id <= 0) {
+  if (id === null) {
     res.status(400).json({ message: "Invalid anime id" });
     return;
   }
@@ -85,6 +91,23 @@ export async function getAnimeById(req: Request, res: Response) {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to fetch anime detail" });
+  }
+}
+
+export async function getAnimeRelations(req: Request, res: Response) {
+  const id = parseRequiredPositiveInteger(req.params.id);
+
+  if (id === null) {
+    res.status(400).json({ message: "Invalid anime id" });
+    return;
+  }
+
+  try {
+    const relations = await fetchTitleRelations("anime", id);
+    res.json(relations);
+  } catch (error) {
+    console.warn("Anime relations unavailable; returning empty relation groups.", error);
+    res.json([]);
   }
 }
 

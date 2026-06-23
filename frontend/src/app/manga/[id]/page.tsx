@@ -2,8 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { LegalAvailabilityLinks } from "@/components/catalog/LegalAvailabilityLinks";
+import { RelatedTitles } from "@/components/catalog/RelatedTitles";
 import { DetailHero } from "@/components/ui/DetailHero";
-import { getMangaById } from "@/lib/api";
+import { getMangaById, getMangaRelations } from "@/lib/api";
 
 type MangaDetailPageProps = {
   params: {
@@ -12,7 +13,10 @@ type MangaDetailPageProps = {
 };
 
 export default async function MangaDetailPage({ params }: MangaDetailPageProps) {
-  const manga = await getMangaById(params.id);
+  const [manga, relations] = await Promise.all([
+    getMangaById(params.id),
+    getMangaRelations(params.id)
+  ]);
 
   if (!manga) {
     notFound();
@@ -25,6 +29,8 @@ export default async function MangaDetailPage({ params }: MangaDetailPageProps) 
       </Link>
 
       <DetailHero item={manga} />
+
+      <RelatedTitles groups={relations} />
 
       <LegalAvailabilityLinks item={manga} />
     </div>

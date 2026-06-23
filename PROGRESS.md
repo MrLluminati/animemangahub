@@ -8,8 +8,8 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 **Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
 **Current stable beta:** `v0.1.0-beta.14`
-**Latest maintenance:** PR #30 — dev console warnings cleanup
-**Next Up:** Complete mobile UI spacing QA, then anime ↔ manga cross-reference display
+**Latest maintenance:** PR #33 — CTA button spacing polish
+**Next Up:** QA anime ↔ manga cross-reference display, then catalog pagination and sorting improvements
 
 ---
 
@@ -101,7 +101,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Dev-console cleanup for favicon and LCP image priority warnings
 
 ### To Build Next
-- [ ] Anime ↔ Manga cross-reference display
+- [x] Anime ↔ Manga cross-reference display
 - [ ] Catalog pagination and sorting improvements
 - [ ] Continue AniPulse visual polish across catalog and detail pages
 - [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
@@ -195,3 +195,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-21 | Synchronized documentation after `v0.1.0-beta.14` and PR #30 maintenance |
 | 2026-05-22 | Mobile QA found image optimizer 500s and suggestion 502s; added reliability fixes for external images, stale-cache fallback, and soft-failing suggestions |
 | 2026-05-22 | Tight homepage CTA button padding found during visual QA; increased reusable ThemeButton padding, minimum height, and CTA pair spacing |
+| 2026-06-24 | Added anime ↔ manga cross-reference display with cached relation endpoints and reusable related-title UI |
