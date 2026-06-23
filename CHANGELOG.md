@@ -25,6 +25,23 @@ Format:
 
 ---
 
+## [2026-05-22] - CTA button spacing polish
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI QA / Polish
+**Commit:** `fix: improve CTA button spacing`
+
+### Fixed
+- Increased homepage CTA button internal padding.
+- Added consistent minimum CTA button height for better visual balance and touch comfort.
+- Prevented CTA label wrapping in compact layouts.
+- Increased spacing between the `Explore Anime` and `Explore Manga` CTA buttons.
+
+### Notes
+- This is a visual polish fix only.
+- Search button sizing is not changed.
+- No API, cache, database, routing, or content-safety behavior changed.
+
+---
 ## [2026-05-22] - Mobile image and suggestion reliability
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - QA / Reliability

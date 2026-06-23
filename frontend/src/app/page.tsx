@@ -27,7 +27,7 @@ export default async function HomePage() {
           <div>
             <SearchBox />
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
             <ThemeButton as={Link} href="/anime">
               Explore Anime
             </ThemeButton>
