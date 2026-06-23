@@ -25,3 +25,15 @@ export type CatalogTitle = {
   volumes?: number | null;
   relevanceScore?: number;
 };
+
+export type RelatedCatalogTitle = {
+  malId: number;
+  title: string;
+  type: "anime" | "manga";
+  url: string | null;
+};
+
+export type CatalogRelationGroup = {
+  relation: string;
+  entries: RelatedCatalogTitle[];
+};

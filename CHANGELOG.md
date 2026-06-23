@@ -25,6 +25,31 @@ Format:
 
 ---
 
+## [2026-06-24] - Anime manga cross-reference display
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - MVP Catalog
+**Commit:** `feat: add anime manga cross references`
+
+### Added
+- Cached backend relation service for Jikan anime/manga relation data.
+- `GET /api/anime/:id/relations` endpoint.
+- `GET /api/manga/:id/relations` endpoint.
+- Frontend relation API helpers.
+- Reusable `RelatedTitles` component.
+- Related-title sections on anime and manga detail pages.
+- `docs/anime-manga-cross-references.md`.
+
+### Changed
+- Anime and manga detail pages now fetch title details and relation groups in parallel.
+- `CatalogRelationGroup` and `RelatedCatalogTitle` frontend types added.
+- `PROGRESS.md` updated for the new feature.
+
+### Notes
+- Relation data is treated as non-critical metadata; relation failures return an empty list instead of breaking detail pages.
+- No database schema or content-safety policy changed.
+- Relation cards currently use compact text links because Jikan relation payloads do not include poster images.
+
+---
 ## [2026-05-22] - CTA button spacing polish
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - UI QA / Polish
