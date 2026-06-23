@@ -25,6 +25,22 @@ Format:
 
 ---
 
+## [2026-06-24] - Cross-reference light theme readability
+**Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
+**Phase:** Phase 1 - UI QA / Polish
+**Commit:** `fix: improve cross reference light readability`
+
+### Fixed
+- Improved light-theme readability for the related-title cross-reference section.
+- Strengthened relation card text contrast, borders, backgrounds, type badges, and open-link color in light mode.
+- Kept dark-theme related-title styling intact while moving relation-card styling into reusable AniPulse CSS classes.
+
+### Notes
+- This is a visual QA fix for the cross-reference feature.
+- No API, cache, route, database, or content-safety behavior changed.
+- `v0.1.0-beta.15` should be tagged only after this readability fix is merged and live QA passes.
+
+---
 ## [2026-06-24] - Anime manga cross-reference display
 **Agent/Author:** GPT-5.5 Thinking + Human: MrLluminati
 **Phase:** Phase 1 - MVP Catalog
