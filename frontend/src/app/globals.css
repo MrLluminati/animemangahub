@@ -331,3 +331,87 @@ a {
     font-size: 18px;
   }
 }
+
+.anipulse-related-section {
+  background: color-mix(in srgb, var(--ap-surface-container) 82%, transparent);
+}
+
+.anipulse-related-description {
+  color: var(--ap-text-muted);
+}
+
+.anipulse-related-badge {
+  border: 1px solid var(--ap-border-strong);
+  background: color-mix(in srgb, var(--ap-primary-active) 12%, transparent);
+  color: var(--ap-primary-active);
+}
+
+.anipulse-related-group {
+  border: 1px solid var(--ap-border);
+  background: color-mix(in srgb, var(--ap-surface-container) 72%, transparent);
+}
+
+.anipulse-related-group-title {
+  color: var(--ap-text-muted);
+}
+
+.anipulse-related-link {
+  border: 1px solid var(--ap-border);
+  background: color-mix(in srgb, var(--ap-surface-container-lowest) 80%, transparent);
+  color: var(--ap-text);
+}
+
+.anipulse-related-link:hover {
+  border-color: var(--ap-border-strong);
+  background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
+}
+
+.anipulse-related-type {
+  border: 1px solid var(--ap-border);
+  color: var(--ap-text-muted);
+}
+
+.anipulse-related-open {
+  color: var(--ap-primary-active);
+}
+
+:root[data-theme="light"] .anipulse-related-section {
+  background: var(--ap-surface-container-lowest);
+}
+
+:root[data-theme="light"] .anipulse-related-description,
+:root[data-theme="light"] .anipulse-related-group-title {
+  color: #334155;
+}
+
+:root[data-theme="light"] .anipulse-related-badge {
+  border-color: rgba(45, 62, 80, 0.72);
+  background: #fff7ea;
+  color: #7f1d1d;
+}
+
+:root[data-theme="light"] .anipulse-related-group {
+  border-color: rgba(45, 62, 80, 0.46);
+  background: #fffaf0;
+}
+
+:root[data-theme="light"] .anipulse-related-link {
+  border-color: rgba(45, 62, 80, 0.42);
+  background: #ffffff;
+  color: #111827;
+}
+
+:root[data-theme="light"] .anipulse-related-link:hover {
+  border-color: #bc243c;
+  background: #fff1f2;
+}
+
+:root[data-theme="light"] .anipulse-related-type {
+  border-color: rgba(45, 62, 80, 0.5);
+  background: #f8f1e3;
+  color: #1f2937;
+}
+
+:root[data-theme="light"] .anipulse-related-open {
+  color: #9f1239;
+}

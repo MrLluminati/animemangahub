@@ -9,7 +9,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 **Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
 **Current stable beta:** `v0.1.0-beta.14`
 **Latest maintenance:** PR #33 — CTA button spacing polish
-**Next Up:** QA anime ↔ manga cross-reference display, then catalog pagination and sorting improvements
+**Next Up:** Complete cross-reference light-theme readability QA, then tag v0.1.0-beta.15
 
 ---
 
@@ -196,3 +196,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-22 | Mobile QA found image optimizer 500s and suggestion 502s; added reliability fixes for external images, stale-cache fallback, and soft-failing suggestions |
 | 2026-05-22 | Tight homepage CTA button padding found during visual QA; increased reusable ThemeButton padding, minimum height, and CTA pair spacing |
 | 2026-06-24 | Added anime ↔ manga cross-reference display with cached relation endpoints and reusable related-title UI |
+| 2026-06-24 | Improved light-theme readability for related-title cross-reference cards after live QA |
