@@ -42,15 +42,15 @@ export function CatalogFilters({
   return (
     <form
       action={action}
-      className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-2xl shadow-black/20"
+      className="anipulse-surface p-5"
     >
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end">
         <label className="flex-1 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400">Genre</span>
+          <span className="anipulse-label text-xs text-[var(--ap-text-muted)]">Genre</span>
           <select
             name="genre"
             defaultValue={selectedGenre ?? ""}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-orange-400"
+            className="anipulse-input w-full px-4 py-3 text-sm"
           >
             <option value="">Any genre</option>
             {GENRE_OPTIONS.map((option) => (
@@ -62,11 +62,11 @@ export function CatalogFilters({
         </label>
 
         <label className="flex-1 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400">Year</span>
+          <span className="anipulse-label text-xs text-[var(--ap-text-muted)]">Year</span>
           <select
             name="year"
             defaultValue={selectedYear ?? ""}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-orange-400"
+            className="anipulse-input w-full px-4 py-3 text-sm"
           >
             <option value="">Any year</option>
             {YEAR_OPTIONS.map((option) => (
@@ -78,11 +78,11 @@ export function CatalogFilters({
         </label>
 
         <label className="flex-1 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400">Status</span>
+          <span className="anipulse-label text-xs text-[var(--ap-text-muted)]">Status</span>
           <select
             name="status"
             defaultValue={selectedStatus ?? ""}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition focus:border-orange-400"
+            className="anipulse-input w-full px-4 py-3 text-sm"
           >
             <option value="">Any status</option>
             {statusOptions.map((option) => (
@@ -96,13 +96,13 @@ export function CatalogFilters({
         <div className="flex gap-3">
           <button
             type="submit"
-            className="rounded-2xl bg-orange-500 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-orange-400"
+            className="anipulse-button anipulse-button-primary px-5 py-3 text-sm"
           >
             Apply filters
           </button>
           <Link
             href={action}
-            className="rounded-2xl border border-white/10 px-5 py-3 text-sm font-bold text-slate-200 transition hover:border-orange-300 hover:text-orange-200"
+            className="anipulse-button anipulse-button-secondary px-5 py-3 text-sm"
           >
             Reset
           </Link>

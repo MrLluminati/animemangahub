@@ -2,7 +2,7 @@
 
 Current stable beta: `v0.1.0-beta.14`
 
-This document summarizes the work completed so far and the next planned tasks for AniManga Hub.
+This document summarizes the work completed so far and the next planned tasks for AniManga Wire.
 
 ---
 
@@ -126,6 +126,8 @@ This document summarizes the work completed so far and the next planned tasks fo
 
 `main` is stable through ranked search suggestions and post-beta-14 dev-console cleanup.
 
+Website development is now on hold after the AniManga Wire asset integration checkpoint. Active work has moved to the Shorts/Reels workspace under `shorts/`.
+
 The current rollback-safe beta tag is:
 
 ```text
@@ -157,6 +159,8 @@ Recommended next tasks:
 2. Improve catalog pagination and sorting.
 3. Continue AniPulse visual polish across catalog and detail pages.
 4. Keep deployment deferred until hosting budget and secrets are ready.
+
+These website tasks are parked until website development is explicitly resumed.
 
 ---
 

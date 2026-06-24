@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { brand } from "@/config/brand";
+
 const footerGroups = [
   {
     title: "Explore",
@@ -32,10 +34,11 @@ export function Footer() {
     <footer className="relative border-t border-[var(--ap-border)] bg-[var(--ap-surface-glass)]">
       <div className="mx-auto grid max-w-[1800px] gap-8 px-4 py-10 text-sm text-[var(--ap-text-muted)] sm:px-6 md:grid-cols-[1.2fr,2fr] lg:px-12">
         <div className="space-y-3">
-          <p className="font-display text-xl font-black text-[var(--ap-text)]">AniManga Hub</p>
+          <p className="font-display text-xl font-black text-[var(--ap-text)]">{brand.brandName}</p>
           <p className="max-w-xl leading-7">
-            Built with AniPulse: a mobile-first anime, manga, guide, and culture discovery theme. Data is shown through public metadata APIs, with official-source discovery and no hosted anime or manga content.
+            {brand.tagline} Safe anime and manga culture coverage, official-source discovery, and no hosted anime or manga content.
           </p>
+          <p className="text-xs font-bold text-[var(--ap-primary-active)]">{brand.website} / {brand.handle}</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-3">

@@ -24,8 +24,8 @@ export default async function MangaDetailPage({ params }: MangaDetailPageProps) 
 
   return (
     <div className="space-y-8">
-      <Link href="/manga" className="text-sm font-semibold text-orange-300 hover:text-orange-200">
-        ← Back to manga
+      <Link href="/manga" className="text-sm font-semibold text-[var(--ap-primary-active)] hover:underline">
+        Back to manga
       </Link>
 
       <DetailHero item={manga} />

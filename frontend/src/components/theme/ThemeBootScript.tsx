@@ -2,7 +2,7 @@ export function ThemeBootScript() {
   const script = `
 (function () {
   try {
-    var storageKey = "anipulse-theme-mode";
+    var storageKey = "animanga-wire-theme-mode";
     var savedMode = window.localStorage.getItem(storageKey);
     var preferredMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
     var mode = savedMode === "dark" || savedMode === "light" ? savedMode : preferredMode;

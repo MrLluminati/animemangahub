@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { SearchBox } from "@/components/search/SearchBox";
@@ -5,6 +6,7 @@ import { SurfaceCard } from "@/components/theme/SurfaceCard";
 import { ThemeBadge } from "@/components/theme/ThemeBadge";
 import { ThemeButton } from "@/components/theme/ThemeButton";
 import { TitleCard } from "@/components/ui/TitleCard";
+import { brand } from "@/config/brand";
 import { getTopManga, getTrendingAnime } from "@/lib/api";
 
 export default async function HomePage() {
@@ -16,24 +18,37 @@ export default async function HomePage() {
   return (
     <div className="space-y-12">
       <SurfaceCard elevated className="p-8 md:p-12">
-        <div className="space-y-6">
-          <ThemeBadge>AniManga Hub</ThemeBadge>
-          <h1 className="anipulse-heading max-w-4xl text-4xl md:text-6xl">
-            The discovery hub for anime and manga fans.
-          </h1>
-          <p className="max-w-2xl text-lg leading-8 text-[var(--ap-text-muted)]">
-            Search titles, explore trending anime and manga, and find official watch/read sources with reviews and personal lists coming next.
-          </p>
-          <div>
-            <SearchBox />
+        <div className="grid gap-8 lg:grid-cols-[1fr,320px] lg:items-center">
+          <div className="space-y-6">
+            <ThemeBadge>{brand.brandName}</ThemeBadge>
+            <h1 className="anipulse-heading max-w-4xl text-4xl md:text-6xl">
+              The discovery hub for anime and manga fans.
+            </h1>
+            <p className="max-w-2xl text-lg leading-8 text-[var(--ap-text-muted)]">
+              {brand.tagline} Search titles, explore trending anime and manga, and find official watch/read sources with reviews and personal lists coming next.
+            </p>
+            <div>
+              <SearchBox />
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <ThemeButton as={Link} href="/anime">
+                Explore Anime
+              </ThemeButton>
+              <ThemeButton as={Link} href="/manga" variant="secondary">
+                Explore Manga
+              </ThemeButton>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <ThemeButton as={Link} href="/anime">
-              Explore Anime
-            </ThemeButton>
-            <ThemeButton as={Link} href="/manga" variant="secondary">
-              Explore Manga
-            </ThemeButton>
+
+          <div className="hidden lg:block">
+            <Image
+              src={brand.logo.fullTransparent}
+              alt={brand.brandName}
+              width={420}
+              height={180}
+              priority
+              className="h-auto w-full"
+            />
           </div>
         </div>
       </SurfaceCard>

@@ -21,7 +21,7 @@ app.use(express.json());
 app.get("/api/health", (_req, res) => {
   res.json({
     status: "ok",
-    service: "animanga-hub-backend",
+    service: "animanga-wire-backend",
     phase: "1D"
   });
 });
@@ -36,5 +36,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`AniManga Hub API running on http://localhost:${port}`);
+  console.log(`AniManga Wire API running on http://localhost:${port}`);
 });

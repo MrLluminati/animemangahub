@@ -12,9 +12,9 @@ function DetailMeta({ label, value }: { label: string; value?: string | number |
   }
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-      <p className="text-xs uppercase tracking-[0.25em] text-slate-500">{label}</p>
-      <p className="mt-2 font-semibold text-white">{value}</p>
+    <div className="manga-panel p-4">
+      <p className="anipulse-label text-xs text-[var(--ap-text-muted)]">{label}</p>
+      <p className="mt-2 font-semibold text-[var(--ap-text)]">{value}</p>
     </div>
   );
 }
@@ -28,7 +28,7 @@ export function DetailHero({ item }: DetailHeroProps) {
 
   return (
     <article className="grid gap-8 lg:grid-cols-[320px,1fr]">
-      <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl shadow-black/30">
+      <div className="relative aspect-[3/4] overflow-hidden rounded-[var(--ap-radius-card)] border-2 border-[var(--ap-border)] bg-[var(--ap-surface-container-high)] shadow-[var(--ap-shadow-strong)]">
         {item.imageUrl ? (
           <Image
             src={item.imageUrl}
@@ -39,7 +39,7 @@ export function DetailHero({ item }: DetailHeroProps) {
             priority
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-slate-500">
+          <div className="flex h-full items-center justify-center text-[var(--ap-text-muted)]">
             No image
           </div>
         )}
@@ -47,14 +47,14 @@ export function DetailHero({ item }: DetailHeroProps) {
 
       <div className="space-y-6">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-300">
+          <p className="anipulse-label text-sm text-[var(--ap-primary-active)]">
             {item.type}
           </p>
-          <h1 className="mt-4 text-4xl font-black tracking-tight text-white md:text-6xl">
+          <h1 className="anipulse-heading mt-4 text-4xl md:text-6xl">
             {item.title}
           </h1>
           {item.synopsis ? (
-            <p className="mt-5 max-w-3xl text-base leading-8 text-slate-300">
+            <p className="mt-5 max-w-3xl text-base leading-8 text-[var(--ap-text-muted)]">
               {item.synopsis}
             </p>
           ) : null}
@@ -74,7 +74,7 @@ export function DetailHero({ item }: DetailHeroProps) {
         {tags.length > 0 ? (
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <span key={tag} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-slate-300">
+              <span key={tag} className="rounded-[var(--ap-radius-control)] border border-[var(--ap-border)] bg-[var(--ap-surface-container-lowest)] px-3 py-1 text-xs font-semibold text-[var(--ap-text-muted)]">
                 {tag}
               </span>
             ))}

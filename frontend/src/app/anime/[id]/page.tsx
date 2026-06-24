@@ -24,8 +24,8 @@ export default async function AnimeDetailPage({ params }: AnimeDetailPageProps) 
 
   return (
     <div className="space-y-8">
-      <Link href="/anime" className="text-sm font-semibold text-orange-300 hover:text-orange-200">
-        ← Back to anime
+      <Link href="/anime" className="text-sm font-semibold text-[var(--ap-primary-active)] hover:underline">
+        Back to anime
       </Link>
 
       <DetailHero item={anime} />

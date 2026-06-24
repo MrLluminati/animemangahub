@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { GlowBackground } from "@/components/theme/GlowBackground";
 import { ThemeBootScript } from "@/components/theme/ThemeBootScript";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { brand } from "@/config/brand";
 
 import "./globals.css";
 
@@ -29,15 +30,38 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AniManga Hub",
-  description: "Discover anime and manga, explore reviews, and find official watch/read sources.",
+  metadataBase: new URL(brand.websiteUrl),
+  title: "AniManga Wire — Anime News, Manga Updates & Release Dates",
+  description: brand.description,
+  openGraph: {
+    title: "AniManga Wire — Anime News, Manga Updates & Release Dates",
+    description: brand.description,
+    url: brand.websiteUrl,
+    siteName: brand.brandName,
+    images: [
+      {
+        url: brand.banner.youtubePreview,
+        width: 2048,
+        height: 1152,
+        alt: brand.brandName
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AniManga Wire — Anime News, Manga Updates & Release Dates",
+    description: brand.description,
+    images: [brand.banner.youtubePreview]
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" }
+      { url: "/icon.png", type: "image/png" },
+      { url: brand.logo.abbreviated, type: "image/png", sizes: "512x512" }
     ],
     shortcut: "/favicon.ico",
-    apple: "/icon.svg"
+    apple: "/apple-icon.png"
   }
 };
 

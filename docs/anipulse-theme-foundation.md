@@ -1,28 +1,32 @@
-# AniPulse Theme Foundation
+# AniManga Wire Visual Foundation
 
-AniPulse is the reusable visual theme system for AniManga Hub and a future standalone marketplace theme.
+The current visual foundation uses the locked AniManga Wire brand direction. The older internal theme file names still use `aniPulse` for compatibility, but the public product direction is AniManga Wire.
 
-## Theme identity
+## Theme Identity
 
-- **Theme name:** AniPulse
-- **Dark mode:** Modern Japan Night Life / Tokyo Night
-- **Light mode:** Vintage Japan Day Life / Vintage Day
-- **Primary use cases:** anime catalog, manga catalog, reviews, guides, culture publication, official-source discovery, and editorial websites.
+- **Brand:** AniManga Wire
+- **Dark mode:** Ink
+- **Light mode:** Paper
+- **Visual direction:** black, white, and limited red with manga sketch, ink, halftone, and paper texture cues.
+- **Avoid:** cyberpunk, gaming HUD, neon tech panels, futuristic UI, and multicolor palettes.
 
-## Design source
+## Design Source
 
-AniPulse is based on the uploaded `DESIGN.md` direction:
+The source of truth is the extracted locked brand kit in `Assets/`, copied into:
 
-- Dark mode uses glassmorphism, cyberpunk minimalism, neon cyan, magenta pulse, amber signal, and midnight surfaces.
-- Light mode uses warm paper, indigo ink, sakura red, warm gold, and editorial magazine surfaces.
-- The theme should support mobile, tablet, laptop, desktop, and large TV-scale layouts.
-- Components must remain modular and reusable, not hardcoded to AniManga Hub.
+```text
+frontend/public/assets/animanga-wire/
+```
 
-## Foundation files
+Use exported logo, banner, watermark, social, brand sheet, and Codex layout files from that public asset tree. Do not crop from a brand sheet while standalone exports exist.
 
+## Foundation Files
+
+- `frontend/src/config/brand.ts`
 - `frontend/src/theme/themeTypes.ts`
 - `frontend/src/theme/aniPulse.ts`
 - `frontend/src/theme/navigation.ts`
+- `frontend/src/components/brand/BrandLogo.tsx`
 - `frontend/src/components/theme/ThemeProvider.tsx`
 - `frontend/src/components/theme/ThemeToggle.tsx`
 - `frontend/src/components/theme/GlowBackground.tsx`
@@ -33,14 +37,9 @@ AniPulse is based on the uploaded `DESIGN.md` direction:
 - `frontend/src/components/theme/BrandMark.tsx`
 - `frontend/src/components/theme/MobileNav.tsx`
 
-## Current implementation scope
+## Current Implementation Scope
 
-This foundation patch:
-
-- Adds dark/light CSS variable tokens.
-- Adds the theme provider and persistent mode toggle.
-- Adds reusable surface, button, badge, section-header, brand, background, and mobile-nav primitives.
-- Updates the global app shell to load AniPulse.
-- Updates the header and footer to use AniPulse primitives.
-
-It does not yet redesign all pages. Homepage, catalog, and detail page visual conversions should be separate reviewable PRs.
+- Central brand constants live in `frontend/src/config/brand.ts`.
+- Public metadata and social preview images use AniManga Wire values.
+- Header, footer, homepage hero, content pillars, social links, and catalog/detail surfaces use the ink-paper AMW visual direction.
+- The theme toggle remains dark/light, but visible labels are `Ink` and `Paper`.

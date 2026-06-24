@@ -1,10 +1,10 @@
-# 🎌 AniManga Hub
+# AniManga Wire
 
 > A non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform.
 
 ## What is this?
 
-AniManga Hub is a catalog-first and culture-aware platform where users can:
+AniManga Wire is a catalog-first and culture-aware platform where users can:
 - Search and discover anime and manga in one place
 - See cross-links ("this anime is based on this manga")
 - Find out exactly where to watch or read legally
@@ -15,7 +15,7 @@ AniManga Hub is a catalog-first and culture-aware platform where users can:
 
 ## Safety and Compliance Position
 
-AniManga Hub is not a hentai website, pornographic anime website, piracy website, torrent index, adult-video redirect site, or scraping/indexing platform for explicit anime content.
+AniManga Wire is not a hentai website, pornographic anime website, piracy website, torrent index, adult-video redirect site, or scraping/indexing platform for explicit anime content.
 
 The project must not host, redirect to, embed, scrape, index, promote, or monetize hentai or pornographic anime content, piracy links, torrent links, illegal readers, explicit thumbnails, adult-site affiliate traffic, NSFW commissions, loli/shota content, sexualized minor-coded content, or any sexualization of minors, real or fictional.
 
@@ -38,7 +38,7 @@ Completed through `v0.1.0-beta.14`:
 - PowerShell 7 workflow automation for validation, cleanup, tagging, and verification
 - Genre, year, and status filters for anime and manga catalog pages
 - Official-source "Where to watch" and "Where to read" discovery sections
-- AniPulse theme foundation with dark/light modes, loaded theme fonts, readable light mode, and responsive mobile drawer
+- AniManga Wire ink-paper brand shell with dark/light modes, loaded theme fonts, readable light mode, and responsive mobile drawer
 - Post-beta-14 dev-console cleanup for favicon and LCP image priority warnings
 
 Deployment is intentionally deferred until Vercel/Railway hosting and production secrets are ready.
@@ -72,6 +72,8 @@ See `docs/project-summary.md`, `PROGRESS.md`, `ROADMAP.md`, `docs/ranked-search-
 anime-manga-hub/
 ├── frontend/          # Next.js app (UI, pages, components)
 ├── backend/           # Express API (routes, controllers, middleware)
+├── Assets/            # Locked AniManga Wire brand/social source kit
+├── shorts/            # Local Shorts/Reels production workspace
 ├── database/          # SQL migrations and seed scripts
 ├── docs/              # Architecture, API docs, decisions
 ├── .github/workflows/ # CI/CD pipelines
@@ -80,6 +82,18 @@ anime-manga-hub/
 ├── PROGRESS.md        # Current build status
 └── ROADMAP.md         # Feature backlog and future plans
 ```
+
+## Current Work Mode
+
+Website development is on hold after the AniManga Wire asset integration checkpoint. New creative work is focused on Shorts/Reels production in `shorts/`.
+
+Raw video inbox for local Shorts work:
+
+```text
+D:\movies\Anime
+```
+
+Generated video outputs stay local in `shorts/outputs/` and are ignored by Git.
 
 ---
 

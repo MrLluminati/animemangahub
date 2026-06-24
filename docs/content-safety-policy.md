@@ -2,7 +2,7 @@
 
 ## Purpose
 
-AniManga Hub must remain a legal, non-explicit anime and manga culture, catalog, review, and legal discovery platform.
+AniManga Wire must remain a legal, non-explicit anime and manga culture, catalog, review, and legal discovery platform.
 
 It must not become a hentai website, pornographic anime website, piracy website, torrent index, adult-video redirect site, or explicit-content indexing platform.
 
@@ -49,7 +49,7 @@ Rules:
 
 ## Absolute Prohibited Content
 
-AniManga Hub must not host, link, index, scrape, monetize, or promote:
+AniManga Wire must not host, link, index, scrape, monetize, or promote:
 
 - Hentai or pornographic anime content.
 - Hentai videos.

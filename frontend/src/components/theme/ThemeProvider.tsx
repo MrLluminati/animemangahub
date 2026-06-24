@@ -13,7 +13,7 @@ type ThemeContextValue = {
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
-const STORAGE_KEY = "anipulse-theme-mode";
+const STORAGE_KEY = "animanga-wire-theme-mode";
 
 function isAniPulseMode(value: string | null): value is AniPulseMode {
   return value === "dark" || value === "light";

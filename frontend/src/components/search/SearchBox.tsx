@@ -219,7 +219,7 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-bold text-[var(--ap-text)]">{item.title}</span>
-                  <span className="mt-1 block text-xs uppercase tracking-[0.08em] text-[var(--ap-text-muted)]">
+                  <span className="mt-1 block text-xs uppercase text-[var(--ap-text-muted)]">
                     {item.type}
                     {item.year ? ` • ${item.year}` : ""}
                     {item.score ? ` • ${item.score.toFixed(1)}` : ""}

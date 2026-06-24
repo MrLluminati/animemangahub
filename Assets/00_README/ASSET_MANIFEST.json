@@ -1,0 +1,317 @@
+[
+  {
+    "path": "01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.png",
+    "note": "Locked manga-style YouTube banner, PNG",
+    "size": [
+      2560,
+      1440
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.png",
+    "note": "Locked manga-style YouTube banner, PNG",
+    "size": [
+      2048,
+      1152
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.jpg",
+    "note": "Locked manga-style YouTube banner, JPEG under 6 MB",
+    "size": [
+      2560,
+      1440
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.jpg",
+    "note": "Locked manga-style YouTube banner, JPEG under 6 MB",
+    "size": [
+      2048,
+      1152
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2560x1440.jpg",
+    "note": "Safe area guide: blue=all devices, green=comfortable content margin",
+    "size": [
+      2560,
+      1440
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2048x1152.jpg",
+    "note": "Safe area guide for 2048x1152 working file",
+    "size": [
+      2048,
+      1152
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "01_Final_Banner/Safe_Area_Guides/AniManga_Wire_VIEWABLE_ON_ALL_DEVICES_CROP_1546x423.png",
+    "note": "Exact YouTube all-device visible center crop",
+    "size": [
+      1546,
+      423
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png",
+    "note": "Abbreviated AMW 1:1 profile logo PNG",
+    "size": [
+      1080,
+      1080
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.jpg",
+    "note": "Abbreviated AMW 1:1 profile logo JPEG",
+    "size": [
+      1080,
+      1080
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_800x800.png",
+    "note": "Abbreviated AMW 1:1 profile logo PNG",
+    "size": [
+      800,
+      800
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_512x512.png",
+    "note": "Abbreviated AMW 1:1 profile logo PNG",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.png",
+    "note": "Full horizontal logo PNG",
+    "size": [
+      2048,
+      878
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.jpg",
+    "note": "Full horizontal logo JPEG",
+    "size": [
+      2048,
+      878
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_1600x684.png",
+    "note": "Full horizontal logo PNG",
+    "size": [
+      1600,
+      684
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Transparent.png",
+    "note": "Abbreviated AMW logo with light background removed",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Transparent.png",
+    "note": "Full horizontal logo with light background removed",
+    "size": [
+      1916,
+      821
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "02_Logos/04_Watermark/YouTube_Watermark_150x150_TRANSPARENT.png",
+    "note": "YouTube watermark 150x150 transparent",
+    "size": [
+      150,
+      150
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "02_Logos/04_Watermark/Watermark_300x300_TRANSPARENT.png",
+    "note": "Watermark 300x300 transparent",
+    "size": [
+      300,
+      300
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "02_Logos/04_Watermark/Watermark_500x500_TRANSPARENT.png",
+    "note": "Watermark 500x500 transparent",
+    "size": [
+      500,
+      500
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.png",
+    "note": "Locked manga brand kit sheet",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.jpg",
+    "note": "Locked manga brand kit sheet JPEG",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/01_Source_Exports/animanga_wire_action_packed_manga_universe.png",
+    "note": "Original source export used for final_banner",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/01_Source_Exports/grunge_anime_inspired_logo_design.png",
+    "note": "Original source export used for abbr_logo",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/01_Source_Exports/anime_manga_news_logo_design.png",
+    "note": "Original source export used for full_logo",
+    "size": [
+      1916,
+      821
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/01_Source_Exports/animanga_wire_brand_kit_sheet.png",
+    "note": "Original source export used for brand_sheet",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/02_Crops/left_manga_panel_strip_520x1440.png",
+    "note": "Left side manga panel strip crop",
+    "size": [
+      520,
+      1440
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/02_Crops/right_manga_panel_strip_520x1440.png",
+    "note": "Right side manga panel strip crop",
+    "size": [
+      520,
+      1440
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/02_Crops/youtube_safe_area_center_crop_1546x423.png",
+    "note": "Central safe area crop",
+    "size": [
+      1546,
+      423
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/02_Crops/central_branding_region_crop.png",
+    "note": "Central branding region crop",
+    "size": [
+      1520,
+      500
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/03_Codex_Ready/banner_base_2560x1440.png",
+    "note": "Codex-ready final flat banner",
+    "size": [
+      2560,
+      1440
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "03_Modular_Assets/03_Codex_Ready/logo_abbreviated_transparent.png",
+    "note": "Codex-ready abbreviated transparent logo",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "03_Modular_Assets/03_Codex_Ready/logo_full_transparent.png",
+    "note": "Codex-ready full transparent logo",
+    "size": [
+      1916,
+      821
+    ],
+    "mode": "RGBA"
+  },
+  {
+    "path": "03_Modular_Assets/03_Codex_Ready/youtube_safe_area_crop.png",
+    "note": "Codex-ready viewable safe area preview",
+    "size": [
+      1546,
+      423
+    ],
+    "mode": "RGB"
+  },
+  {
+    "path": "05_Codex/codex_layout.json",
+    "note": "Codex layout and locked brand rules",
+    "size": "",
+    "mode": ""
+  },
+  {
+    "path": "05_Codex/compose_banner_template.py",
+    "note": "Starter script for Codex/PIL use",
+    "size": "",
+    "mode": ""
+  },
+  {
+    "path": "00_README/README.txt",
+    "note": "Package README",
+    "size": "",
+    "mode": ""
+  }
+]

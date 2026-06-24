@@ -1,6 +1,6 @@
 # CHANGELOG
 
-All notable changes to AniManga Hub are logged here.
+All notable changes to AniManga Wire are logged here.
 Every agent or developer MUST add an entry before pushing to `main`.
 
 Format:
@@ -22,6 +22,54 @@ Format:
 ### Notes
 - Any decisions made, blockers, or context for next agent
 ```
+
+---
+
+## [2026-06-24] - Shorts workspace and website hold
+**Agent/Author:** Codex GPT-5
+**Phase:** Shorts/Reels Production Setup
+**Commit:** `chore: checkpoint animanga wire assets and shorts workspace`
+
+### Added
+- `shorts/` workspace with docs, templates, scripts, output/work/export/log folders, and Git ignore rules.
+- `shorts/scripts/create_sample_short.py` for generating a vertical AniManga Wire sample Short from the raw inbox.
+- `docs/website-development-hold.md` to mark website development as paused.
+- First local sample render at `shorts/outputs/amw-sample-001.mp4`.
+
+### Changed
+- Updated project docs to separate website maintenance from Shorts/Reels production.
+- Documented `D:\movies\Anime` as the local raw video inbox.
+
+### Notes
+- Generated MP4 outputs are intentionally ignored by Git.
+- The first sample uses the supplied Shorts reference style: upper clip montage, lower info card, AMW branding, and a follow strip.
+
+---
+
+## [2026-06-24] - AniManga Wire brand integration
+**Agent/Author:** Codex GPT-5
+**Phase:** Phase 1 - UI/Product Polish
+**Commit:** `feat: integrate animanga wire branding`
+
+### Added
+- Central `frontend/src/config/brand.ts` with AniManga Wire name, tagline, social links, categories, metadata copy, and public asset paths.
+- Public AniManga Wire asset tree under `frontend/public/assets/animanga-wire/`.
+- Reusable `BrandLogo` component for the existing app shell.
+- AMW-derived app icon, Apple icon, and favicon assets.
+
+### Changed
+- Kept the existing catalog-first homepage with search, trending anime, top manga, and Explore CTAs while swapping in AniManga Wire copy and logo assets.
+- Updated metadata, Open Graph, Twitter card, header, footer, backend health label, and app shell copy.
+- Reworked shared CSS tokens away from the old neon/glass direction into ink, paper, halftone, and limited-red styling.
+- Updated catalog, detail, legal availability, related-title, search, and dev cache UI surfaces to use the AMW visual palette.
+
+### Removed
+- Removed the old file-based `icon.svg` with the AP mark.
+- Removed temporary marketing-style homepage components so the website remains the original catalog app.
+
+### Notes
+- The repo folder and package names still use the old project path where changing them would risk tooling churn.
+- The `aniPulse` internal type/file names remain for compatibility, but public labels now use AniManga Wire, Ink, and Paper.
 
 ---
 

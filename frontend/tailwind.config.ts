@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0b0f19",
-        panel: "#111827",
-        accent: "#f97316",
-        muted: "#94a3b8"
+        ink: "#070707",
+        panel: "#101010",
+        accent: "#de1c22",
+        muted: "#d2ccc0"
       }
     }
   },

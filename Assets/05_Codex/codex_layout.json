@@ -1,0 +1,46 @@
+{
+  "brand": "AniManga Wire",
+  "locked_design": "black, white, red manga sketch style; do not change visual direction",
+  "youtube_banner": {
+    "recommended_size": [
+      2560,
+      1440
+    ],
+    "all_devices_safe_area": {
+      "size": [
+        1546,
+        423
+      ],
+      "x": 507,
+      "y": 508,
+      "x2": 2053,
+      "y2": 931
+    },
+    "safe_area_padding_recommended": 70,
+    "content_notes": [
+      "Keep full logo, tagline, categories, website and Instagram inside safe area.",
+      "Keep top and bottom breathing room within the safe area.",
+      "Side manga panels may extend outside safe area."
+    ]
+  },
+  "locked_assets": {
+    "final_banner_png": "01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.png",
+    "final_banner_jpg": "01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.jpg",
+    "abbreviated_logo": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png",
+    "full_logo": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.png",
+    "transparent_abbreviated_logo": "02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Transparent.png",
+    "transparent_full_logo": "02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Transparent.png"
+  },
+  "brand_text": {
+    "name": "AniManga Wire",
+    "tagline": "Anime News. Manga Updates. Wired Daily.",
+    "categories": [
+      "Anime News",
+      "Manga Updates",
+      "Release Dates",
+      "Hype Edits"
+    ],
+    "website": "www.animangawire.com",
+    "instagram": "@animangawire"
+  }
+}

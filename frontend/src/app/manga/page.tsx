@@ -37,9 +37,9 @@ export default async function MangaPage({ searchParams }: { searchParams?: PageS
   return (
     <div className="space-y-8">
       <section>
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Catalog</p>
-        <h1 className="mt-3 text-4xl font-black tracking-tight">Manga</h1>
-        <p className="mt-3 max-w-2xl text-slate-300">
+        <p className="anipulse-label text-sm text-[var(--ap-primary-active)]">Catalog</p>
+        <h1 className="anipulse-heading mt-3 text-4xl">Manga</h1>
+        <p className="mt-3 max-w-2xl text-[var(--ap-text-muted)]">
           Browse manga from Jikan public API data. Use safe catalog filters for genre, publication year, and status.
         </p>
       </section>
@@ -54,10 +54,10 @@ export default async function MangaPage({ searchParams }: { searchParams?: PageS
 
       <section className="space-y-4">
         <div>
-          <p className="text-sm font-semibold text-slate-400">
+          <p className="text-sm font-semibold text-[var(--ap-text-muted)]">
             {isFiltered ? "Filtered manga results" : "Top manga"}
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-[var(--ap-text-muted)]">
             Showing {manga.length} title{manga.length === 1 ? "" : "s"}.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default async function MangaPage({ searchParams }: { searchParams?: PageS
             {manga.map((item) => <TitleCard key={item.malId} item={item} />)}
           </div>
         ) : (
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-slate-300">
+          <div className="anipulse-surface p-8 text-[var(--ap-text-muted)]">
             No manga matched these filters. Try a broader genre, year, or status.
           </div>
         )}

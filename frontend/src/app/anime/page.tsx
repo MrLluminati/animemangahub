@@ -35,9 +35,9 @@ export default async function AnimePage({ searchParams }: { searchParams?: PageS
   return (
     <div className="space-y-8">
       <section>
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Catalog</p>
-        <h1 className="mt-3 text-4xl font-black tracking-tight">Anime</h1>
-        <p className="mt-3 max-w-2xl text-slate-300">
+        <p className="anipulse-label text-sm text-[var(--ap-primary-active)]">Catalog</p>
+        <h1 className="anipulse-heading mt-3 text-4xl">Anime</h1>
+        <p className="mt-3 max-w-2xl text-[var(--ap-text-muted)]">
           Browse anime from Jikan public API data. Use safe catalog filters for genre, release year, and status.
         </p>
       </section>
@@ -52,10 +52,10 @@ export default async function AnimePage({ searchParams }: { searchParams?: PageS
 
       <section className="space-y-4">
         <div>
-          <p className="text-sm font-semibold text-slate-400">
+          <p className="text-sm font-semibold text-[var(--ap-text-muted)]">
             {isFiltered ? "Filtered anime results" : "Currently airing anime"}
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-[var(--ap-text-muted)]">
             Showing {anime.length} title{anime.length === 1 ? "" : "s"}.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default async function AnimePage({ searchParams }: { searchParams?: PageS
             {anime.map((item) => <TitleCard key={item.malId} item={item} />)}
           </div>
         ) : (
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-slate-300">
+          <div className="anipulse-surface p-8 text-[var(--ap-text-muted)]">
             No anime matched these filters. Try a broader genre, year, or status.
           </div>
         )}

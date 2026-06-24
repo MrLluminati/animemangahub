@@ -6,10 +6,11 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish
+**Active Phase:** Shorts/Reels Production Setup
 **Current stable beta:** `v0.1.0-beta.14`
-**Latest maintenance:** PR #33 — CTA button spacing polish
-**Next Up:** Complete cross-reference light-theme readability QA, then tag v0.1.0-beta.15
+**Latest maintenance:** AniManga Wire GitHub checkpoint prep and Shorts workspace setup
+**Website Status:** On hold after AniManga Wire asset integration
+**Next Up:** Review the first AMW Shorts sample and refine the editing template.
 
 ---
 
@@ -94,7 +95,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Genre, year, and status filters
 - [x] "Where to Watch" official-source discovery links
 - [x] "Where to Read" official-source discovery links
-- [x] AniPulse reusable theme foundation
+- [x] AniManga Wire ink-paper brand shell
 - [x] Ranked search suggestions
 - [x] Search sort modes: relevance, popularity, score, and year
 - [x] Search UI polish for portal suggestions, dropdown width, scroll behavior, and sort dropdown
@@ -103,8 +104,10 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 ### To Build Next
 - [x] Anime ↔ Manga cross-reference display
 - [ ] Catalog pagination and sorting improvements
-- [ ] Continue AniPulse visual polish across catalog and detail pages
+- [ ] Continue AniManga Wire visual polish across catalog and detail pages
 - [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
+
+> Website development is currently on hold. Resume these items only when the owner explicitly reopens website work.
 
 ---
 
@@ -197,3 +200,5 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-05-22 | Tight homepage CTA button padding found during visual QA; increased reusable ThemeButton padding, minimum height, and CTA pair spacing |
 | 2026-06-24 | Added anime ↔ manga cross-reference display with cached relation endpoints and reusable related-title UI |
 | 2026-06-24 | Improved light-theme readability for related-title cross-reference cards after live QA |
+| 2026-06-24 | Integrated locked AniManga Wire branding, public assets, metadata, and logo assets into the existing catalog app |
+| 2026-06-24 | Put website development on hold and created the Shorts/Reels workspace with first AMW sample render |

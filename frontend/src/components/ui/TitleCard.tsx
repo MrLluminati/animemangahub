@@ -45,7 +45,7 @@ export function TitleCard({ item, priority = false }: TitleCardProps) {
             </h3>
 
             {typeof item.score === "number" ? (
-              <span className="shrink-0 rounded-full bg-[color-mix(in_srgb,var(--ap-tertiary-active)_18%,transparent)] px-2 py-1 text-xs font-semibold text-[var(--ap-tertiary)]">
+              <span className="shrink-0 rounded-[var(--ap-radius-control)] border border-[var(--ap-border-strong)] bg-[rgba(222,28,34,0.14)] px-2 py-1 text-xs font-semibold text-[var(--ap-primary-active)]">
                 {item.score.toFixed(1)}
               </span>
             ) : null}

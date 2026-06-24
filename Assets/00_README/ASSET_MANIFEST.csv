@@ -1,0 +1,37 @@
+path,note,size,mode
+01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.png,"Locked manga-style YouTube banner, PNG","(2560, 1440)",RGB
+01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.png,"Locked manga-style YouTube banner, PNG","(2048, 1152)",RGB
+01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.jpg,"Locked manga-style YouTube banner, JPEG under 6 MB","(2560, 1440)",RGB
+01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.jpg,"Locked manga-style YouTube banner, JPEG under 6 MB","(2048, 1152)",RGB
+01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2560x1440.jpg,"Safe area guide: blue=all devices, green=comfortable content margin","(2560, 1440)",RGB
+01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2048x1152.jpg,Safe area guide for 2048x1152 working file,"(2048, 1152)",RGB
+01_Final_Banner/Safe_Area_Guides/AniManga_Wire_VIEWABLE_ON_ALL_DEVICES_CROP_1546x423.png,Exact YouTube all-device visible center crop,"(1546, 423)",RGB
+02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png,Abbreviated AMW 1:1 profile logo PNG,"(1080, 1080)",RGB
+02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.jpg,Abbreviated AMW 1:1 profile logo JPEG,"(1080, 1080)",RGB
+02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_800x800.png,Abbreviated AMW 1:1 profile logo PNG,"(800, 800)",RGB
+02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_512x512.png,Abbreviated AMW 1:1 profile logo PNG,"(512, 512)",RGB
+02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.png,Full horizontal logo PNG,"(2048, 878)",RGB
+02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.jpg,Full horizontal logo JPEG,"(2048, 878)",RGB
+02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_1600x684.png,Full horizontal logo PNG,"(1600, 684)",RGB
+02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Transparent.png,Abbreviated AMW logo with light background removed,"(1254, 1254)",RGBA
+02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Transparent.png,Full horizontal logo with light background removed,"(1916, 821)",RGBA
+02_Logos/04_Watermark/YouTube_Watermark_150x150_TRANSPARENT.png,YouTube watermark 150x150 transparent,"(150, 150)",RGBA
+02_Logos/04_Watermark/Watermark_300x300_TRANSPARENT.png,Watermark 300x300 transparent,"(300, 300)",RGBA
+02_Logos/04_Watermark/Watermark_500x500_TRANSPARENT.png,Watermark 500x500 transparent,"(500, 500)",RGBA
+04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.png,Locked manga brand kit sheet,"(1448, 1086)",RGB
+04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.jpg,Locked manga brand kit sheet JPEG,"(1448, 1086)",RGB
+03_Modular_Assets/01_Source_Exports/animanga_wire_action_packed_manga_universe.png,Original source export used for final_banner,"(1672, 941)",RGB
+03_Modular_Assets/01_Source_Exports/grunge_anime_inspired_logo_design.png,Original source export used for abbr_logo,"(1254, 1254)",RGB
+03_Modular_Assets/01_Source_Exports/anime_manga_news_logo_design.png,Original source export used for full_logo,"(1916, 821)",RGB
+03_Modular_Assets/01_Source_Exports/animanga_wire_brand_kit_sheet.png,Original source export used for brand_sheet,"(1448, 1086)",RGB
+03_Modular_Assets/02_Crops/left_manga_panel_strip_520x1440.png,Left side manga panel strip crop,"(520, 1440)",RGB
+03_Modular_Assets/02_Crops/right_manga_panel_strip_520x1440.png,Right side manga panel strip crop,"(520, 1440)",RGB
+03_Modular_Assets/02_Crops/youtube_safe_area_center_crop_1546x423.png,Central safe area crop,"(1546, 423)",RGB
+03_Modular_Assets/02_Crops/central_branding_region_crop.png,Central branding region crop,"(1520, 500)",RGB
+03_Modular_Assets/03_Codex_Ready/banner_base_2560x1440.png,Codex-ready final flat banner,"(2560, 1440)",RGB
+03_Modular_Assets/03_Codex_Ready/logo_abbreviated_transparent.png,Codex-ready abbreviated transparent logo,"(1254, 1254)",RGBA
+03_Modular_Assets/03_Codex_Ready/logo_full_transparent.png,Codex-ready full transparent logo,"(1916, 821)",RGBA
+03_Modular_Assets/03_Codex_Ready/youtube_safe_area_crop.png,Codex-ready viewable safe area preview,"(1546, 423)",RGB
+05_Codex/codex_layout.json,Codex layout and locked brand rules,,
+05_Codex/compose_banner_template.py,Starter script for Codex/PIL use,,
+00_README/README.txt,Package README,,

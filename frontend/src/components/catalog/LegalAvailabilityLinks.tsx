@@ -77,14 +77,14 @@ export function LegalAvailabilityLinks({ item }: LegalAvailabilityLinksProps) {
       : "Check publishers, stores, and official reading platforms. Availability can vary by region and may change over time.";
 
   return (
-    <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
+    <section className="anipulse-surface p-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Availability</p>
-          <h2 className="mt-3 text-2xl font-black text-white">{heading}</h2>
-          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-300">{note}</p>
+          <p className="anipulse-label text-sm text-[var(--ap-primary-active)]">Availability</p>
+          <h2 className="mt-3 text-2xl font-black text-[var(--ap-text)]">{heading}</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-[var(--ap-text-muted)]">{note}</p>
         </div>
-        <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-emerald-200">
+        <span className="rounded-[var(--ap-radius-control)] border border-[var(--ap-border-strong)] bg-[var(--ap-surface-container-lowest)] px-3 py-1 text-xs font-bold uppercase text-[var(--ap-primary-active)]">
           Official sources
         </span>
       </div>
@@ -96,21 +96,21 @@ export function LegalAvailabilityLinks({ item }: LegalAvailabilityLinksProps) {
             href={link.href}
             target="_blank"
             rel="noreferrer"
-            className="group rounded-2xl border border-white/10 bg-slate-950/60 p-5 transition hover:border-orange-300/60 hover:bg-orange-500/10"
+            className="manga-panel group p-5 transition hover:border-[var(--ap-primary-active)]"
           >
             <div className="flex items-center justify-between gap-4">
-              <h3 className="text-lg font-bold text-white">{link.name}</h3>
-              <span className="text-sm font-bold text-orange-300 transition group-hover:text-orange-200">
-                Open ↗
+              <h3 className="text-lg font-bold text-[var(--ap-text)]">{link.name}</h3>
+              <span className="text-sm font-bold text-[var(--ap-primary-active)] transition group-hover:translate-x-1">
+                Open
               </span>
             </div>
-            <p className="mt-2 text-sm leading-6 text-slate-400">{link.description}</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--ap-text-muted)]">{link.description}</p>
           </a>
         ))}
       </div>
 
-      <div className="mt-5 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-4 text-sm leading-7 text-amber-100">
-        AniManga Hub only points users toward official sources and safe discovery options.
+      <div className="mt-5 rounded-[var(--ap-radius-card)] border border-[var(--ap-border-strong)] bg-[rgba(222,28,34,0.12)] p-4 text-sm leading-7 text-[var(--ap-text)]">
+        AniManga Wire only points users toward official sources and safe discovery options.
         These buttons are discovery shortcuts and do not guarantee that every title is available on every platform or in every region.
       </div>
     </section>

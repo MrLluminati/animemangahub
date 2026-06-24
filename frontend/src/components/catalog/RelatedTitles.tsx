@@ -36,7 +36,7 @@ export function RelatedTitles({ groups }: RelatedTitlesProps) {
             Explore adaptations, sequels, prequels, side stories, and other connected anime/manga entries from public catalog data.
           </p>
         </div>
-        <span className="anipulse-related-badge w-fit rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.18em]">
+        <span className="anipulse-related-badge w-fit rounded-[var(--ap-radius-control)] px-3 py-1 text-xs font-bold uppercase">
           Cross-reference
         </span>
       </div>
@@ -44,7 +44,7 @@ export function RelatedTitles({ groups }: RelatedTitlesProps) {
       <div className="mt-6 space-y-5">
         {visibleGroups.map((group) => (
           <div key={group.relation} className="anipulse-related-group rounded-[var(--ap-radius-card)] p-4">
-            <h3 className="anipulse-related-group-title text-sm font-bold uppercase tracking-[0.18em]">{group.relation}</h3>
+            <h3 className="anipulse-related-group-title text-sm font-bold uppercase">{group.relation}</h3>
 
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {group.entries.map((entry) => (
@@ -55,12 +55,12 @@ export function RelatedTitles({ groups }: RelatedTitlesProps) {
                 >
                   <span className="min-w-0">
                     <span className="block truncate text-sm font-bold">{entry.title}</span>
-                    <span className="anipulse-related-type mt-2 inline-flex rounded-full px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.16em]">
+                    <span className="anipulse-related-type mt-2 inline-flex rounded-[var(--ap-radius-control)] px-2 py-1 text-[0.65rem] font-bold uppercase">
                       {getTypeLabel(entry.type)}
                     </span>
                   </span>
                   <span className="anipulse-related-open shrink-0 text-sm font-bold transition group-hover:translate-x-1">
-                    Open →
+                    Open
                   </span>
                 </Link>
               ))}

@@ -6,13 +6,15 @@ All planned features, prioritized by phase. Items move to `PROGRESS.md` when act
 
 ## Vision
 
-AniManga Hub becomes a non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform. It combines catalog discovery, legal watch/read links, reviews, user tracking, editorial anime culture articles, censorship/media-literacy commentary, safe fandom education, and future community tools with strong moderation.
+AniManga Wire becomes a non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform. It combines catalog discovery, legal watch/read links, reviews, user tracking, editorial anime culture articles, censorship/media-literacy commentary, safe fandom education, and future community tools with strong moderation.
 
 ---
 
 ## Phase 1 — MVP Catalog
 
 Core value: search anything, find where to watch/read it.
+
+Status: on hold after AniManga Wire asset integration. Resume only when website work is reopened.
 
 - Anime catalog with metadata from Jikan/AniList
 - Manga catalog with metadata from MangaDex/Jikan
@@ -25,7 +27,7 @@ Core value: search anything, find where to watch/read it.
 - Search sort modes for relevance, popularity, score, and year
 - Genre, year, and status filters
 - Responsive design (mobile-first through large/TV screens)
-- AniPulse dark/light theme system
+- AniManga Wire ink-paper dark/light theme system
 
 ---
 
@@ -48,7 +50,7 @@ Completed within Phase 1:
 - Genre, year, and status filters
 - Official-source "Where to Watch" discovery sections
 - Official-source "Where to Read" discovery sections
-- AniPulse theme foundation with dark/light modes and responsive app shell
+- AniManga Wire ink-paper theme foundation with dark/light modes and responsive app shell
 - Ranked full search
 - Top-three autocomplete search suggestions
 - Search sort modes for relevance, popularity, score, and year
@@ -59,13 +61,13 @@ Remaining Phase 1 priorities:
 
 - Anime ↔ manga cross-reference display.
 - Catalog pagination and sorting improvements.
-- Continue AniPulse visual polish across catalog and detail pages.
+- Continue AniManga Wire visual polish across catalog and detail pages.
 - Deployment when hosting budget and secrets are ready.
 
 ---
 ## Content, Safety, and Legal Discovery Tracks
 
-Before expanding community features, AniManga Hub must add and preserve these tracks:
+Before expanding community features, AniManga Wire must add and preserve these tracks:
 
 - Content & Culture publication.
 - Compliance & Moderation.
@@ -78,7 +80,9 @@ Public comments, marketplace submissions, and mature-theme community features mu
 
 ## Phase 2 — Editorial Content and Guides
 
-Core value: turn AniManga Hub into a safe anime/manga culture publication.
+Core value: turn AniManga Wire into a safe anime/manga culture publication.
+
+Status: parked while Shorts/Reels production is the active focus.
 
 - Article system
 - Article categories and tags

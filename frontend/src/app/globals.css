@@ -4,34 +4,34 @@
 
 :root {
   color-scheme: dark;
-  --ap-background: #131315;
-  --ap-surface: #131315;
-  --ap-surface-dim: #131315;
-  --ap-surface-bright: #39393b;
-  --ap-surface-container-lowest: #0e0e10;
-  --ap-surface-container-low: #1c1b1d;
-  --ap-surface-container: #201f21;
-  --ap-surface-container-high: #2a2a2c;
-  --ap-surface-container-highest: #353437;
-  --ap-surface-glass: rgba(32, 31, 33, 0.72);
-  --ap-text: #e5e1e4;
-  --ap-text-muted: #b9cacb;
-  --ap-inverse-surface: #e5e1e4;
-  --ap-inverse-text: #313032;
-  --ap-outline: #849495;
-  --ap-border: rgba(0, 240, 255, 0.16);
-  --ap-border-strong: rgba(0, 240, 255, 0.32);
-  --ap-primary: #dbfcff;
-  --ap-primary-active: #00f0ff;
-  --ap-on-primary: #00363a;
-  --ap-secondary: #fface8;
-  --ap-secondary-active: #ff24e4;
-  --ap-tertiary: #fff4e8;
-  --ap-tertiary-active: #ffd386;
-  --ap-shadow-soft: 0 0 30px rgba(0, 240, 255, 0.1);
-  --ap-shadow-strong: 0 0 42px rgba(255, 36, 228, 0.16);
+  --ap-background: #070707;
+  --ap-surface: #101010;
+  --ap-surface-dim: #070707;
+  --ap-surface-bright: #1d1d1d;
+  --ap-surface-container-lowest: #070707;
+  --ap-surface-container-low: #101010;
+  --ap-surface-container: #171717;
+  --ap-surface-container-high: #222222;
+  --ap-surface-container-highest: #2f2f2f;
+  --ap-surface-glass: rgba(10, 10, 10, 0.94);
+  --ap-text: #fbfaf4;
+  --ap-text-muted: #d2ccc0;
+  --ap-inverse-surface: #fbfaf4;
+  --ap-inverse-text: #070707;
+  --ap-outline: #fbfaf4;
+  --ap-border: rgba(251, 250, 244, 0.22);
+  --ap-border-strong: rgba(222, 28, 34, 0.72);
+  --ap-primary: #fbfaf4;
+  --ap-primary-active: #de1c22;
+  --ap-on-primary: #ffffff;
+  --ap-secondary: #fbfaf4;
+  --ap-secondary-active: #070707;
+  --ap-tertiary: #fbfaf4;
+  --ap-tertiary-active: #de1c22;
+  --ap-shadow-soft: 4px 4px 0 rgba(222, 28, 34, 0.36);
+  --ap-shadow-strong: 6px 6px 0 rgba(222, 28, 34, 0.48);
   --ap-radius-card: 0.5rem;
-  --ap-radius-control: 0.75rem;
+  --ap-radius-control: 0.375rem;
   --ap-font-display: var(--font-epilogue), Epilogue, Inter, ui-sans-serif, system-ui, sans-serif;
   --ap-font-body: var(--font-hanken-grotesk), "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
   --ap-font-label: var(--font-space-grotesk), "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
@@ -39,34 +39,32 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --ap-background: #f9f6f0;
-  --ap-surface: #fffdf7;
-  --ap-surface-dim: #f8f1e3;
+  --ap-background: #f8f7f2;
+  --ap-surface: #ffffff;
+  --ap-surface-dim: #f1efe8;
   --ap-surface-bright: #ffffff;
-  --ap-surface-container-lowest: #fffdf7;
-  --ap-surface-container-low: #fff7ea;
+  --ap-surface-container-lowest: #ffffff;
+  --ap-surface-container-low: #f8f7f2;
   --ap-surface-container: #ffffff;
-  --ap-surface-container-high: #f2eadc;
-  --ap-surface-container-highest: #e7d8c4;
-  --ap-surface-glass: rgba(255, 253, 247, 0.92);
-  --ap-text: #1f2933;
-  --ap-text-muted: #4b5563;
-  --ap-inverse-surface: #2d3e50;
-  --ap-inverse-text: #fffdf7;
-  --ap-outline: #2d3e50;
-  --ap-border: rgba(45, 62, 80, 0.32);
-  --ap-border-strong: rgba(45, 62, 80, 0.62);
-  --ap-primary: #bc243c;
-  --ap-primary-active: #bc243c;
-  --ap-on-primary: #fffdf7;
-  --ap-secondary: #2d3e50;
-  --ap-secondary-active: #2d3e50;
-  --ap-tertiary: #5f4300;
-  --ap-tertiary-active: #d4af37;
-  --ap-shadow-soft: 3px 3px 0 rgba(212, 175, 55, 0.45);
-  --ap-shadow-strong: 4px 4px 0 rgba(212, 175, 55, 0.55);
-  --ap-radius-card: 0.125rem;
-  --ap-radius-control: 0.125rem;
+  --ap-surface-container-high: #f1efe8;
+  --ap-surface-container-highest: #e5e0d5;
+  --ap-surface-glass: rgba(255, 255, 255, 0.94);
+  --ap-text: #090909;
+  --ap-text-muted: #49443e;
+  --ap-inverse-surface: #090909;
+  --ap-inverse-text: #ffffff;
+  --ap-outline: #090909;
+  --ap-border: rgba(9, 9, 9, 0.22);
+  --ap-border-strong: rgba(222, 28, 34, 0.78);
+  --ap-primary: #090909;
+  --ap-primary-active: #de1c22;
+  --ap-on-primary: #ffffff;
+  --ap-secondary: #090909;
+  --ap-secondary-active: #ffffff;
+  --ap-tertiary: #090909;
+  --ap-tertiary-active: #de1c22;
+  --ap-shadow-soft: 4px 4px 0 rgba(9, 9, 9, 0.14);
+  --ap-shadow-strong: 6px 6px 0 rgba(222, 28, 34, 0.28);
 }
 
 * {
@@ -80,9 +78,19 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--ap-background);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0),
+    var(--ap-background);
+  background-size: 18px 18px, auto;
   color: var(--ap-text);
   font-family: var(--ap-font-body);
+}
+
+:root[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 1px 1px, rgba(9, 9, 9, 0.08) 1px, transparent 0),
+    var(--ap-background);
+  background-size: 18px 18px, auto;
 }
 
 a {
@@ -97,15 +105,15 @@ a {
 .anipulse-heading {
   color: var(--ap-text);
   font-family: var(--ap-font-display);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.06;
 }
 
 .anipulse-label {
   font-family: var(--ap-font-label);
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 800;
+  letter-spacing: 0;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -118,70 +126,84 @@ a {
   z-index: 0;
 }
 
-.anipulse-orb {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(72px);
-}
-
-.anipulse-orb-primary {
-  left: -10rem;
-  top: -8rem;
-  width: 32rem;
-  height: 32rem;
-  background: color-mix(in srgb, var(--ap-primary-active) 18%, transparent);
-}
-
-.anipulse-orb-secondary {
-  right: -10rem;
-  top: 14rem;
-  width: 34rem;
-  height: 34rem;
-  background: color-mix(in srgb, var(--ap-secondary-active) 14%, transparent);
-}
-
-.anipulse-orb-tertiary {
-  bottom: -12rem;
-  left: 35%;
-  width: 32rem;
-  height: 32rem;
-  background: color-mix(in srgb, var(--ap-tertiary-active) 12%, transparent);
-}
-
-.anipulse-grid {
+.manga-paper-field {
   position: absolute;
   inset: 0;
+  opacity: 0.28;
   background-image:
-    linear-gradient(color-mix(in srgb, var(--ap-primary-active) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--ap-secondary-active) 5%, transparent) 1px, transparent 1px);
-  background-size: 72px 72px;
-  opacity: 0.35;
+    linear-gradient(115deg, transparent 0 46%, rgba(255, 255, 255, 0.16) 47%, transparent 49%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
+  background-size: 180px 180px, 14px 14px;
 }
 
-:root[data-theme="light"] .anipulse-grid {
-  background-image: radial-gradient(color-mix(in srgb, var(--ap-tertiary-active) 45%, transparent) 0.65px, transparent 0.65px);
-  background-size: 18px 18px;
-  opacity: 0.32;
+:root[data-theme="light"] .manga-paper-field {
+  opacity: 0.34;
+  background-image:
+    linear-gradient(115deg, transparent 0 46%, rgba(9, 9, 9, 0.12) 47%, transparent 49%),
+    radial-gradient(circle at 50% 50%, rgba(9, 9, 9, 0.14) 1px, transparent 1.5px);
 }
 
+.manga-speed-lines {
+  position: absolute;
+  inset: -10%;
+  opacity: 0.11;
+  background-image: repeating-linear-gradient(105deg, transparent 0 44px, rgba(255, 255, 255, 0.34) 45px 46px, transparent 47px 92px);
+}
+
+:root[data-theme="light"] .manga-speed-lines {
+  opacity: 0.14;
+  background-image: repeating-linear-gradient(105deg, transparent 0 44px, rgba(9, 9, 9, 0.26) 45px 46px, transparent 47px 92px);
+}
+
+.manga-halftone {
+  background-image: radial-gradient(circle at center, rgba(222, 28, 34, 0.32) 0 1px, transparent 1.5px);
+  background-size: 13px 13px;
+  mix-blend-mode: normal;
+  opacity: 0.2;
+}
+
+.hero-stage {
+  position: relative;
+  border: 2px solid var(--ap-border-strong);
+  border-radius: var(--ap-radius-card);
+  background: var(--ap-surface);
+  box-shadow: var(--ap-shadow-strong);
+}
+
+.manga-panel,
 .anipulse-surface {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--ap-border);
+  border: 2px solid var(--ap-border);
   border-radius: var(--ap-radius-card);
   background: var(--ap-surface-glass);
   box-shadow: var(--ap-shadow-soft);
   color: var(--ap-text);
-  backdrop-filter: blur(16px);
 }
 
-:root[data-theme="light"] .anipulse-surface::before {
+.manga-panel::before,
+.anipulse-surface::before {
   position: absolute;
   inset: 0;
-  z-index: -1;
-  transform: translate(3px, 3px);
-  border: 1px solid color-mix(in srgb, var(--ap-tertiary-active) 38%, transparent);
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0),
+    linear-gradient(135deg, rgba(222, 28, 34, 0.12), transparent 30%);
+  background-size: 12px 12px, auto;
   content: "";
+}
+
+:root[data-theme="light"] .manga-panel::before,
+:root[data-theme="light"] .anipulse-surface::before {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(9, 9, 9, 0.08) 1px, transparent 0),
+    linear-gradient(135deg, rgba(222, 28, 34, 0.1), transparent 30%);
+}
+
+.manga-panel > *,
+.anipulse-surface > * {
+  position: relative;
+  z-index: 1;
 }
 
 .anipulse-surface-elevated {
@@ -195,8 +217,8 @@ a {
   justify-content: center;
   border-radius: var(--ap-radius-control);
   font-family: var(--ap-font-label);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 900;
+  letter-spacing: 0;
   text-transform: uppercase;
   transition:
     transform 150ms ease,
@@ -205,28 +227,27 @@ a {
     background-color 150ms ease;
 }
 
+.anipulse-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
 .anipulse-button-primary {
-  border: 1px solid color-mix(in srgb, var(--ap-primary-active) 35%, transparent);
+  border: 2px solid #070707;
   background: var(--ap-primary-active);
   color: var(--ap-on-primary);
-  box-shadow: 0 0 22px color-mix(in srgb, var(--ap-primary-active) 38%, transparent);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.72);
+}
+
+:root[data-theme="light"] .anipulse-button-primary {
+  border-color: #090909;
 }
 
 .anipulse-button-secondary {
-  border: 1px solid var(--ap-border);
-  background: color-mix(in srgb, var(--ap-surface-bright) 10%, transparent);
+  border: 2px solid var(--ap-border-strong);
+  background: var(--ap-surface-container-lowest);
   color: var(--ap-text);
-}
-
-:root[data-theme="light"] .anipulse-button-primary,
-:root[data-theme="light"] .anipulse-button-secondary {
-  border: 2px solid var(--ap-secondary-active);
   box-shadow: var(--ap-shadow-soft);
-}
-
-:root[data-theme="light"] .anipulse-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: none;
 }
 
 .anipulse-badge {
@@ -234,22 +255,16 @@ a {
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
-  border: 1px solid var(--ap-border);
-  border-radius: 9999px;
-  background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
+  border: 2px solid var(--ap-border-strong);
+  border-radius: var(--ap-radius-control);
+  background: var(--ap-surface-container-lowest);
   padding: 0.45rem 0.75rem;
-  color: var(--ap-primary);
+  color: var(--ap-primary-active);
   font-family: var(--ap-font-label);
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 900;
+  letter-spacing: 0;
   text-transform: uppercase;
-}
-
-:root[data-theme="light"] .anipulse-badge {
-  border-radius: var(--ap-radius-control);
-  background: var(--ap-surface-container-low);
-  color: var(--ap-secondary-active);
 }
 
 .anipulse-brand-mark {
@@ -257,21 +272,11 @@ a {
   width: 2.75rem;
   height: 2.75rem;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--ap-primary-active) 30%, transparent);
+  border: 2px solid var(--ap-border-strong);
   border-radius: var(--ap-radius-control);
-  background: var(--ap-primary-active);
-  color: var(--ap-on-primary);
-  font-family: var(--ap-font-display);
-  font-size: 0.875rem;
-  font-weight: 900;
-  box-shadow: 0 0 22px color-mix(in srgb, var(--ap-primary-active) 45%, transparent);
-}
-
-:root[data-theme="light"] .anipulse-brand-mark {
-  border: 2px solid var(--ap-secondary-active);
-  background: var(--ap-primary-active);
-  color: var(--ap-on-primary);
-  box-shadow: 3px 3px 0 var(--ap-tertiary-active);
+  background: #ffffff;
+  color: #070707;
+  box-shadow: 3px 3px 0 var(--ap-primary-active);
 }
 
 .anipulse-icon-button {
@@ -279,20 +284,21 @@ a {
   width: 2.75rem;
   height: 2.75rem;
   place-items: center;
-  border: 1px solid var(--ap-border);
+  border: 2px solid var(--ap-border);
   border-radius: var(--ap-radius-control);
-  background: color-mix(in srgb, var(--ap-surface-bright) 10%, transparent);
+  background: var(--ap-surface-container-lowest);
   color: var(--ap-text);
 }
 
 .anipulse-nav-link {
+  border: 2px solid transparent;
   border-radius: var(--ap-radius-control);
   padding: 0.6rem 0.85rem;
   color: var(--ap-text-muted);
   font-family: var(--ap-font-label);
   font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-weight: 900;
+  letter-spacing: 0;
   text-transform: uppercase;
   transition:
     color 150ms ease,
@@ -301,15 +307,16 @@ a {
 }
 
 .anipulse-nav-link:hover {
-  background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
+  border-color: var(--ap-border-strong);
+  background: var(--ap-surface-container-lowest);
   color: var(--ap-text);
 }
 
 .anipulse-input {
   min-width: 0;
-  border: 1px solid var(--ap-border);
-  border-radius: 9999px;
-  background: color-mix(in srgb, var(--ap-surface-container-lowest) 88%, transparent);
+  border: 2px solid var(--ap-border);
+  border-radius: var(--ap-radius-control);
+  background: var(--ap-surface-container-lowest);
   color: var(--ap-text);
   outline: none;
   transition:
@@ -323,17 +330,11 @@ a {
 
 .anipulse-input:focus {
   border-color: var(--ap-primary-active);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ap-primary-active) 18%, transparent);
-}
-
-@media (min-width: 1920px) {
-  body {
-    font-size: 18px;
-  }
+  box-shadow: 0 0 0 3px rgba(222, 28, 34, 0.18);
 }
 
 .anipulse-related-section {
-  background: color-mix(in srgb, var(--ap-surface-container) 82%, transparent);
+  background: var(--ap-surface-container);
 }
 
 .anipulse-related-description {
@@ -341,14 +342,14 @@ a {
 }
 
 .anipulse-related-badge {
-  border: 1px solid var(--ap-border-strong);
-  background: color-mix(in srgb, var(--ap-primary-active) 12%, transparent);
+  border: 2px solid var(--ap-border-strong);
+  background: var(--ap-surface-container-lowest);
   color: var(--ap-primary-active);
 }
 
 .anipulse-related-group {
-  border: 1px solid var(--ap-border);
-  background: color-mix(in srgb, var(--ap-surface-container) 72%, transparent);
+  border: 2px solid var(--ap-border);
+  background: var(--ap-surface-container-low);
 }
 
 .anipulse-related-group-title {
@@ -356,62 +357,21 @@ a {
 }
 
 .anipulse-related-link {
-  border: 1px solid var(--ap-border);
-  background: color-mix(in srgb, var(--ap-surface-container-lowest) 80%, transparent);
+  border: 2px solid var(--ap-border);
+  background: var(--ap-surface-container-lowest);
   color: var(--ap-text);
 }
 
 .anipulse-related-link:hover {
   border-color: var(--ap-border-strong);
-  background: color-mix(in srgb, var(--ap-primary-active) 10%, transparent);
+  background: rgba(222, 28, 34, 0.12);
 }
 
 .anipulse-related-type {
-  border: 1px solid var(--ap-border);
+  border: 2px solid var(--ap-border);
   color: var(--ap-text-muted);
 }
 
 .anipulse-related-open {
   color: var(--ap-primary-active);
-}
-
-:root[data-theme="light"] .anipulse-related-section {
-  background: var(--ap-surface-container-lowest);
-}
-
-:root[data-theme="light"] .anipulse-related-description,
-:root[data-theme="light"] .anipulse-related-group-title {
-  color: #334155;
-}
-
-:root[data-theme="light"] .anipulse-related-badge {
-  border-color: rgba(45, 62, 80, 0.72);
-  background: #fff7ea;
-  color: #7f1d1d;
-}
-
-:root[data-theme="light"] .anipulse-related-group {
-  border-color: rgba(45, 62, 80, 0.46);
-  background: #fffaf0;
-}
-
-:root[data-theme="light"] .anipulse-related-link {
-  border-color: rgba(45, 62, 80, 0.42);
-  background: #ffffff;
-  color: #111827;
-}
-
-:root[data-theme="light"] .anipulse-related-link:hover {
-  border-color: #bc243c;
-  background: #fff1f2;
-}
-
-:root[data-theme="light"] .anipulse-related-type {
-  border-color: rgba(45, 62, 80, 0.5);
-  background: #f8f1e3;
-  color: #1f2937;
-}
-
-:root[data-theme="light"] .anipulse-related-open {
-  color: #9f1239;
 }
