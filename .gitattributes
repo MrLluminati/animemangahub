@@ -1,0 +1,2 @@
+# Keep repository ignore rules as normalized text.
+.gitignore text eol=lf diff
