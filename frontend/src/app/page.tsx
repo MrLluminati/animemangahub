@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { SurfaceLogo } from "@/components/brand/SurfaceLogo";
 import { SearchBox } from "@/components/search/SearchBox";
 import { SurfaceCard } from "@/components/theme/SurfaceCard";
 import { ThemeBadge } from "@/components/theme/ThemeBadge";
@@ -41,11 +41,11 @@ export default async function HomePage() {
           </div>
 
           <div className="hidden lg:block">
-            <Image
-              src={brand.logo.fullTransparent}
+            <SurfaceLogo
+              family="full"
               alt={brand.brandName}
-              width={420}
-              height={180}
+              width={1916}
+              height={821}
               priority
               className="h-auto w-full"
             />

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { SurfaceLogo } from "@/components/brand/SurfaceLogo";
 import { brand } from "@/config/brand";
 
 type BrandLogoProps = {
@@ -12,8 +12,9 @@ export function BrandLogo({ compact = false, priority = false }: BrandLogoProps)
   return (
     <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label={`${brand.brandName} home`}>
       <span className="anipulse-brand-mark overflow-hidden">
-        <Image
-          src={brand.logo.abbreviatedTransparent}
+        <SurfaceLogo
+          family="abbreviated"
+          surface="light"
           alt=""
           width={44}
           height={44}
