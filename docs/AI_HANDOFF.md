@@ -41,14 +41,15 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 
 ---
 
-## Draft PR 1 - Local Shorts Exclusion
+## Merged PR 1 - Local Shorts Exclusion
 
 - PR: [#36](https://github.com/MrLluminati/animemangahub/pull/36).
 - Title: `chore: keep Shorts workspace local-only`.
 - Base: `main`.
 - Head: `chore/exclude-local-shorts-workspace`.
 - Remote commit: `1bdf9f715aa3ae51248c00d8c01e294f12fa25f6`.
-- State: open draft.
+- State: merged on 2026-07-18 at 08:02:03 UTC.
+- Merge commit: `c3780f8f5db18b5036d2652eb2b4531a8ea0a9e6`.
 
 ---
 
@@ -56,21 +57,25 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 
 - PR: [#37](https://github.com/MrLluminati/animemangahub/pull/37).
 - Title: `fix: complete AniManga Wire website rebrand`.
-- Base: `chore/exclude-local-shorts-workspace`.
+- Base: `main`.
 - Head: `fix/complete-animanga-wire-website-rebrand`.
-- Remote commit before this handoff update: `97bfd8c8487c497085b260cea516bc1b8167aeec`.
+- Remote commit before this handoff update: `84f007f5704d2644cb73718e6eb89e7b7055a02a`.
 - State: open draft.
-- Dependency: stacked on PR #36; merge PR #36 first.
+- Dependency status: PR #36 is merged; PR #37 now targets `main` directly.
+- CI status: expected to run because the PR now targets `main`.
 
 ---
 
-## Current Next Action
+## Current Next Actions
 
-- Review PR #36.
-- Merge PR #36 first when approved; do not merge either PR during this handoff.
-- Retarget or rebase PR #37 onto updated `main` after PR #36 merges.
-- Run final `v0.1.0-beta.16` validation before tagging or release.
-- Keep failed branding candidates, manifests, related branding documentation, and frontend public aliases out of both PRs.
+1. Wait for and review PR #37 CI.
+2. Perform backend-running anime and manga detail smoke testing.
+3. Investigate the pre-existing mobile horizontal overflow.
+4. Complete dark, light, mobile, search, image, availability-link, and related-title validation.
+5. Merge PR #37 only after all required checks and release gates pass.
+6. Do not tag `v0.1.0-beta.16` until the complete release matrix passes.
+
+Keep failed branding candidates, manifests, related branding documentation, and frontend public aliases out of PR #37.
 
 ---
 
