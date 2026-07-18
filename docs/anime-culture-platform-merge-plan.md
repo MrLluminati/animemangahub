@@ -1,5 +1,7 @@
 # Anime Culture Platform Merge Plan
 
+> Historical planning record: this document predates the AniManga Wire rebrand and is retained for consolidation context only. It is not the current execution plan. Current work is governed by [ROADMAP.md](../ROADMAP.md), [PROGRESS.md](../PROGRESS.md), [DECISIONS.md](DECISIONS.md), and [AI_HANDOFF.md](AI_HANDOFF.md); legacy AniManga Hub wording below remains as migration history.
+
 ## Decision
 
 AniManga Hub will remain the single platform.

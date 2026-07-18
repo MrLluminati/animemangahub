@@ -2,7 +2,7 @@
 
 ## Editorial Mission
 
-AniManga Hub publishes safe, non-explicit, useful anime and manga content that helps users discover titles, understand themes, find legal platforms, and participate in fandom responsibly.
+AniManga Wire publishes safe, non-explicit, useful anime and manga content that helps users discover titles, understand themes, find legal platforms, and participate in fandom responsibly.
 
 ## Review Standards
 
@@ -85,7 +85,7 @@ Editorial content must not teach users how to pirate, list piracy sites, link to
 
 ## Corrections Policy
 
-AniManga Hub should correct factual errors promptly and log the article, error, correction made, date, editor/author, and whether the correction affects legal/platform availability.
+AniManga Wire should correct factual errors promptly and log the article, error, correction made, date, editor/author, and whether the correction affects legal/platform availability.
 
 ## Legal Review Note
 

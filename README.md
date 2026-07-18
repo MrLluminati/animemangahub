@@ -23,9 +23,9 @@ The project owner is based in India, so Indian legal and cyber-law risk must be 
 
 ## Current Development Status
 
-Current stable beta: `v0.1.0-beta.14`
+Current stable website beta: `v0.1.0-beta.15`
 
-Completed through `v0.1.0-beta.14`:
+Completed through `v0.1.0-beta.15`:
 
 - Working Next.js frontend and Express backend
 - Jikan-powered anime and manga catalog
@@ -38,10 +38,17 @@ Completed through `v0.1.0-beta.14`:
 - PowerShell 7 workflow automation for validation, cleanup, tagging, and verification
 - Genre, year, and status filters for anime and manga catalog pages
 - Official-source "Where to watch" and "Where to read" discovery sections
+- Anime ↔ manga cross-reference display with light-theme readability fixes
 - AniManga Wire ink-paper brand shell with dark/light modes, loaded theme fonts, readable light mode, and responsive mobile drawer
 - Post-beta-14 dev-console cleanup for favicon and LCP image priority warnings
 
 Deployment is intentionally deferred until Vercel/Railway hosting and production secrets are ready.
+
+Website development is fully resumed. The next planned website milestone is `v0.1.0-beta.16` after the remaining rebrand-completion work, validation, and manual QA.
+
+Current development work implements the corrected detail-page order (Detail Hero → Availability → Related Titles) and clickable YouTube/Instagram footer links. These changes belong to the upcoming `v0.1.0-beta.16` candidate and are not part of the stable `v0.1.0-beta.15` tag.
+
+Remaining `v0.1.0-beta.16` gates include backend-running detail-page smoke tests, final dark/light/mobile/search/image/availability/related-link validation, investigation of pre-existing mobile page-wide horizontal overflow, clean-repository verification, and corrected transparent branding assets.
 
 See `docs/project-summary.md`, `PROGRESS.md`, `ROADMAP.md`, `docs/ranked-search-suggestions.md`, `docs/dev-console-warnings-cleanup.md`, `docs/anipulse-theme-foundation.md`, `docs/content-safety-policy.md`, and `docs/anime-culture-platform-merge-plan.md` for the current build state.
 
@@ -85,15 +92,11 @@ anime-manga-hub/
 
 ## Current Work Mode
 
-Website development is on hold after the AniManga Wire asset integration checkpoint. New creative work is focused on Shorts/Reels production in `shorts/`.
+Website development and local Shorts/Reels production are separate parallel workstreams. Website development is fully resumed.
 
-Raw video inbox for local Shorts work:
+The GitHub repository name, local `anime-manga-hub` folder, package names, database identifiers, and other technical legacy identifiers remain unchanged.
 
-```text
-D:\movies\Anime
-```
-
-Generated video outputs stay local in `shorts/outputs/` and are ignored by Git.
+The entire `shorts/` production workspace stays local and is excluded from GitHub. The sole Shorts-path asset eligible for versioning is the approved reusable main frame at `shorts/assets/frames/amw-shorts-unified-frame-v1.png`; canonical branding assets remain under `Assets/` and frontend public assets.
 
 ---
 
@@ -154,11 +157,13 @@ This platform pulls metadata from free, public APIs:
 
 ## Deployment
 
+Deployment remains deferred. The steps below describe the future Vercel/Railway setup; current deployment jobs remain disabled until hosting and production secrets are intentionally configured.
+
 ### Frontend → Vercel
 1. Connect your GitHub repo at vercel.com
 2. Set root directory to `frontend`
 3. Add environment variables from `.env.example` in Vercel dashboard
-4. Every push to `main` auto-deploys
+4. After deployment is enabled, configure pushes to `main` to deploy automatically
 
 ### Backend + DB → Railway
 1. Create a new project at railway.app

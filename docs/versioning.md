@@ -1,6 +1,6 @@
 # Versioning and Rollback Workflow
 
-AniManga Hub uses beta release tags to preserve safe rollback points after stable milestones.
+AniManga Wire uses beta release tags to preserve safe rollback points after stable milestones.
 
 This project is developed in small, reviewable phases. Each working milestone should be merged through a pull request, verified by GitHub Actions, and then optionally tagged as a beta release.
 
@@ -19,6 +19,14 @@ This project is developed in small, reviewable phases. Each working milestone sh
 | `v0.1.0-beta.7` | Phase 1D cache observability |
 | `v0.1.0-beta.8` | Workflow verification tooling |
 | `v0.1.0-beta.9` | Phase 1E frontend cache debug visibility |
+| `v0.1.0-beta.10` | Workflow cleanup and tagging idempotency |
+| `v0.1.0-beta.11` | Catalog genre, year, and status filters |
+| `v0.1.0-beta.12` | Official-source legal watch/read discovery links |
+| `v0.1.0-beta.13` | AniPulse theme foundation and interaction/readability fixes |
+| `v0.1.0-beta.14` | Ranked search suggestions and search UI stabilization |
+| `v0.1.0-beta.15` | Anime ↔ manga cross-references and light-theme readability fix |
+
+The current stable website tag is `v0.1.0-beta.15`. The next planned milestone is `v0.1.0-beta.16`; do not create that tag until the resumed website rebrand-completion work is merged, validated, and manually QA-tested.
 
 ---
 

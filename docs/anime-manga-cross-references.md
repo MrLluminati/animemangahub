@@ -35,5 +35,5 @@ Relations are treated as non-critical metadata. If the upstream relation request
 
 - No database schema changed.
 - No content-safety policy changed.
-- Relation entries are linked to local AniManga Hub detail routes where possible.
+- Relation entries are linked to local AniManga Wire detail routes where possible.
 - Relation entries currently use compact text cards because the Jikan relation endpoint does not provide poster images in the relation payload.

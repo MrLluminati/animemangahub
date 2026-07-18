@@ -14,7 +14,7 @@ AniManga Wire becomes a non-explicit anime and manga culture, legal discovery, c
 
 Core value: search anything, find where to watch/read it.
 
-Status: on hold after AniManga Wire asset integration. Resume only when website work is reopened.
+Status: active. Website development is fully resumed.
 
 - Anime catalog with metadata from Jikan/AniList
 - Manga catalog with metadata from MangaDex/Jikan
@@ -34,7 +34,13 @@ Status: on hold after AniManga Wire asset integration. Resume only when website 
 
 ## Phase 1 Progress Snapshot
 
-Current stable beta: `v0.1.0-beta.14`
+Current stable website beta: `v0.1.0-beta.15`
+
+Next planned website milestone: `v0.1.0-beta.16`
+
+Current website track: rebrand completion, maintenance, validation, and manual QA.
+
+Parallel local track: Shorts/Reels production in `shorts/`, excluded from GitHub.
 
 Completed within Phase 1:
 
@@ -56,13 +62,36 @@ Completed within Phase 1:
 - Search sort modes for relevance, popularity, score, and year
 - Search UI polish for suggestion overlay behavior and sort dropdown
 - Dev-console cleanup after `v0.1.0-beta.14`
+- Anime ↔ manga cross-reference display
+- Cross-reference light-theme readability fix
+- Detail-page order: Detail Hero → Availability → Related Titles (implemented in the current development state)
+- Accessible footer links for official YouTube and Instagram profiles (implemented in the current development state)
 
 Remaining Phase 1 priorities:
 
-- Anime ↔ manga cross-reference display.
+- Complete the remaining AniManga Wire website rebrand maintenance for `v0.1.0-beta.16`.
+- Correct and revalidate failed transparent branding candidates.
+- Run backend-supported detail-page smoke testing.
+- Complete final dark-theme, light-theme, mobile, search, image, availability-link, and related-title-link validation.
+- Investigate pre-existing mobile page-wide horizontal overflow.
+- Verify a clean release repository before tagging `v0.1.0-beta.16`.
 - Catalog pagination and sorting improvements.
 - Continue AniManga Wire visual polish across catalog and detail pages.
 - Deployment when hosting budget and secrets are ready.
+
+---
+
+## Parallel Local Track — Shorts/Reels Production
+
+Core value: create repeatable AniManga Wire short-form clips for brand growth independently from website development.
+
+Status: active locally and excluded from GitHub.
+
+- Local Shorts workspace in `shorts/`.
+- Scripts, templates, Remotion source, documentation, outputs, work files, dependencies, caches, generated assets, and per-Short sources remain local-only.
+- The one approved Shorts-path versioning candidate is `shorts/assets/frames/amw-shorts-unified-frame-v1.png`.
+- Canonical branding assets remain separate candidates under the normal brand and frontend asset trees after QA.
+- Detailed production priorities remain in ignored local documentation.
 
 ---
 ## Content, Safety, and Legal Discovery Tracks
@@ -82,7 +111,7 @@ Public comments, marketplace submissions, and mature-theme community features mu
 
 Core value: turn AniManga Wire into a safe anime/manga culture publication.
 
-Status: parked while Shorts/Reels production is the active focus.
+Status: parked until the resumed Phase 1 website work and `v0.1.0-beta.16` milestone are complete.
 
 - Article system
 - Article categories and tags

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This policy defines the future moderation framework for AniManga Hub user-generated content, reviews, comments, reports, marketplace listings, and creator profiles.
+This policy defines the future moderation framework for AniManga Wire user-generated content, reviews, comments, reports, marketplace listings, and creator profiles.
 
 Public comments and open community features should not launch until moderation tooling exists.
 
@@ -85,7 +85,7 @@ Escalate immediately for child-safety risk, sexual content involving minors or m
 
 ## Child-Safety Zero-Tolerance Policy
 
-AniManga Hub has zero tolerance for sexualization of minors, real or fictional, including youthful-looking, childlike, ambiguous-age, school-coded, loli, shota, or teen-coded sexual content.
+AniManga Wire has zero tolerance for sexualization of minors, real or fictional, including youthful-looking, childlike, ambiguous-age, school-coded, loli, shota, or teen-coded sexual content.
 
 Such content must be removed or quarantined immediately and escalated for review.
 

@@ -1,6 +1,6 @@
 # External API Reference
 
-Quick reference for all third-party APIs used in AniManga Hub.
+Quick reference for all third-party APIs used in AniManga Wire.
 
 ---
 
