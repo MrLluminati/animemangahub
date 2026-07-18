@@ -15,7 +15,19 @@ export const brand = {
     abbreviated: "/assets/animanga-wire/logo/amw-profile-512.png",
     abbreviatedTransparent: "/assets/animanga-wire/logo/amw-profile-transparent.png",
     full: "/assets/animanga-wire/logo/animanga-wire-full-logo.png",
-    fullTransparent: "/assets/animanga-wire/logo/animanga-wire-full-logo-transparent.png"
+    fullTransparent: "/assets/animanga-wire/logo/animanga-wire-full-logo-transparent.png",
+    surface: {
+      abbreviated: {
+        light: "/assets/animanga-wire/logo/amw-profile-light-surface.png",
+        dark: "/assets/animanga-wire/logo/amw-profile-dark-surface.png",
+        red: "/assets/animanga-wire/logo/amw-profile-red-surface.png"
+      },
+      full: {
+        light: "/assets/animanga-wire/logo/animanga-wire-full-logo-light-surface.png",
+        dark: "/assets/animanga-wire/logo/animanga-wire-full-logo-dark-surface.png",
+        red: "/assets/animanga-wire/logo/animanga-wire-full-logo-red-surface.png"
+      }
+    }
   },
   banner: {
     youtube: "/assets/animanga-wire/banner/youtube-banner-2560x1440.png",

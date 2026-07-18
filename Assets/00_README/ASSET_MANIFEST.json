@@ -1,317 +1,1395 @@
 [
   {
-    "path": "01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.png",
-    "note": "Locked manga-style YouTube banner, PNG",
-    "size": [
-      2560,
-      1440
-    ],
-    "mode": "RGB"
+    "repository_path": "Assets/00_README/README.txt",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [],
+    "byte_size": 1055,
+    "sha256": "76683DCA663667683AE2FF8AB102BD5BA4A59387F900F90228FE69780DE1A3B2",
+    "format": "TXT",
+    "colour_mode": "",
+    "alpha_status": "not applicable",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Package README",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Package README"
   },
   {
-    "path": "01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.png",
-    "note": "Locked manga-style YouTube banner, PNG",
-    "size": [
+    "repository_path": "Assets/01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       2048,
       1152
     ],
-    "mode": "RGB"
+    "byte_size": 847685,
+    "sha256": "A74871C03405D5EDF1EDAADB5C0ED58C31DFCDDAA2079923248D23F20342814E",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Locked manga-style YouTube banner, JPEG under 6 MB",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Locked manga-style YouTube banner, JPEG under 6 MB"
   },
   {
-    "path": "01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.jpg",
-    "note": "Locked manga-style YouTube banner, JPEG under 6 MB",
-    "size": [
+    "repository_path": "Assets/01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       2560,
       1440
     ],
-    "mode": "RGB"
+    "byte_size": 1137094,
+    "sha256": "F864F870322DE3CE0D3D34CE05C8EA80372216A7662F6F9931B7B1B74157C664",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Locked manga-style YouTube banner, JPEG under 6 MB",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Locked manga-style YouTube banner, JPEG under 6 MB"
   },
   {
-    "path": "01_Final_Banner/JPEG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.jpg",
-    "note": "Locked manga-style YouTube banner, JPEG under 6 MB",
-    "size": [
+    "repository_path": "Assets/01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2048x1152.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       2048,
       1152
     ],
-    "mode": "RGB"
+    "byte_size": 4445605,
+    "sha256": "5F79207AE992A61473476652FA11C9D5B8FA14D90F3702F12D3166784785D9DA",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Locked manga-style YouTube banner, PNG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Locked manga-style YouTube banner, PNG"
   },
   {
-    "path": "01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2560x1440.jpg",
-    "note": "Safe area guide: blue=all devices, green=comfortable content margin",
-    "size": [
+    "repository_path": "Assets/01_Final_Banner/PNG/AniManga_Wire_YT_Banner_LOCKED_2560x1440.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       2560,
       1440
     ],
-    "mode": "RGB"
+    "byte_size": 6325796,
+    "sha256": "D9D63CCBD06E3AD7BB9570AFDC1164567DCEA307C2288EE51F9245DCE7562B89",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Locked manga-style YouTube banner, PNG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Locked manga-style YouTube banner, PNG"
   },
   {
-    "path": "01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2048x1152.jpg",
-    "note": "Safe area guide for 2048x1152 working file",
-    "size": [
-      2048,
-      1152
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "01_Final_Banner/Safe_Area_Guides/AniManga_Wire_VIEWABLE_ON_ALL_DEVICES_CROP_1546x423.png",
-    "note": "Exact YouTube all-device visible center crop",
-    "size": [
+    "repository_path": "Assets/01_Final_Banner/Safe_Area_Guides/AniManga_Wire_VIEWABLE_ON_ALL_DEVICES_CROP_1546x423.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1546,
       423
     ],
-    "mode": "RGB"
+    "byte_size": 978398,
+    "sha256": "A9126BF39F5E045224ADAB77250D1E784BDFF92775A5DD20CDC50FE9A9A82FB8",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Exact YouTube all-device visible center crop",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Exact YouTube all-device visible center crop"
   },
   {
-    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png",
-    "note": "Abbreviated AMW 1:1 profile logo PNG",
-    "size": [
+    "repository_path": "Assets/01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2048x1152.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      2048,
+      1152
+    ],
+    "byte_size": 900029,
+    "sha256": "FDCDD0838C6CE66CAC15903CCD5B6790D61D97F303EB4BD7200D457EB97A1265",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Safe area guide for 2048x1152 working file",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Safe area guide for 2048x1152 working file"
+  },
+  {
+    "repository_path": "Assets/01_Final_Banner/Safe_Area_Guides/AniManga_Wire_YT_Banner_SAFE_AREA_GUIDE_2560x1440.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      2560,
+      1440
+    ],
+    "byte_size": 1209690,
+    "sha256": "943519C5ECDF4C0FD66FFB85A7662AAECED6E44E1F377DB2A30029486A26E463",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Safe area guide: blue=all devices, green=comfortable content margin",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Safe area guide: blue=all devices, green=comfortable content margin"
+  },
+  {
+    "repository_path": "Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1080,
       1080
     ],
-    "mode": "RGB"
+    "byte_size": 537544,
+    "sha256": "A2ADE64EA609D1FDCB8FFE1E533D48C7D3AAD00E3269F96F290AA0EF45B2DA9C",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Abbreviated AMW 1:1 profile logo JPEG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Abbreviated AMW 1:1 profile logo JPEG"
   },
   {
-    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.jpg",
-    "note": "Abbreviated AMW 1:1 profile logo JPEG",
-    "size": [
+    "repository_path": "Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
       1080,
       1080
     ],
-    "mode": "RGB"
+    "byte_size": 492685,
+    "sha256": "C522F8C58AC8085C1CB850E094ABF2E9DFB4C87777F87C239FDD05728874086B",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "derivative",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "LANCZOS: 1254 -> 1080",
+    "production_approved": true,
+    "intended_use": "approved profile derivative",
+    "source_type": "deterministic transparent raster derivative",
+    "editable_source": "not currently available",
+    "note": "Abbreviated AMW 1:1 profile logo PNG"
   },
   {
-    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_800x800.png",
-    "note": "Abbreviated AMW 1:1 profile logo PNG",
-    "size": [
-      800,
-      800
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_512x512.png",
-    "note": "Abbreviated AMW 1:1 profile logo PNG",
-    "size": [
+    "repository_path": "Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_512x512.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
       512,
       512
     ],
-    "mode": "RGB"
+    "byte_size": 178237,
+    "sha256": "569BC65800F66C4D4F35EF8DBFE431B8302C2641DD330581F89612067724C1C4",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "derivative",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "LANCZOS: 1254 -> 1080 -> 800 -> 512",
+    "production_approved": true,
+    "intended_use": "approved profile derivative",
+    "source_type": "deterministic transparent raster derivative",
+    "editable_source": "not currently available",
+    "note": "Abbreviated AMW 1:1 profile logo PNG"
   },
   {
-    "path": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.png",
-    "note": "Full horizontal logo PNG",
-    "size": [
-      2048,
-      878
+    "repository_path": "Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_800x800.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      800,
+      800
     ],
-    "mode": "RGB"
+    "byte_size": 341051,
+    "sha256": "464614786FD1B88FEFC291949E978BC9B5EF84805C6628EF4F60E3E759D411C1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "derivative",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "LANCZOS: 1254 -> 1080 -> 800",
+    "production_approved": true,
+    "intended_use": "approved profile derivative",
+    "source_type": "deterministic transparent raster derivative",
+    "editable_source": "not currently available",
+    "note": "Abbreviated AMW 1:1 profile logo PNG"
   },
   {
-    "path": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.jpg",
-    "note": "Full horizontal logo JPEG",
-    "size": [
-      2048,
-      878
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_1600x684.png",
-    "note": "Full horizontal logo PNG",
-    "size": [
+    "repository_path": "Assets/02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_1600x684.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1600,
       684
     ],
-    "mode": "RGB"
+    "byte_size": 1697274,
+    "sha256": "0F9A56872BD77AEFC9E25500158EA8F20695ED2505DA68DB23DE8BE6D9F91D57",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Full horizontal logo PNG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Full horizontal logo PNG"
   },
   {
-    "path": "02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Transparent.png",
-    "note": "Abbreviated AMW logo with light background removed",
-    "size": [
+    "repository_path": "Assets/02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      2048,
+      878
+    ],
+    "byte_size": 558898,
+    "sha256": "764CAE2AC210190660468CC0B470592AEBDD9FD63C03571846381BD28469C8E0",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Full horizontal logo JPEG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Full horizontal logo JPEG"
+  },
+  {
+    "repository_path": "Assets/02_Logos/02_Full_Logo/AniManga_Wire_Full_Logo_2048x878.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      2048,
+      878
+    ],
+    "byte_size": 2383856,
+    "sha256": "02457E169899CF204E693ED965F5F11CEA8D7A9CF595F96885352A8E4672160D",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Full horizontal logo PNG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Full horizontal logo PNG"
+  },
+  {
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Dark_Surface_1254x1254.png",
+    "asset_family": "profile",
+    "surface_role": "dark",
+    "dimensions": [
       1254,
       1254
     ],
-    "mode": "RGBA"
+    "byte_size": 362171,
+    "sha256": "D4739D6A843A29B5757EBA3105B2E6E7444AF53A1F2D09DDAA3757BAF787567B",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "canonical raster master",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Dark_Surface_1254x1254.png",
+    "alias_relationship": "canonical",
+    "production_approved": true,
+    "intended_use": "approved profile master for dark surfaces",
+    "source_type": "validated transparent raster master",
+    "editable_source": "not currently available",
+    "note": "approved profile master for dark surfaces"
   },
   {
-    "path": "02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Transparent.png",
-    "note": "Full horizontal logo with light background removed",
-    "size": [
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362322,
+    "sha256": "10905D667B5391C3D1D02565B308FB569B96326953463C3DC61BEEC6D8E6C8E1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "canonical raster master",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "canonical",
+    "production_approved": true,
+    "intended_use": "approved profile master for light surfaces",
+    "source_type": "validated transparent raster master",
+    "editable_source": "not currently available",
+    "note": "approved profile master for light surfaces"
+  },
+  {
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Red_Surface_1254x1254.png",
+    "asset_family": "profile",
+    "surface_role": "red",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 281557,
+    "sha256": "0D3ACF3110BE6F72533C64FFABE212B4454EE500AB39A2D7B68A7ECC3FC789C8",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "canonical raster master",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Red_Surface_1254x1254.png",
+    "alias_relationship": "canonical",
+    "production_approved": true,
+    "intended_use": "approved profile master for red surfaces",
+    "source_type": "validated transparent raster master",
+    "editable_source": "not currently available",
+    "note": "approved profile master for red surfaces"
+  },
+  {
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Transparent.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362322,
+    "sha256": "10905D667B5391C3D1D02565B308FB569B96326953463C3DC61BEEC6D8E6C8E1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "legacy compatibility alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "legacy generic transparent profile path",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Abbreviated AMW logo with light background removed"
+  },
+  {
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Dark_Surface_1916x821.png",
+    "asset_family": "full logo",
+    "surface_role": "dark",
+    "dimensions": [
       1916,
       821
     ],
-    "mode": "RGBA"
+    "byte_size": 199884,
+    "sha256": "FAF1209983F8257E66467942A0F7ADBD685B6675C56C28CC80FA3583EBBA6BEF",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "canonical raster master",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Dark_Surface_1916x821.png",
+    "alias_relationship": "canonical",
+    "production_approved": true,
+    "intended_use": "approved full logo master for dark surfaces",
+    "source_type": "validated transparent raster master",
+    "editable_source": "not currently available",
+    "note": "approved full logo master for dark surfaces"
   },
   {
-    "path": "02_Logos/04_Watermark/YouTube_Watermark_150x150_TRANSPARENT.png",
-    "note": "YouTube watermark 150x150 transparent",
-    "size": [
-      150,
-      150
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
     ],
-    "mode": "RGBA"
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "canonical raster master",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "canonical",
+    "production_approved": true,
+    "intended_use": "approved full logo master for light surfaces",
+    "source_type": "validated transparent raster master",
+    "editable_source": "not currently available",
+    "note": "approved full logo master for light surfaces"
   },
   {
-    "path": "02_Logos/04_Watermark/Watermark_300x300_TRANSPARENT.png",
-    "note": "Watermark 300x300 transparent",
-    "size": [
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Red_Surface_1916x821.png",
+    "asset_family": "full logo",
+    "surface_role": "red",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 153322,
+    "sha256": "BA2B9BFB9E054848ACFD704E40BEF9BF181EBC92CDDED76E53F42130E62EC56D",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "canonical raster master",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Red_Surface_1916x821.png",
+    "alias_relationship": "canonical",
+    "production_approved": true,
+    "intended_use": "approved full logo master for red surfaces",
+    "source_type": "validated transparent raster master",
+    "editable_source": "not currently available",
+    "note": "approved full logo master for red surfaces"
+  },
+  {
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Transparent.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "legacy compatibility alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "legacy generic transparent full-logo path",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Full horizontal logo with light background removed"
+  },
+  {
+    "repository_path": "Assets/02_Logos/03_Transparent_PNG/README.md",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [],
+    "byte_size": 1416,
+    "sha256": "ADD02355B27406A58FBA9270557881CEA30609DAC078F64BAC723C9F785F28A3",
+    "format": "Markdown",
+    "colour_mode": "",
+    "alpha_status": "not applicable",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": ""
+  },
+  {
+    "repository_path": "Assets/02_Logos/04_Watermark/README.md",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [],
+    "byte_size": 1063,
+    "sha256": "D7B6306406ED08F76C6D07901C9DC68618B2338E2DEA7276E88C8651BE3711EF",
+    "format": "Markdown",
+    "colour_mode": "",
+    "alpha_status": "not applicable",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": ""
+  },
+  {
+    "repository_path": "Assets/02_Logos/04_Watermark/Watermark_300x300_TRANSPARENT.png",
+    "asset_family": "watermark",
+    "surface_role": "light",
+    "dimensions": [
       300,
       300
     ],
-    "mode": "RGBA"
+    "byte_size": 82243,
+    "sha256": "B36CBB12DB773BB36BC048100E46FA9CE8EF4D4E8B468E226371F91B418AB4B3",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "derivative",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "LANCZOS: 500 -> 300 directly",
+    "production_approved": true,
+    "intended_use": "approved watermark derivative",
+    "source_type": "deterministic transparent raster derivative",
+    "editable_source": "not currently available",
+    "note": "Watermark 300x300 transparent"
   },
   {
-    "path": "02_Logos/04_Watermark/Watermark_500x500_TRANSPARENT.png",
-    "note": "Watermark 500x500 transparent",
-    "size": [
+    "repository_path": "Assets/02_Logos/04_Watermark/Watermark_500x500_TRANSPARENT.png",
+    "asset_family": "watermark",
+    "surface_role": "light",
+    "dimensions": [
       500,
       500
     ],
-    "mode": "RGBA"
+    "byte_size": 188214,
+    "sha256": "85B33F286D20733EEB1B943DA205D383755D054BA5E535264437CB727EC24E76",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "derivative",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "LANCZOS: 1254 -> 1080 -> 800 -> 512 -> 500",
+    "production_approved": true,
+    "intended_use": "approved watermark master",
+    "source_type": "deterministic transparent raster derivative",
+    "editable_source": "not currently available",
+    "note": "Watermark 500x500 transparent"
   },
   {
-    "path": "04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.png",
-    "note": "Locked manga brand kit sheet",
-    "size": [
-      1448,
-      1086
+    "repository_path": "Assets/02_Logos/04_Watermark/YouTube_Watermark_150x150_TRANSPARENT.png",
+    "asset_family": "watermark",
+    "surface_role": "light",
+    "dimensions": [
+      150,
+      150
     ],
-    "mode": "RGB"
+    "byte_size": 26309,
+    "sha256": "DAEE0830FECFF55867BDFE3C92047CA2E2CD11E0AB61D2708B2C3ECA2F26A8E9",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "derivative",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "LANCZOS: 500 -> 150 directly; not 300 -> 150",
+    "production_approved": true,
+    "intended_use": "approved YouTube watermark derivative",
+    "source_type": "deterministic transparent raster derivative",
+    "editable_source": "not currently available",
+    "note": "YouTube watermark 150x150 transparent"
   },
   {
-    "path": "04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.jpg",
-    "note": "Locked manga brand kit sheet JPEG",
-    "size": [
-      1448,
-      1086
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/01_Source_Exports/animanga_wire_action_packed_manga_universe.png",
-    "note": "Original source export used for final_banner",
-    "size": [
+    "repository_path": "Assets/03_Modular_Assets/01_Source_Exports/animanga_wire_action_packed_manga_universe.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1672,
       941
     ],
-    "mode": "RGB"
+    "byte_size": 3189572,
+    "sha256": "39ADC42C585F2A18735733E849E86DC00F9D0F43FEA566DAC92C6D3300A66437",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Original source export used for final_banner",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Original source export used for final_banner"
   },
   {
-    "path": "03_Modular_Assets/01_Source_Exports/grunge_anime_inspired_logo_design.png",
-    "note": "Original source export used for abbr_logo",
-    "size": [
-      1254,
-      1254
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/01_Source_Exports/anime_manga_news_logo_design.png",
-    "note": "Original source export used for full_logo",
-    "size": [
-      1916,
-      821
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/01_Source_Exports/animanga_wire_brand_kit_sheet.png",
-    "note": "Original source export used for brand_sheet",
-    "size": [
+    "repository_path": "Assets/03_Modular_Assets/01_Source_Exports/animanga_wire_brand_kit_sheet.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1448,
       1086
     ],
-    "mode": "RGB"
+    "byte_size": 2977288,
+    "sha256": "C305DCDA6E8A49367CD0E45CE052746837CA7F2B753D8D1523D7470D120B2D59",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Original source export used for brand_sheet",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Original source export used for brand_sheet"
   },
   {
-    "path": "03_Modular_Assets/02_Crops/left_manga_panel_strip_520x1440.png",
-    "note": "Left side manga panel strip crop",
-    "size": [
-      520,
-      1440
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/02_Crops/right_manga_panel_strip_520x1440.png",
-    "note": "Right side manga panel strip crop",
-    "size": [
-      520,
-      1440
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/02_Crops/youtube_safe_area_center_crop_1546x423.png",
-    "note": "Central safe area crop",
-    "size": [
-      1546,
-      423
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/02_Crops/central_branding_region_crop.png",
-    "note": "Central branding region crop",
-    "size": [
-      1520,
-      500
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/03_Codex_Ready/banner_base_2560x1440.png",
-    "note": "Codex-ready final flat banner",
-    "size": [
-      2560,
-      1440
-    ],
-    "mode": "RGB"
-  },
-  {
-    "path": "03_Modular_Assets/03_Codex_Ready/logo_abbreviated_transparent.png",
-    "note": "Codex-ready abbreviated transparent logo",
-    "size": [
-      1254,
-      1254
-    ],
-    "mode": "RGBA"
-  },
-  {
-    "path": "03_Modular_Assets/03_Codex_Ready/logo_full_transparent.png",
-    "note": "Codex-ready full transparent logo",
-    "size": [
+    "repository_path": "Assets/03_Modular_Assets/01_Source_Exports/anime_manga_news_logo_design.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1916,
       821
     ],
-    "mode": "RGBA"
+    "byte_size": 2395824,
+    "sha256": "0D59663059B161EEC76DCBE30AFC3211BA423293CFA07DCECEF9806CB04D04C1",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Original source export used for full_logo",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Original source export used for full_logo"
   },
   {
-    "path": "03_Modular_Assets/03_Codex_Ready/youtube_safe_area_crop.png",
-    "note": "Codex-ready viewable safe area preview",
-    "size": [
+    "repository_path": "Assets/03_Modular_Assets/01_Source_Exports/grunge_anime_inspired_logo_design.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 2875486,
+    "sha256": "9898EF830950625081F00EB252712D2CC178E5CB1E3532453487904C5297AE7B",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Original source export used for abbr_logo",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Original source export used for abbr_logo"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/02_Crops/central_branding_region_crop.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      1520,
+      500
+    ],
+    "byte_size": 1137491,
+    "sha256": "7280C5E5AD64226B5C39D95D4B12288694BE2348426E2F02F0A938A8710C6B0D",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Central branding region crop",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Central branding region crop"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/02_Crops/left_manga_panel_strip_520x1440.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      520,
+      1440
+    ],
+    "byte_size": 1324239,
+    "sha256": "E0CFF4BEB9D745658E08F3C912E35FDB6A6B71C2B621EFEF3FC0F8D657871ECB",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Left side manga panel strip crop",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Left side manga panel strip crop"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/02_Crops/right_manga_panel_strip_520x1440.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      520,
+      1440
+    ],
+    "byte_size": 1293553,
+    "sha256": "E233756813501BF50AFF71851015B0BDD7414E3F26BE5F0FC9142E088BE8CB82",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Right side manga panel strip crop",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Right side manga panel strip crop"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/02_Crops/youtube_safe_area_center_crop_1546x423.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
       1546,
       423
     ],
-    "mode": "RGB"
+    "byte_size": 978398,
+    "sha256": "A9126BF39F5E045224ADAB77250D1E784BDFF92775A5DD20CDC50FE9A9A82FB8",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Central safe area crop",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Central safe area crop"
   },
   {
-    "path": "05_Codex/codex_layout.json",
-    "note": "Codex layout and locked brand rules",
-    "size": "",
-    "mode": ""
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/banner_base_2560x1440.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      2560,
+      1440
+    ],
+    "byte_size": 6325796,
+    "sha256": "D9D63CCBD06E3AD7BB9570AFDC1164567DCEA307C2288EE51F9245DCE7562B89",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Codex-ready final flat banner",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Codex-ready final flat banner"
   },
   {
-    "path": "05_Codex/compose_banner_template.py",
-    "note": "Starter script for Codex/PIL use",
-    "size": "",
-    "mode": ""
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_abbreviated_dark_surface.png",
+    "asset_family": "profile",
+    "surface_role": "dark",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362171,
+    "sha256": "D4739D6A843A29B5757EBA3105B2E6E7444AF53A1F2D09DDAA3757BAF787567B",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Dark_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Dark_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready profile for dark surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready profile for dark surfaces"
   },
   {
-    "path": "00_README/README.txt",
-    "note": "Package README",
-    "size": "",
-    "mode": ""
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_abbreviated_light_surface.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362322,
+    "sha256": "10905D667B5391C3D1D02565B308FB569B96326953463C3DC61BEEC6D8E6C8E1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready profile for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready profile for light surfaces"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_abbreviated_red_surface.png",
+    "asset_family": "profile",
+    "surface_role": "red",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 281557,
+    "sha256": "0D3ACF3110BE6F72533C64FFABE212B4454EE500AB39A2D7B68A7ECC3FC789C8",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Red_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Red_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready profile for red surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready profile for red surfaces"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_abbreviated_transparent.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362322,
+    "sha256": "10905D667B5391C3D1D02565B308FB569B96326953463C3DC61BEEC6D8E6C8E1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready profile for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready abbreviated transparent logo"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_full_dark_surface.png",
+    "asset_family": "full logo",
+    "surface_role": "dark",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 199884,
+    "sha256": "FAF1209983F8257E66467942A0F7ADBD685B6675C56C28CC80FA3583EBBA6BEF",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Dark_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Dark_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready full logo for dark surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready full logo for dark surfaces"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_full_light_surface.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready full logo for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready full logo for light surfaces"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_full_red_surface.png",
+    "asset_family": "full logo",
+    "surface_role": "red",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 153322,
+    "sha256": "BA2B9BFB9E054848ACFD704E40BEF9BF181EBC92CDDED76E53F42130E62EC56D",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Red_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Red_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready full logo for red surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready full logo for red surfaces"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/logo_full_transparent.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "Codex-ready alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "Codex-ready full logo for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "Codex-ready full transparent logo"
+  },
+  {
+    "repository_path": "Assets/03_Modular_Assets/03_Codex_Ready/youtube_safe_area_crop.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      1546,
+      423
+    ],
+    "byte_size": 978398,
+    "sha256": "A9126BF39F5E045224ADAB77250D1E784BDFF92775A5DD20CDC50FE9A9A82FB8",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Codex-ready viewable safe area preview",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Codex-ready viewable safe area preview"
+  },
+  {
+    "repository_path": "Assets/04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.jpg",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "byte_size": 609271,
+    "sha256": "667AF3D0248110A29CCCBCAB984AD47F8A2541B0536D532B587AFAB30084AA43",
+    "format": "JPEG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Locked manga brand kit sheet JPEG",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Locked manga brand kit sheet JPEG"
+  },
+  {
+    "repository_path": "Assets/04_Brand_Sheet/AniManga_Wire_Locked_Manga_Brand_Kit_Sheet.png",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "byte_size": 2952354,
+    "sha256": "9DF9988D5CDADD4B838C1D4BFD5ECF275D7465FDD586F36AA42AD2EA65442AEA",
+    "format": "PNG",
+    "colour_mode": "RGB",
+    "alpha_status": "absent",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Locked manga brand kit sheet",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Locked manga brand kit sheet"
+  },
+  {
+    "repository_path": "Assets/05_Codex/codex_layout.json",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [],
+    "byte_size": 1569,
+    "sha256": "09891A285127B9E1553FF0E1323658A72E8B3EFDF3F61A2829491BEEF59BAFAF",
+    "format": "JSON",
+    "colour_mode": "",
+    "alpha_status": "not applicable",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Codex layout and locked brand rules",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Codex layout and locked brand rules"
+  },
+  {
+    "repository_path": "Assets/05_Codex/compose_banner_template.py",
+    "asset_family": "legacy brand kit",
+    "surface_role": "",
+    "dimensions": [],
+    "byte_size": 498,
+    "sha256": "6264F89B57D13BE40F1BF2023049E5554CC4AB9EFE9167F3DB000CC1634B1955",
+    "format": "Python",
+    "colour_mode": "",
+    "alpha_status": "not applicable",
+    "asset_role": "existing asset",
+    "canonical_source": "",
+    "alias_relationship": "",
+    "production_approved": null,
+    "intended_use": "Starter script for Codex/PIL use",
+    "source_type": "existing repository asset",
+    "editable_source": "",
+    "note": "Starter script for Codex/PIL use"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/amw-profile-512.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      512,
+      512
+    ],
+    "byte_size": 178237,
+    "sha256": "569BC65800F66C4D4F35EF8DBFE431B8302C2641DD330581F89612067724C1C4",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_512x512.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_512x512.png",
+    "production_approved": true,
+    "intended_use": "frontend profile for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend profile for light surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/amw-profile-dark-surface.png",
+    "asset_family": "profile",
+    "surface_role": "dark",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362171,
+    "sha256": "D4739D6A843A29B5757EBA3105B2E6E7444AF53A1F2D09DDAA3757BAF787567B",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Dark_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Dark_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "frontend profile for dark surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend profile for dark surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/amw-profile-light-surface.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362322,
+    "sha256": "10905D667B5391C3D1D02565B308FB569B96326953463C3DC61BEEC6D8E6C8E1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "frontend profile for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend profile for light surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/amw-profile-red-surface.png",
+    "asset_family": "profile",
+    "surface_role": "red",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 281557,
+    "sha256": "0D3ACF3110BE6F72533C64FFABE212B4454EE500AB39A2D7B68A7ECC3FC789C8",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Red_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Red_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "frontend profile for red surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend profile for red surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/amw-profile-transparent.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "byte_size": 362322,
+    "sha256": "10905D667B5391C3D1D02565B308FB569B96326953463C3DC61BEEC6D8E6C8E1",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AMW_Abbreviated_Profile_Light_Surface_1254x1254.png",
+    "production_approved": true,
+    "intended_use": "frontend profile for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend profile for light surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/animanga-wire-full-logo-dark-surface.png",
+    "asset_family": "full logo",
+    "surface_role": "dark",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 199884,
+    "sha256": "FAF1209983F8257E66467942A0F7ADBD685B6675C56C28CC80FA3583EBBA6BEF",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Dark_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Dark_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "frontend full logo for dark surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend full logo for dark surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/animanga-wire-full-logo-light-surface.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "frontend full logo for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend full logo for light surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/animanga-wire-full-logo-red-surface.png",
+    "asset_family": "full logo",
+    "surface_role": "red",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 153322,
+    "sha256": "BA2B9BFB9E054848ACFD704E40BEF9BF181EBC92CDDED76E53F42130E62EC56D",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Red_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Red_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "frontend full logo for red surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend full logo for red surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/animanga-wire-full-logo-transparent.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "frontend full logo for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend full logo for light surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/logo/animanga-wire-full-logo.png",
+    "asset_family": "full logo",
+    "surface_role": "light",
+    "dimensions": [
+      1916,
+      821
+    ],
+    "byte_size": 198236,
+    "sha256": "463F2A857556EDAB7406E00D97839AF76CB15073B516BC77FD50ECD14B247BFD",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/03_Transparent_PNG/AniManga_Wire_Full_Logo_Light_Surface_1916x821.png",
+    "production_approved": true,
+    "intended_use": "frontend full logo for light surfaces",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend full logo for light surfaces"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/social/amw-profile-1080.png",
+    "asset_family": "profile",
+    "surface_role": "light",
+    "dimensions": [
+      1080,
+      1080
+    ],
+    "byte_size": 492685,
+    "sha256": "C522F8C58AC8085C1CB850E094ABF2E9DFB4C87777F87C239FDD05728874086B",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend social alias",
+    "canonical_source": "Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/01_Abbreviated_Profile/AMW_Abbreviated_Profile_1080x1080.png",
+    "production_approved": true,
+    "intended_use": "frontend social profile image",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend social profile image"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/watermark/watermark-300.png",
+    "asset_family": "watermark",
+    "surface_role": "light",
+    "dimensions": [
+      300,
+      300
+    ],
+    "byte_size": 82243,
+    "sha256": "B36CBB12DB773BB36BC048100E46FA9CE8EF4D4E8B468E226371F91B418AB4B3",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/04_Watermark/Watermark_300x300_TRANSPARENT.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/04_Watermark/Watermark_300x300_TRANSPARENT.png",
+    "production_approved": true,
+    "intended_use": "frontend watermark compatibility path",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend watermark compatibility path"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/watermark/watermark-500.png",
+    "asset_family": "watermark",
+    "surface_role": "light",
+    "dimensions": [
+      500,
+      500
+    ],
+    "byte_size": 188214,
+    "sha256": "85B33F286D20733EEB1B943DA205D383755D054BA5E535264437CB727EC24E76",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/04_Watermark/Watermark_500x500_TRANSPARENT.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/04_Watermark/Watermark_500x500_TRANSPARENT.png",
+    "production_approved": true,
+    "intended_use": "frontend watermark compatibility path",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend watermark compatibility path"
+  },
+  {
+    "repository_path": "frontend/public/assets/animanga-wire/watermark/youtube-watermark-150.png",
+    "asset_family": "watermark",
+    "surface_role": "light",
+    "dimensions": [
+      150,
+      150
+    ],
+    "byte_size": 26309,
+    "sha256": "DAEE0830FECFF55867BDFE3C92047CA2E2CD11E0AB61D2708B2C3ECA2F26A8E9",
+    "format": "PNG",
+    "colour_mode": "RGBA",
+    "alpha_status": "present; alpha-zero RGB normalized; outer border clear",
+    "asset_role": "frontend alias",
+    "canonical_source": "Assets/02_Logos/04_Watermark/YouTube_Watermark_150x150_TRANSPARENT.png",
+    "alias_relationship": "byte-identical to Assets/02_Logos/04_Watermark/YouTube_Watermark_150x150_TRANSPARENT.png",
+    "production_approved": true,
+    "intended_use": "frontend watermark compatibility path",
+    "source_type": "byte-identical raster alias",
+    "editable_source": "not currently available",
+    "note": "frontend watermark compatibility path"
   }
 ]
