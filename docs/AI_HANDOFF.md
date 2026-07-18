@@ -69,8 +69,8 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 
 ## Current Next Actions
 
-1. Re-run live search when Jikan is healthy; both upstream anime and manga searches returned `504`, so the confirmed `one piece` query produced no results during this pass.
-2. Review PR #37 CI and the remaining keyboard-search observation: automated Enter presses did not submit, while the visible Search button did.
+1. Re-run live search when Jikan is healthy; three bounded retries still returned upstream `504` responses.
+2. Decide whether dedicated Arrow Up/Down suggestion highlighting should be a future accessibility enhancement; the current focusable suggestion buttons do not implement an active-descendant keyboard model.
 3. Correct and revalidate the excluded transparent-branding candidates.
 4. Merge PR #37 only after owner review and all remaining release gates pass.
 5. Do not tag `v0.1.0-beta.16` until the complete release matrix passes.
@@ -96,13 +96,22 @@ Keep failed branding candidates, manifests, related branding documentation, and 
 - Live query `one piece` remained blocked by upstream Jikan `504` responses. The page rendered the intended zero-result fallback without overflow. Automated Search-button submission worked; automated Enter submission did not navigate and needs a later browser/operator recheck.
 - PR #37 remains draft and unmerged. `v0.1.0-beta.16` remains untagged.
 
+### Final search validation — 2026-07-18
+
+- Three bounded `one piece` retries produced no live results. Direct Jikan anime/manga requests returned `504/504` on every attempt; backend anime/manga routes returned `500/500`, and the combined route returned `502`. Attempt durations in milliseconds were: direct `676/539`, backend `545/183`, combined `908`; direct `823/555`, backend `560/189`, combined `918`; direct `620/563`, backend `548/183`, combined `926`.
+- Browser event logging confirmed Enter reached the focused input as `key=Enter`, `code=Enter`, `defaultPrevented=false`, `isComposing=false`, with the input as target. No application keydown handler consumed it, but the automation keyboard API did not perform the browser's native implicit form-submit default action, so no submit event or navigation followed in states with suggestions absent, visible, or dismissed, or with whitespace around the query.
+- The visible Search button and `requestSubmit()` on the actual form both invoked the real submit handler and navigated once to `/search?q=one%20piece`; whitespace trimmed correctly and an empty query retained its existing redirect-to-home behavior. A synthetic submit comparison exposed stale React state and was not treated as user-equivalent evidence. No search source correction was required.
+- Arrow Down did not highlight a suggestion: focus remained on the input and `aria-activedescendant` remained absent. The current component has no Arrow Up/Down active-suggestion model; whether to add one is an owner enhancement decision, not a regression in the documented full-search Enter flow.
+- Because browser request interception was not available in the selected browser surface, controlled rendering used a temporary Jikan-compatible local service boundary outside the repository. It returned two anime and two manga records. All four cards and images rendered at `1440x900`, `390x844`, and `360x800` in dark/light coverage; query refresh persistence, `/anime/21` navigation, focus usability, and zero horizontal overflow/browser-console errors passed. No mock, fixture, log, database, or source artifact is versioned.
+- Live upstream success remains an external-service verification gate. PR #37 remains draft and unmerged, and `v0.1.0-beta.16` remains untagged.
+
 ---
 
 ## Remaining `v0.1.0-beta.16` Gates
 
 - Correct and revalidate failed transparent branding candidates.
 - Validate a successful live search result after the Jikan upstream recovers.
-- Recheck Enter-key search submission in an independent browser/operator pass.
+- Decide whether dedicated Arrow Up/Down suggestion selection is required for this release; native form structure and real submit paths are validated, while the automation keyboard surface does not execute implicit Enter submission.
 - Verify a clean release repository.
 - Tag `v0.1.0-beta.16` only after all gates pass.
 
