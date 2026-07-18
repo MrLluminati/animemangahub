@@ -59,7 +59,8 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 - Title: `fix: complete AniManga Wire website rebrand`.
 - Base: `main`.
 - Head: `fix/complete-animanga-wire-website-rebrand`.
-- Remote commit before this handoff update: `84f007f5704d2644cb73718e6eb89e7b7055a02a`.
+- Remote commit at runtime-validation start: `9ea030f0d8c7453e052f9beea6c6a7183d8b3546`.
+- Local runtime fix commit: `5938bdd` (`fix: prevent mobile layout overflow`).
 - State: open draft.
 - Dependency status: PR #36 is merged; PR #37 now targets `main` directly.
 - CI status: expected to run because the PR now targets `main`.
@@ -68,12 +69,11 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 
 ## Current Next Actions
 
-1. Wait for and review PR #37 CI.
-2. Perform backend-running anime and manga detail smoke testing.
-3. Investigate the pre-existing mobile horizontal overflow.
-4. Complete dark, light, mobile, search, image, availability-link, and related-title validation.
-5. Merge PR #37 only after all required checks and release gates pass.
-6. Do not tag `v0.1.0-beta.16` until the complete release matrix passes.
+1. Re-run live search when Jikan is healthy; both upstream anime and manga searches returned `504`, so the confirmed `one piece` query produced no results during this pass.
+2. Review PR #37 CI and the remaining keyboard-search observation: automated Enter presses did not submit, while the visible Search button did.
+3. Correct and revalidate the excluded transparent-branding candidates.
+4. Merge PR #37 only after owner review and all remaining release gates pass.
+5. Do not tag `v0.1.0-beta.16` until the complete release matrix passes.
 
 Keep failed branding candidates, manifests, related branding documentation, and frontend public aliases out of PR #37.
 
@@ -87,19 +87,22 @@ Keep failed branding candidates, manifests, related branding documentation, and 
 - Frontend type-check, lint, and production build passed for `1e8f12e`.
 - Backend-off production builds can log non-fatal `ECONNREFUSED` fetch messages while still succeeding.
 
+### Runtime validation — 2026-07-18
+
+- Backend started on port `4000`; `GET /api/health` returned `200` with service status `ok`. Frontend started on port `3000` and returned `200`.
+- Confirmed records: anime `/anime/21` (One Piece) and manga `/manga/13` (One Piece). Anime relations included the internal manga link `/manga/13`; manga relations returned no groups and correctly omitted the section.
+- Browser coverage passed at `1440x900`, `1280x720`, `390x844`, `375x667`, and `360x800` in dark and light themes. Header, footer, social attributes, images, detail ordering, availability destinations, and internal related-title navigation passed without browser-console errors.
+- Mobile overflow root cause was the header controls flex item shrinking below its fixed-width children. Commit `5938bdd` adds `shrink-0`; all tested root/body and footer measurements now match their client widths.
+- Live query `one piece` remained blocked by upstream Jikan `504` responses. The page rendered the intended zero-result fallback without overflow. Automated Search-button submission worked; automated Enter submission did not navigate and needs a later browser/operator recheck.
+- PR #37 remains draft and unmerged. `v0.1.0-beta.16` remains untagged.
+
 ---
 
 ## Remaining `v0.1.0-beta.16` Gates
 
 - Correct and revalidate failed transparent branding candidates.
-- Run anime and manga detail-page smoke tests with the backend running.
-- Complete final dark-theme and light-theme release passes.
-- Complete final mobile layout pass.
-- Investigate pre-existing mobile page-wide horizontal overflow.
-- Validate search behavior and results.
-- Validate images.
-- Validate availability links.
-- Validate related-title links.
+- Validate a successful live search result after the Jikan upstream recovers.
+- Recheck Enter-key search submission in an independent browser/operator pass.
 - Verify a clean release repository.
 - Tag `v0.1.0-beta.16` only after all gates pass.
 
