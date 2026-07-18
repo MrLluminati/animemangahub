@@ -30,9 +30,9 @@ export default async function MangaDetailPage({ params }: MangaDetailPageProps) 
 
       <DetailHero item={manga} />
 
-      <RelatedTitles groups={relations} />
-
       <LegalAvailabilityLinks item={manga} />
+
+      <RelatedTitles groups={relations} />
     </div>
   );
 }
