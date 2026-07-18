@@ -1,6 +1,6 @@
 # Development Workflow
 
-AniManga Hub uses a PowerShell-first, branch-based workflow.
+AniManga Wire uses a PowerShell-first, branch-based workflow.
 
 Use PowerShell 7 through Windows Terminal for this project. Do not use old Windows PowerShell 5.1 for patch scripts.
 

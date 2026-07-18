@@ -2,7 +2,7 @@
 
 ## Purpose
 
-AniManga Hub helps users find where anime and manga are legally available. It must not become a piracy directory, torrent index, adult redirect site, or illegal reader guide.
+AniManga Wire helps users find where anime and manga are legally available. It must not become a piracy directory, torrent index, adult redirect site, or illegal reader guide.
 
 ## Official and Legal Platforms Only
 

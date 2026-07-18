@@ -6,11 +6,26 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Shorts/Reels Production Setup
-**Current stable beta:** `v0.1.0-beta.14`
-**Latest maintenance:** AniManga Wire GitHub checkpoint prep and Shorts workspace setup
-**Website Status:** On hold after AniManga Wire asset integration
-**Next Up:** Review the first AMW Shorts sample and refine the editing template.
+**Active Phase:** Phase 1 website development and AniManga Wire rebrand completion
+**Current stable website beta:** `v0.1.0-beta.15`
+**Current repo checkpoint:** `main` includes AniManga Wire brand integration and Shorts workspace setup after the beta tag
+**Next website milestone:** `v0.1.0-beta.16`
+**Website Status:** Fully resumed
+**Shorts Status:** Separate local-only production workstream excluded from GitHub
+**Review branch:** `chore/review-local-amw-updates`
+**Local commits:** `1bdf9f7 chore: keep shorts workspace local-only`; `1e8f12e fix: complete detail layout and footer social links`
+**Commit integration status:** Both commits exist locally only; neither has been pushed, merged, released, or included in a tag.
+**Next Up:** Correct blocked transparent branding assets and complete the remaining `v0.1.0-beta.16` validation matrix.
+
+### Repository Hygiene Review — 2026-07-18
+
+- [x] Website development is fully resumed; Shorts/Reels remains separate and local-only.
+- [x] Local commit `1bdf9f7` excludes the Shorts workspace while versioning only the approved unified frame; not pushed.
+- [x] Local commit `1e8f12e` implements Hero → Availability → Related ordering and footer social links; not pushed.
+- [x] Anime ↔ manga cross-references remain implemented in `v0.1.0-beta.15`.
+- [ ] Failed transparent branding candidates remain blocked and must not be committed until corrected and revalidated.
+- [x] Current project documentation is synchronized for local review.
+- [ ] Remaining `v0.1.0-beta.16` release validation remains pending.
 
 ---
 
@@ -103,11 +118,18 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ### To Build Next
 - [x] Anime ↔ Manga cross-reference display
+- [x] Reorder anime and manga detail sections to Hero → Availability → Related Titles (`1e8f12e`, local only)
+- [x] Add accessible footer links for the official YouTube and Instagram profiles (`1e8f12e`, local only)
+- [ ] Complete website rebrand maintenance for the `v0.1.0-beta.16` candidate
+- [ ] Run backend-supported anime and manga detail-page smoke tests
+- [ ] Complete final dark-theme, light-theme, mobile, search, image, availability-link, and related-title-link validation
+- [ ] Investigate pre-existing mobile page-wide horizontal overflow
+- [ ] Verify a clean release repository and tag `v0.1.0-beta.16`
 - [ ] Catalog pagination and sorting improvements
 - [ ] Continue AniManga Wire visual polish across catalog and detail pages
 - [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
 
-> Website development is currently on hold. Resume these items only when the owner explicitly reopens website work.
+> Website development is fully resumed. Shorts/Reels remains a separate local-only workstream; only `shorts/assets/frames/amw-shorts-unified-frame-v1.png` is versioned from inside `shorts/`.
 
 ---
 
@@ -202,3 +224,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-06-24 | Improved light-theme readability for related-title cross-reference cards after live QA |
 | 2026-06-24 | Integrated locked AniManga Wire branding, public assets, metadata, and logo assets into the existing catalog app |
 | 2026-06-24 | Put website development on hold and created the Shorts/Reels workspace with first AMW sample render |
+| 2026-07-18 | Ended the historical website hold and fully resumed Phase 1 website work toward `v0.1.0-beta.16` |
+| 2026-07-18 | Created local unpushed commit `1bdf9f7` for the Shorts local-only policy and approved unified-frame exception |
+| 2026-07-18 | Created local unpushed commit `1e8f12e` for Hero → Availability → Related ordering and footer YouTube/Instagram links |
+| 2026-07-18 | Synchronized current project documentation while preserving unrelated local work |

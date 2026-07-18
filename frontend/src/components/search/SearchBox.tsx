@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { FormEvent, useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { createPortal } from "react-dom";
 
 import { getSearchSuggestions } from "@/lib/api";
 import type { CatalogTitle } from "@/types/catalog";
@@ -186,7 +185,7 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
 
   const suggestionsOverlay =
     shouldShowSuggestions && overlayRect
-      ? createPortal(
+      ? (
           <div
             id={`${inputId}-suggestions-overlay`}
             className="fixed z-[2147483647] max-h-[min(24rem,calc(100vh-2rem))] overflow-auto rounded-[var(--ap-radius-card)] border border-[var(--ap-border-strong)] bg-[var(--ap-surface-container)] p-2 text-[var(--ap-text)] shadow-[var(--ap-shadow-strong)]"
@@ -227,8 +226,7 @@ export function SearchBox({ defaultValue = "", compact = false }: SearchBoxProps
                 </span>
               </button>
             ))}
-          </div>,
-          document.body
+          </div>
         )
       : null;
 

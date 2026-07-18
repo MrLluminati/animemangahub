@@ -39,6 +39,26 @@ export function Footer() {
             {brand.tagline} Safe anime and manga culture coverage, official-source discovery, and no hosted anime or manga content.
           </p>
           <p className="text-xs font-bold text-[var(--ap-primary-active)]">{brand.website} / {brand.handle}</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1 font-semibold text-[var(--ap-text)]">
+            <a
+              href={brand.youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit AniManga Wire on YouTube"
+              className="transition hover:text-[var(--ap-primary-active)] focus-visible:text-[var(--ap-primary-active)]"
+            >
+              YouTube
+            </a>
+            <a
+              href={brand.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit AniManga Wire on Instagram"
+              className="transition hover:text-[var(--ap-primary-active)] focus-visible:text-[var(--ap-primary-active)]"
+            >
+              Instagram
+            </a>
+          </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-3">

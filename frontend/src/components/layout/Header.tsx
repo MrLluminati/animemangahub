@@ -22,7 +22,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex min-w-0 items-center gap-2">
+        <div className="flex min-w-0 shrink-0 items-center gap-2">
           <div className="hidden xl:block">
             <SearchBox compact />
           </div>

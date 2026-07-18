@@ -1,6 +1,8 @@
-# AniManga Hub Project Summary
+# AniManga Wire Project Summary
 
-Current stable beta: `v0.1.0-beta.14`
+Current stable website beta: `v0.1.0-beta.15`
+
+Next planned website milestone: `v0.1.0-beta.16`
 
 This document summarizes the work completed so far and the next planned tasks for AniManga Wire.
 
@@ -113,6 +115,13 @@ This document summarizes the work completed so far and the next planned tasks fo
 - Marked first above-the-fold title card images as priority to reduce Next.js LCP image warnings.
 - Added `docs/dev-console-warnings-cleanup.md`.
 
+### Phase 1K — Anime ↔ Manga Cross-References
+
+- Added cached anime and manga relation endpoints backed by Jikan relation data.
+- Added the reusable `RelatedTitles` component to anime and manga detail pages.
+- Improved related-title card readability in light mode after live QA.
+- Rollback tag: `v0.1.0-beta.15`.
+
 ### Project Operations
 
 - PowerShell 7 workflow script added at `scripts/dev-workflow.ps1`.
@@ -124,14 +133,16 @@ This document summarizes the work completed so far and the next planned tasks fo
 
 ## Current Stable State
 
-`main` is stable through ranked search suggestions and post-beta-14 dev-console cleanup.
+`main` is stable through the `v0.1.0-beta.15` anime ↔ manga cross-reference milestone and is ahead of that tag with the AniManga Wire brand/Shorts checkpoint.
 
-Website development is now on hold after the AniManga Wire asset integration checkpoint. Active work has moved to the Shorts/Reels workspace under `shorts/`.
+Website development is fully resumed. Shorts/Reels production continues as a separate local-only workstream excluded from GitHub, except for the one approved reusable main-frame candidate.
+
+Current development state enforces the local-only Shorts policy, corrects detail-page order, and adds official footer social links. These changes are planned for the `v0.1.0-beta.16` candidate and are not part of the stable `v0.1.0-beta.15` tag.
 
 The current rollback-safe beta tag is:
 
 ```text
-v0.1.0-beta.14
+v0.1.0-beta.15
 ```
 
 Current local development status:
@@ -147,6 +158,9 @@ Current local development status:
 - Ranked search suggestions appear under active search inputs.
 - Search suggestion overlays close on page scroll.
 - Search results can be sorted by relevance, popularity, score, and year.
+- Anime and manga detail pages display cached related-title cross-references.
+- Anime and manga detail pages render Detail Hero → Availability → Related Titles.
+- The footer links to the official AniManga Wire YouTube and Instagram profiles.
 - Browser favicon request is satisfied by `/favicon.ico`.
 
 ---
@@ -155,12 +169,13 @@ Current local development status:
 
 Recommended next tasks:
 
-1. Add anime-to-manga cross-reference display.
-2. Improve catalog pagination and sorting.
-3. Continue AniPulse visual polish across catalog and detail pages.
-4. Keep deployment deferred until hosting budget and secrets are ready.
-
-These website tasks are parked until website development is explicitly resumed.
+1. Correct and revalidate the failed transparent branding candidates.
+2. Run backend-supported anime and manga detail-page smoke tests.
+3. Complete final dark-theme, light-theme, mobile, search, image, availability-link, and related-title-link validation.
+4. Investigate pre-existing mobile page-wide horizontal overflow.
+5. Verify a clean release repository before tagging `v0.1.0-beta.16`.
+6. Improve catalog pagination and sorting.
+7. Keep deployment deferred until hosting budget and secrets are ready.
 
 ---
 

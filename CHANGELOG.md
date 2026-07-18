@@ -25,6 +25,49 @@ Format:
 
 ---
 
+## [2026-07-18] - Synchronize AniManga Wire project state
+**Agent/Author:** Codex GPT-5
+**Phase:** Project Operations / Documentation
+**Commit:** `docs: synchronize animanga wire project state`
+
+### Changed
+- Synchronized current-facing naming, release, roadmap, progress, handoff, policy, workflow, and setup documentation for AniManga Wire.
+- Recorded that website development is fully resumed, `v0.1.0-beta.15` remains stable, and `v0.1.0-beta.16` remains pending validation and tagging.
+- Preserved historical AniManga Hub references where they describe earlier releases, migration decisions, repository identifiers, or archived planning.
+
+### Notes
+- Recorded that branding transparency QA remains unresolved and must pass before affected assets are released.
+
+---
+
+## [2026-07-18] - Complete detail layout and footer social links
+**Agent/Author:** Codex GPT-5
+**Phase:** Phase 1 / Website Maintenance
+**Commit:** `fix: complete detail layout and footer social links`
+
+### Changed
+- Reordered anime and manga detail pages to Detail Hero → Availability → Related Titles.
+- Added accessible footer links using the configured official YouTube and Instagram URLs.
+
+### Notes
+- This work belongs to the `v0.1.0-beta.16` development state; full release validation remains pending.
+
+---
+
+## [2026-07-18] - Keep Shorts production local-only
+**Agent/Author:** Codex GPT-5
+**Phase:** Project Operations / Local Shorts Policy
+**Commit:** `chore: keep shorts workspace local-only`
+
+### Changed
+- Removed previously tracked Shorts paths from Git tracking while preserving locally existing production files.
+- Excluded the Shorts/Reels workspace from GitHub except for `shorts/assets/frames/amw-shorts-unified-frame-v1.png`.
+
+### Notes
+- Website development remains fully resumed as a separate workstream.
+
+---
+
 ## [2026-06-24] - Shorts workspace and website hold
 **Agent/Author:** Codex GPT-5
 **Phase:** Shorts/Reels Production Setup

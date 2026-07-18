@@ -6,13 +6,19 @@ This file tells AI agents (Claude, Cursor, Copilot, etc.) everything needed to c
 
 ## Project Overview
 
-**AniManga Hub** — A non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform.
+**AniManga Wire** — A non-explicit anime and manga culture, legal discovery, catalog, review, and fandom platform.
 
 Users can search titles, see where to watch/read them legally, rate and review, maintain lists, and follow new releases. Future phases include subscriptions and licensed streaming.
 
-**Current stable beta:** `v0.1.0-beta.9`
+**Current stable beta:** `v0.1.0-beta.15`
 
 **Current phase:** Phase 1 — MVP Catalog and Legal Discovery
+
+**Current active website work:** Phase 1 development is fully resumed; the next planned website milestone is `v0.1.0-beta.16`.
+
+**Parallel local workstream:** Shorts/Reels production continues in `shorts/`, but the production workspace is local-only and excluded from GitHub.
+
+**Website status:** Fully resumed.
 
 ---
 
@@ -36,6 +42,40 @@ Users can search titles, see where to watch/read them legally, rate and review, 
 **Every agent and every contributor MUST add a `CHANGELOG.md` entry before pushing to `main`.**
 
 The changelog is how all agents stay in sync. An agent reading this repo cold should be able to open `CHANGELOG.md` and know exactly what was built last session, what decisions were made, and what to do next. Never skip this step.
+
+---
+
+## Agent Memory & Handoff Rules
+
+Before touching files, read these in order:
+
+1. `CLAUDE.md` and `AGENTS.md`
+2. `docs/AI_HANDOFF.md`
+3. `PROGRESS.md`
+4. `ROADMAP.md`
+5. `CHANGELOG.md`
+6. `docs/DECISIONS.md` and `docs/SETUP_NOTES.md`
+
+Working rules:
+
+- Run `git status --short --branch` before edits.
+- Preserve unrelated local changes and never reset user work without explicit approval.
+- Keep docs concise, dated when useful, and clear enough for a cold-start agent.
+- Update `CHANGELOG.md` for every meaningful session.
+- Update `PROGRESS.md` when current status or next steps change.
+- Update `ROADMAP.md` when priorities, phases, or active tracks change.
+- Record durable decisions in `docs/DECISIONS.md`.
+- Record setup or machine-local workflow notes in `docs/SETUP_NOTES.md`.
+- Put current handoff state, blockers, and active local work in `docs/AI_HANDOFF.md`.
+
+Durable workstream and release rules:
+
+- `shorts/` is an active local production workspace, not unrelated local noise, and must remain excluded from GitHub.
+- Shorts source code, scripts, templates, documentation, generated assets, outputs, packages, intermediates, logs, exports, dependencies, caches, and raw media stay local and out of Git.
+- The only Shorts-path candidate for versioning is the approved reusable main frame at `shorts/assets/frames/amw-shorts-unified-frame-v1.png`.
+- Canonical AniManga Wire branding assets outside `shorts/` remain separate versioning candidates after asset QA.
+- Website development is fully resumed and should continue through reviewable branches with the normal validation workflow.
+- `v0.1.0-beta.16` remains untagged pending backend-running detail-page smoke testing, final dark/light/mobile/search/image/link validation, clean-repository verification, and corrected branding transparency.
 
 ---
 
