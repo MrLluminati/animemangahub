@@ -23,21 +23,54 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 - Historical public name: AniManga Hub.
 - Repository: `MrLluminati/animemangahub`.
 - Local folder and other technical legacy identifiers remain unchanged.
-- Review branch: `chore/review-local-amw-updates`.
+- Local safety branch: `chore/review-local-amw-updates`.
 - Stable website tag: `v0.1.0-beta.15`.
 - Next milestone: `v0.1.0-beta.16`; not released or tagged.
 - Website development: fully resumed.
 - Deployment: deferred until hosting and production secrets are intentionally configured.
-- Working tree: intentionally dirty with documentation synchronization and failed transparent-branding work.
+- Working tree: intentionally dirty with failed transparent-branding work and local-only detailed `PROGRESS.md` narrative.
 
-Local commits:
+---
 
-```text
-1bdf9f7 chore: keep shorts workspace local-only
-1e8f12e fix: complete detail layout and footer social links
-```
+## Local Safety Branch
 
-**Push status:** Not pushed.
+- Branch: `chore/review-local-amw-updates`.
+- State: checked out and intentionally dirty.
+- Contains failed branding candidates, related manifests/public aliases, and local-only detailed `PROGRESS.md` narrative.
+- Must not be pushed.
+
+---
+
+## Draft PR 1 - Local Shorts Exclusion
+
+- PR: [#36](https://github.com/MrLluminati/animemangahub/pull/36).
+- Title: `chore: keep Shorts workspace local-only`.
+- Base: `main`.
+- Head: `chore/exclude-local-shorts-workspace`.
+- Remote commit: `1bdf9f715aa3ae51248c00d8c01e294f12fa25f6`.
+- State: open draft.
+
+---
+
+## Draft PR 2 - Website Rebrand Completion
+
+- PR: [#37](https://github.com/MrLluminati/animemangahub/pull/37).
+- Title: `fix: complete AniManga Wire website rebrand`.
+- Base: `chore/exclude-local-shorts-workspace`.
+- Head: `fix/complete-animanga-wire-website-rebrand`.
+- Remote commit before this handoff update: `97bfd8c8487c497085b260cea516bc1b8167aeec`.
+- State: open draft.
+- Dependency: stacked on PR #36; merge PR #36 first.
+
+---
+
+## Current Next Action
+
+- Review PR #36.
+- Merge PR #36 first when approved; do not merge either PR during this handoff.
+- Retarget or rebase PR #37 onto updated `main` after PR #36 merges.
+- Run final `v0.1.0-beta.16` validation before tagging or release.
+- Keep failed branding candidates, manifests, related branding documentation, and frontend public aliases out of both PRs.
 
 ---
 
