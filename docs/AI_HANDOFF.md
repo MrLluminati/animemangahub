@@ -28,7 +28,8 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 - Next milestone: `v0.1.0-beta.16`; not released or tagged.
 - Website development: fully resumed.
 - Deployment: deferred until hosting and production secrets are intentionally configured.
-- Working tree: intentionally dirty with failed transparent-branding work and local-only detailed `PROGRESS.md` narrative.
+- Branding integration branch: `fix/correct-transparent-branding-assets`, based on merged PR #37 at `83d1d8bf027ab6483f8e58309e15393e72b65251`.
+- The separate safety worktree remains intentionally dirty with excluded failed branding candidates and local-only detailed `PROGRESS.md` narrative; do not copy or push it.
 
 ---
 
@@ -53,7 +54,7 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 
 ---
 
-## Draft PR 2 - Website Rebrand Completion
+## Merged PR 2 - Website Rebrand Completion
 
 - PR: [#37](https://github.com/MrLluminati/animemangahub/pull/37).
 - Title: `fix: complete AniManga Wire website rebrand`.
@@ -62,9 +63,8 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 - Remote commit at runtime-validation start: `9ea030f0d8c7453e052f9beea6c6a7183d8b3546`.
 - Local runtime fix commit: `5938bdd` (`fix: prevent mobile layout overflow`).
 - Local accessibility fix commit: `169370a` (`fix: improve search suggestion accessibility`).
-- State: open draft.
-- Dependency status: PR #36 is merged; PR #37 now targets `main` directly.
-- CI status: expected to run because the PR now targets `main`.
+- State: merged into `main`.
+- Merge commit: `83d1d8bf027ab6483f8e58309e15393e72b65251`.
 
 ---
 
@@ -72,8 +72,8 @@ This file is the quick-start operational handoff for the next AI/Codex session. 
 
 1. Re-run live search when Jikan is healthy; the final bounded retry still returned upstream `504` responses.
 2. Consider dedicated Arrow Up/Down suggestion highlighting as an optional future accessibility enhancement.
-3. Correct and revalidate the excluded transparent-branding candidates.
-4. Complete PR #37 CI and merge-readiness review; at this documentation point the PR remains draft and unmerged.
+3. Review and merge the dedicated corrected-transparent-branding PR only after its CI and scope audit pass.
+4. Run final clean-state and release verification after that branding PR is merged.
 5. Do not tag `v0.1.0-beta.16` until the complete release matrix passes.
 
 Keep failed branding candidates, manifests, related branding documentation, and frontend public aliases out of PR #37.
@@ -140,11 +140,15 @@ Keep failed branding candidates, manifests, related branding documentation, and 
 
 ---
 
-## Branding Blocker
+## Corrected Transparent Branding Integration
 
-- Pending transparent PNG replacements failed dark/colored-background QA because pale/grey rectangular texture remains visible.
-- Do not commit or publish those binaries, asset manifests, asset READMEs, or frontend public aliases until corrected and revalidated.
-- Checkerboard JPG previews are not production assets.
+- Intake package SHA-256: `BB324A0521650A2B07FF9FE68216379E90B23861270C82080E81171333608272`.
+- Six production masters were independently validated: `1254 x 1254` profile and `1916 x 821` full-logo families, each with light-, dark-, and brand-red-surface variants.
+- The corrected masters are 8-bit RGBA PNGs with zero hidden RGB beneath alpha zero, zero non-transparent outer-border pixels, matching alpha geometry within each family, corrected profile centring, and no prior grey/marble rectangular contamination.
+- Deterministic Pillow LANCZOS profile/watermark derivatives were generated through `1254 -> 1080 -> 800 -> 512 -> 500`; `300` and `150` were each generated directly from `500`.
+- Generic canonical, Codex-ready, and frontend paths remain compatible light-surface aliases. Explicit light/dark/red aliases are byte-identical to their approved masters. Theme-changing frontend usage selects light or dark through the established theme provider; the permanently white header mark remains light-surface.
+- A genuine vector/layered editable source is not currently available. The validated transparent raster masters are the approved canonical source type; the editable source remains future branding debt.
+- The dedicated branding PR must remain draft and unmerged until CI and final scope review complete. This work does not create or tag `v0.1.0-beta.16`; post-merge clean-state and release verification remain required.
 
 ---
 
