@@ -9,18 +9,18 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 **Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish  
 **Previous stable website beta:** `v0.1.0-beta.15`  
 **Release candidate:** `v0.1.0-beta.16`  
-**Verified pre-release main commit:** `708e2d4186096ba61df080dd5f0e5b094e20d384`  
-**Release-preparation branch:** `release/v0.1.0-beta.16`  
+**Release documentation merge:** PR #39 at `b4acf0af1f7166c4301f888f2d108253f7d01e49`  
 **Website Status:** Fully resumed  
 **Shorts Status:** Separate local-only production workstream excluded from GitHub  
 **Deployment Status:** Disabled until hosting and production secrets are configured  
-**Next Up:** Merge the beta.16 release-preparation pull request after CI, then create the annotated tag at its merge commit.
+**Next Up:** Create the annotated `v0.1.0-beta.16` tag from updated `main` after the final status-sync pull request passes CI and merges.
 
 ### beta.16 Release Review — 2026-07-19
 
 - [x] PR #36 merged: Shorts/Reels production workspace excluded from Git except the approved unified frame.
 - [x] PR #37 merged: AniManga Wire website rebrand completion, detail ordering, social links, mobile overflow fix, and search accessibility fixes.
 - [x] PR #38 merged: validated transparent branding masters, derivatives, aliases, and theme-aware surface selection.
+- [x] PR #39 merged: beta.16 release record, operational handoff, preserved build log, and versioning instructions integrated.
 - [x] Anime ↔ manga cross-references remain implemented from `v0.1.0-beta.15`.
 - [x] Frontend type-check, lint, and production build passed.
 - [x] Backend type-check passed in GitHub Actions.
@@ -28,11 +28,9 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Search input, Search button, native keyboard activation, suggestion navigation, theme persistence, and zero-overflow checks passed.
 - [x] Corrected PNG decoding, alpha, border, geometry, and alias-integrity gates passed.
 - [x] `main` verified identical to `708e2d4186096ba61df080dd5f0e5b094e20d384` before release preparation.
-- [x] No open pull requests remained when release preparation began.
 - [x] `v0.1.0-beta.16` verified absent before release preparation.
 - [x] Jikan public v4 anime endpoints returned populated JSON again on July 19 after the July 18 upstream failures.
-- [ ] Merge the release-preparation pull request after CI and final scope review.
-- [ ] Create the annotated `v0.1.0-beta.16` tag at the release-preparation merge commit.
+- [ ] Create the annotated `v0.1.0-beta.16` tag at the final status-sync merge commit.
 
 ---
 
@@ -132,9 +130,10 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Replace contaminated transparent branding assets with validated light/dark/red masters and deterministic derivatives
 - [x] Integrate theme-aware branding aliases and public assets
 - [x] Verify a clean remote release scope through PR #38 and post-merge checks
+- [x] Integrate beta.16 release documentation through PR #39
 
 ### To Build Next
-- [ ] Merge the beta.16 release-preparation PR and create the annotated `v0.1.0-beta.16` tag
+- [ ] Create the annotated `v0.1.0-beta.16` tag from updated `main`
 - [ ] Catalog pagination improvements
 - [ ] Catalog sorting improvements beyond search-result sorting
 - [ ] Continue AniManga Wire visual polish across catalog and detail pages
@@ -241,4 +240,4 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-07-18 | Merged PR #36 to keep Shorts production local-only while retaining the approved unified frame |
 | 2026-07-18 | Merged PR #37 to complete the website rebrand, detail ordering, social links, responsive fixes, and search accessibility |
 | 2026-07-19 | Merged PR #38 with corrected transparent branding masters, derivatives, aliases, and theme-aware logo selection |
-| 2026-07-19 | Verified post-merge release scope, Jikan endpoint recovery, and prepared `v0.1.0-beta.16` release documentation |
+| 2026-07-19 | Merged PR #39 with beta.16 release notes, handoff, progress, and versioning documentation |
