@@ -27,7 +27,7 @@ This project is developed in small, reviewable phases. Each working milestone sh
 | `v0.1.0-beta.15` | Anime ↔ manga cross-references and light-theme readability fix |
 | `v0.1.0-beta.16` | AniManga Wire rebrand completion, responsive/accessibility fixes, corrected transparent branding, and repository/Shorts boundary cleanup |
 
-`v0.1.0-beta.15` is the previous stable website tag. `v0.1.0-beta.16` is the prepared release milestone; its annotated tag must point to the final release-preparation merge commit after GitHub Actions and scope review pass. See `docs/releases/v0.1.0-beta.16.md` for its validation record.
+`v0.1.0-beta.15` is the previous stable website tag. `v0.1.0-beta.16` is the prepared release milestone; its annotated tag must point to the final release-status merge commit after GitHub Actions and scope review pass. See `docs/releases/v0.1.0-beta.16.md` for its validation record.
 
 ---
 
@@ -89,7 +89,7 @@ Before merging into `main`:
 
 ## Creating a Beta Tag
 
-After a stable milestone is merged into `main`, create an annotated tag:
+After a stable milestone and its final release-status documentation are merged into `main`, create an annotated tag:
 
 ```powershell
 git checkout main
@@ -104,8 +104,8 @@ The workflow tag command is safe to re-run. If the local and remote tags already
 
 Before tagging, verify:
 
-- `main` matches the intended release-preparation merge commit;
-- GitHub Actions passed for the release-preparation pull request;
+- `main` matches the intended final release-status merge commit;
+- GitHub Actions passed for the release-status pull request;
 - the working tree is clean;
 - the tag does not already exist at a different commit;
 - release notes identify the included milestone and known limitations.
