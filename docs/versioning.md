@@ -6,7 +6,7 @@ This project is developed in small, reviewable phases. Each working milestone sh
 
 ---
 
-## Current Release Tags
+## Release Milestones
 
 | Tag | Meaning |
 |---|---|
