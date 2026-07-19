@@ -1,230 +1,145 @@
 # PROGRESS.md — Build Log
 
-A running log of what's been completed, decisions made, and what comes next. Update this every session.
+A running summary of completed work, current release state, and next priorities.
 
 ---
 
 ## Current Status
 
-**Active Phase:** Phase 1 website development and AniManga Wire rebrand completion
-**Current stable website beta:** `v0.1.0-beta.15`
-**Current repo checkpoint:** `main` includes AniManga Wire brand integration and Shorts workspace setup after the beta tag
-**Next website milestone:** `v0.1.0-beta.16`
-**Website Status:** Fully resumed
-**Shorts Status:** Separate local-only production workstream excluded from GitHub
-**Review branch:** `chore/review-local-amw-updates`
-**Local commits:** `1bdf9f7 chore: keep shorts workspace local-only`; `1e8f12e fix: complete detail layout and footer social links`
-**Commit integration status:** Both commits exist locally only; neither has been pushed, merged, released, or included in a tag.
-**Next Up:** Correct blocked transparent branding assets and complete the remaining `v0.1.0-beta.16` validation matrix.
+**Active phase:** Phase 1 — MVP Catalog and UI/Product Polish  
+**Previous stable website beta:** `v0.1.0-beta.15`  
+**Release candidate:** `v0.1.0-beta.16`  
+**Verified pre-release main commit:** `708e2d4186096ba61df080dd5f0e5b094e20d384`  
+**Release-preparation branch:** `release/v0.1.0-beta.16`  
+**Website status:** Fully resumed  
+**Shorts status:** Separate local-only production workstream  
+**Deployment status:** Disabled until hosting and production secrets are configured
 
-### Repository Hygiene Review — 2026-07-18
+### beta.16 release gate — 2026-07-19
 
-- [x] Website development is fully resumed; Shorts/Reels remains separate and local-only.
-- [x] Local commit `1bdf9f7` excludes the Shorts workspace while versioning only the approved unified frame; not pushed.
-- [x] Local commit `1e8f12e` implements Hero → Availability → Related ordering and footer social links; not pushed.
-- [x] Anime ↔ manga cross-references remain implemented in `v0.1.0-beta.15`.
-- [ ] Failed transparent branding candidates remain blocked and must not be committed until corrected and revalidated.
-- [x] Current project documentation is synchronized for local review.
-- [ ] Remaining `v0.1.0-beta.16` release validation remains pending.
+- [x] PR #36 merged: Shorts/Reels production workspace excluded from Git except the approved unified frame.
+- [x] PR #37 merged: AniManga Wire website rebrand completed and accessibility/mobile fixes integrated.
+- [x] PR #38 merged: corrected transparent branding masters, derivatives, aliases, and theme-aware surface selection integrated.
+- [x] Frontend type-check passed.
+- [x] Frontend lint passed with zero new warnings or errors.
+- [x] Frontend production build passed.
+- [x] Backend type-check passed in GitHub Actions.
+- [x] Desktop and mobile browser QA passed in light and dark themes.
+- [x] Search input, button, suggestion activation, native keyboard navigation, theme persistence, and overflow checks passed.
+- [x] Corrected PNG decoder, alpha, border, geometry, and alias-integrity gates passed.
+- [x] `main` verified identical to merge commit `708e2d4186096ba61df080dd5f0e5b094e20d384` before release preparation.
+- [x] No open pull request remained when release preparation began.
+- [x] `v0.1.0-beta.16` verified absent before release preparation.
+- [x] Jikan public v4 anime endpoints returned populated JSON again on July 19 after the July 18 upstream failures.
+- [ ] Merge the release-preparation pull request after CI and scope review.
+- [ ] Create the annotated `v0.1.0-beta.16` tag at the release-preparation merge commit.
 
 ---
 
 ## Phase 0 — Foundation ✅
 
+- [x] Repository structure and core documentation.
+- [x] Next.js frontend and Express backend scaffolds.
+- [x] Prisma schema and local migration structure.
+- [x] GitHub Actions lint/type-check workflow.
+- [x] Environment template, ignore rules, architecture, API, and workflow documentation.
+
+---
+
+## Phase 1 — MVP Catalog and UI/Product Polish
+
 ### Completed
-- [x] GitHub repo structure created
-- [x] `README.md` — full project overview and setup guide
-- [x] `CLAUDE.md` — AI agent instructions and project context
-- [x] `PROGRESS.md` — this file
-- [x] `ROADMAP.md` — full feature backlog
-- [x] `.env.example` — all required environment variables documented
-- [x] `.gitignore` — comprehensive ignore rules
-- [x] `docs/architecture.md` — technology decisions explained
-- [x] `docs/api.md` — external API reference
-- [x] `database/migrations/` — folder ready for SQL migrations
-- [x] `database/seeds/` — folder ready for seed scripts
-- [x] `.github/workflows/deploy.yml` — CI/CD pipeline scaffold
-- [x] Frontend folder scaffolded
-- [x] Backend folder scaffolded
 
-### Decisions Made
-- **Next.js 14 App Router** chosen over Pages Router for better performance and future-proofing
-- **Prisma** chosen as ORM for type-safe DB access and easy migrations
-- **Railway** chosen for backend/DB hosting
-- **Vercel** chosen for frontend
-- **Jikan API** as primary data source
-- **Tailwind CSS** for styling
+- [x] Trending anime and top manga catalog routes and pages.
+- [x] Anime and manga detail routes and pages.
+- [x] Combined search and search results page.
+- [x] Local SQLite Jikan response caching.
+- [x] Cache health, statistics, clear endpoints, and development debug panel.
+- [x] Genre, year, and status catalog filters.
+- [x] Official-source legal watch/read discovery links.
+- [x] Anime ↔ manga relation endpoints and related-title UI.
+- [x] Ranked search suggestions and search sort modes.
+- [x] Search suggestion layout, visibility, scrolling, and keyboard-accessibility fixes.
+- [x] AniManga Wire public rebrand and metadata integration.
+- [x] Hero → Availability → Related Titles detail ordering.
+- [x] Official YouTube and Instagram footer links.
+- [x] Mobile header shrink and horizontal-overflow fixes.
+- [x] Corrected transparent profile and full-logo masters for light, dark, and brand-red surfaces.
+- [x] Deterministic profile and watermark derivatives.
+- [x] Theme-aware logo selection and synchronized public/Codex-ready aliases.
+- [x] Shorts/Reels workspace boundary enforced as local-only.
 
----
+### Next after beta.16
 
-## Phase 1 — MVP Catalog 🔲
-
-### Completed in Phase 1A
-- [x] Next.js app initialised manually inside `/frontend`
-- [x] Tailwind CSS configured
-- [x] Express backend initialised inside `/backend`
-- [x] TypeScript configured for frontend and backend
-- [x] Backend health route added at `/api/health`
-- [x] Jikan API wrapper added with basic rate limiting
-- [x] Anime trending route added at `/api/anime/trending`
-- [x] Manga top route added at `/api/manga/top`
-- [x] Homepage created with anime and manga sections
-- [x] Anime listing page created
-- [x] Manga listing page created
-- [x] Header/footer layout added
-- [x] Initial Prisma schema defined
-
-### Completed in Phase 1B
-- [x] Anime detail API route added at `/api/anime/:id`
-- [x] Manga detail API route added at `/api/manga/:id`
-- [x] Combined search API route added at `/api/search?q=...`
-- [x] Anime detail page added at `/anime/[id]`
-- [x] Manga detail page added at `/manga/[id]`
-- [x] Search results page added at `/search?q=...`
-- [x] Catalog cards made clickable
-- [x] Search box added to header and homepage
-
-### Completed in Phase 1C
-- [x] Prisma `ApiCache` model added
-- [x] Local SQLite cache added for Jikan API responses
-- [x] Cache-first fetching added to anime and manga services
-- [x] Local database migration added
-
-### Completed in Phase 1D
-- [x] Cache health endpoint added at `/api/cache/health`
-- [x] Cache stats endpoint added at `/api/cache/stats`
-- [x] Local cache clear endpoints added at `/api/cache` and `/api/cache/clear`
-- [x] Cache hit, miss, and stale logs added
-- [x] Cache observability documentation added
-
-### Completed in Phase 1E
-- [x] Development-only frontend cache debug panel added
-- [x] Frontend cache health/stats API helpers added
-- [x] Cache response types added
-- [x] Local visual cache debug test completed
-
-### Completed in Phase 1F
-- [x] Merge Anime Culture Platform strategy into AniManga Hub as a single-platform direction
-- [x] Add content safety policy, editorial policy, moderation policy, and legal watch/read link policy
-- [x] Make workflow cleanup and tagging idempotent
-- [x] Genre, year, and status filters
-- [x] "Where to Watch" official-source discovery links
-- [x] "Where to Read" official-source discovery links
-- [x] AniManga Wire ink-paper brand shell
-- [x] Ranked search suggestions
-- [x] Search sort modes: relevance, popularity, score, and year
-- [x] Search UI polish for portal suggestions, dropdown width, scroll behavior, and sort dropdown
-- [x] Dev-console cleanup for favicon and LCP image priority warnings
-
-### To Build Next
-- [x] Anime ↔ Manga cross-reference display
-- [x] Reorder anime and manga detail sections to Hero → Availability → Related Titles (`1e8f12e`, local only)
-- [x] Add accessible footer links for the official YouTube and Instagram profiles (`1e8f12e`, local only)
-- [ ] Complete website rebrand maintenance for the `v0.1.0-beta.16` candidate
-- [ ] Run backend-supported anime and manga detail-page smoke tests
-- [ ] Complete final dark-theme, light-theme, mobile, search, image, availability-link, and related-title-link validation
-- [ ] Investigate pre-existing mobile page-wide horizontal overflow
-- [ ] Verify a clean release repository and tag `v0.1.0-beta.16`
-- [ ] Catalog pagination and sorting improvements
-- [ ] Continue AniManga Wire visual polish across catalog and detail pages
-- [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
-
-> Website development is fully resumed. Shorts/Reels remains a separate local-only workstream; only `shorts/assets/frames/amw-shorts-unified-frame-v1.png` is versioned from inside `shorts/`.
+- [ ] Catalog pagination improvements.
+- [ ] Catalog sorting improvements beyond search-result sorting.
+- [ ] Continued visual polish across catalog and detail pages.
+- [ ] Optional Arrow Up/Down active-suggestion highlighting.
+- [ ] Genuine editable/vector branding source.
+- [ ] Vercel and Railway deployment when hosting and production secrets are intentionally configured.
 
 ---
 
-## Phase 2 — User Accounts & Community 🔲
+## Phase 2 — User Accounts and Community
 
-### To Build
-- [ ] NextAuth.js setup (Google + Discord)
-- [ ] User profile page
-- [ ] Watchlist
-- [ ] Reading list
-- [ ] Star ratings
-- [ ] Written reviews
-- [ ] Discussion threads per title
-- [ ] User avatar + bio
+- [ ] Authentication foundation.
+- [ ] User profile page.
+- [ ] Watchlist and reading list.
+- [ ] User ratings and reviews.
+- [ ] Title discussion threads.
+- [ ] User avatar and biography.
 
 ---
 
-## Phase 3 — Monetization 🔲
+## Phase 3 — Monetization
 
-### To Build
-- [ ] Ad slot placements in layout
-- [ ] Google AdSense integration
-- [ ] Affiliate links
-- [ ] Stripe subscription setup
-- [ ] Free vs Premium tier logic
+- [ ] Advertising placement strategy.
+- [ ] Affiliate-link system.
+- [ ] Subscription and premium-tier design.
+- [ ] Payment integration only after legal, privacy, and operational review.
 
 ---
 
-## Phase 4 — Growth & SEO 🔲
+## Phase 4 — Growth and SEO
 
-### To Build
-- [ ] Dynamic sitemap generation
-- [ ] SEO meta tags on all pages
-- [ ] Structured data (JSON-LD)
-- [ ] Seasonal anime chart
-- [ ] Countdown timers
-- [ ] Email newsletter
-- [ ] Recommendation engine
-- [ ] React Native mobile app
-- [ ] Social sharing cards
+- [ ] Dynamic sitemap.
+- [ ] Expanded SEO metadata and structured data.
+- [ ] Seasonal anime chart and countdowns.
+- [ ] Newsletter.
+- [ ] Recommendation engine.
+- [ ] Social sharing cards.
+- [ ] Mobile application evaluation.
 
 ---
 
-## Phase 5 — Licensing & Partnerships 🔲
+## Phase 5 — Licensing and Partnerships
 
-### To Build
-- [ ] Embedded licensed video player
-- [ ] Publisher/studio dashboard
-- [ ] Sponsored listing system
-- [ ] Premium streaming tier
-- [ ] Partner API
+- [ ] Licensed-video partnership model.
+- [ ] Publisher/studio dashboard.
+- [ ] Sponsored listings.
+- [ ] Premium streaming tier only with valid licences.
+- [ ] Partner API.
 
 ---
 
-## Session Log
+## Recent Milestones
 
-| Date | What Was Done |
+| Date | Milestone |
 |---|---|
-| Phase 0 start | Repo structure, all foundation files created |
-| 2026-05-07 | Phase 1A working skeleton prepared: frontend, backend, Jikan routes, Prisma schema, homepage, anime/manga pages |
-| 2026-05-07 | Phase 1A merged into `main`; created rollback-safe beta tag `v0.1.0-beta.1`; added documentation plan for beta versioning and rollback workflow |
-| 2026-05-07 | Phase 1B prepared: detail pages, clickable cards, combined search, and expanded Jikan metadata mapping |
-| 2026-05-07 | Disabled deployment jobs until Vercel/Railway hosting is configured; lint/type-check remains active in GitHub Actions |
-| 2026-05-07 | Phase 1C local SQLite caching added with Prisma ApiCache, cache-first Jikan fetching, local migration, and validation workflow |
-| 2026-05-07 | Added reusable PowerShell 7 development workflow script and documented mandatory PR, validation, cleanup, and beta-tag process |
-| 2026-05-07 | Phase 1D cache observability added: cache health, stats, clear endpoints, cache logs, and documentation |
-| 2026-05-07 | Added verify action to reusable PowerShell workflow for one-command repository, branch, commit, and tag verification |
-| 2026-05-07 | Phase 1E frontend cache debug visibility added with development-only cache panel, frontend cache API helpers, and documentation |
-| 2026-05-07 | Summarized completed work through `v0.1.0-beta.9` and documented remaining Phase 1 priorities |
-| 2026-05-17 | Merged Anime Culture Platform strategy into AniManga Hub as a single-platform direction |
-| 2026-05-17 | Made workflow cleanup and tagging idempotent for repeated post-merge and beta-tag commands |
-| 2026-05-17 | Added genre, year, and status filters for anime and manga catalog pages |
-| 2026-05-17 | Added official-platform legal watch/read discovery links to anime and manga detail pages |
-| 2026-05-17 | Added AniPulse reusable theme foundation with dark/light mode support |
-| 2026-05-17 | Stabilized AniPulse live verification issues for theme persistence, header responsiveness, mobile navigation, search accessibility, and app icon support |
-| 2026-05-17 | Repaired AniPulse client interactions for theme toggle, mobile drawer, search fallback, and footer completeness |
-| 2026-05-17 | Improved AniPulse fonts, light-mode readability, pre-hydration theme loading, and mobile drawer behavior |
-| 2026-05-17 | Live-verified and tagged AniPulse theme foundation as `v0.1.0-beta.13` |
-| 2026-05-18 | Synchronized documentation through `v0.1.0-beta.13`; next issue is short search query handling |
-| 2026-05-18 | Improved short search query handling with resilient combined search, serialized Jikan requests, no-store frontend search fetches, and clearer single-character query behavior |
-| 2026-05-18 | Added ranked search results, search sort modes, and top-three autocomplete suggestions |
-| 2026-05-18 | Fixed search suggestion layout and replaced separate sort buttons with a dropdown |
-| 2026-05-18 | Moved search suggestions into a portal overlay so dropdowns no longer expand the navbar and match input width only |
-| 2026-05-18 | Strengthened search suggestion portal visibility, z-index, viewport clamping, and pointer handling |
-| 2026-05-18 | Updated search suggestions to close on page scroll so portal dropdowns do not float above the navbar |
-| 2026-05-18 | Tagged `v0.1.0-beta.14` for ranked search suggestions and began cleanup of non-blocking dev console warnings |
-| 2026-05-21 | Merged PR #30 dev-console cleanup: favicon route, metadata icon declarations, and LCP image priority support |
-| 2026-05-21 | Synchronized documentation after `v0.1.0-beta.14` and PR #30 maintenance |
-| 2026-05-22 | Mobile QA found image optimizer 500s and suggestion 502s; added reliability fixes for external images, stale-cache fallback, and soft-failing suggestions |
-| 2026-05-22 | Tight homepage CTA button padding found during visual QA; increased reusable ThemeButton padding, minimum height, and CTA pair spacing |
-| 2026-06-24 | Added anime ↔ manga cross-reference display with cached relation endpoints and reusable related-title UI |
-| 2026-06-24 | Improved light-theme readability for related-title cross-reference cards after live QA |
-| 2026-06-24 | Integrated locked AniManga Wire branding, public assets, metadata, and logo assets into the existing catalog app |
-| 2026-06-24 | Put website development on hold and created the Shorts/Reels workspace with first AMW sample render |
-| 2026-07-18 | Ended the historical website hold and fully resumed Phase 1 website work toward `v0.1.0-beta.16` |
-| 2026-07-18 | Created local unpushed commit `1bdf9f7` for the Shorts local-only policy and approved unified-frame exception |
-| 2026-07-18 | Created local unpushed commit `1e8f12e` for Hero → Availability → Related ordering and footer YouTube/Instagram links |
-| 2026-07-18 | Synchronized current project documentation while preserving unrelated local work |
+| 2026-05-07 | Phase 1 foundation merged and first rollback-safe beta tags established. |
+| 2026-05-17 | Filters, official-source discovery links, theme foundation, and workflow idempotency completed. |
+| 2026-05-18 | Ranked search suggestions and `v0.1.0-beta.14` completed. |
+| 2026-05-22 | Mobile image/suggestion reliability and CTA spacing fixes completed. |
+| 2026-06-24 | Anime ↔ manga cross-references and `v0.1.0-beta.15` completed. |
+| 2026-06-24 | AniManga Wire branding integrated and Shorts workspace created. |
+| 2026-07-18 | Website development resumed; PR #36 and PR #37 merged. |
+| 2026-07-19 | PR #38 merged and beta.16 release verification completed. |
+
+---
+
+## Operational Boundaries
+
+- The local safety branch `chore/review-local-amw-updates` is intentionally dirty and must not be reset, cleaned, overwritten, or pushed.
+- Shorts/Reels production files remain local-only; only `shorts/assets/frames/amw-shorts-unified-frame-v1.png` is versioned from that workspace.
+- The current approved branding source is validated transparent raster artwork. A genuine vector/layered source is still unavailable.
+- AniManga Wire remains non-explicit, legal-discovery-first, and subject to the repository's copyright, moderation, privacy, and India-compliance requirements.
