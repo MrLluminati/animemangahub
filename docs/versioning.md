@@ -25,8 +25,9 @@ This project is developed in small, reviewable phases. Each working milestone sh
 | `v0.1.0-beta.13` | AniPulse theme foundation and interaction/readability fixes |
 | `v0.1.0-beta.14` | Ranked search suggestions and search UI stabilization |
 | `v0.1.0-beta.15` | Anime ↔ manga cross-references and light-theme readability fix |
+| `v0.1.0-beta.16` | AniManga Wire rebrand completion, responsive/accessibility fixes, corrected transparent branding, and repository/Shorts boundary cleanup |
 
-The current stable website tag is `v0.1.0-beta.15`. The next planned milestone is `v0.1.0-beta.16`; do not create that tag until the resumed website rebrand-completion work is merged, validated, and manually QA-tested.
+`v0.1.0-beta.15` is the previous stable website tag. `v0.1.0-beta.16` is the prepared release milestone; its annotated tag must point to the final release-preparation merge commit after GitHub Actions and scope review pass. See `docs/releases/v0.1.0-beta.16.md` for its validation record.
 
 ---
 
@@ -66,6 +67,7 @@ Feature or documentation work should happen on a separate branch:
 feature/phase-1b-search-and-layout
 fix/frontend-type-errors
 docs/versioning-rollback-workflow
+release/v0.1.0-beta.16
 ```
 
 Do not develop directly on `main`.
@@ -76,11 +78,11 @@ Do not develop directly on `main`.
 
 Before merging into `main`:
 
-1. Push the feature branch.
+1. Push the feature or release branch.
 2. Open a pull request into `main`.
 3. Wait for GitHub Actions to pass.
-4. Review the changed files.
-5. Use Squash and merge.
+4. Review the changed files and release scope.
+5. Merge using an allowed repository merge method.
 6. Pull the updated `main` locally.
 
 ---
@@ -93,12 +95,20 @@ After a stable milestone is merged into `main`, create an annotated tag:
 git checkout main
 git pull origin main
 
-pwsh .\scripts\dev-workflow.ps1 -Action tag -TagName "v0.1.0-beta.10" -TagMessage "Workflow idempotency beta release"
+pwsh .\scripts\dev-workflow.ps1 -Action tag -TagName "v0.1.0-beta.16" -TagMessage "AniManga Wire rebrand completion and corrected transparent branding"
 ```
 
 Annotated tags are preferred because they preserve a message and release context.
 
 The workflow tag command is safe to re-run. If the local and remote tags already exist and point to the current `main`, the command reports success instead of failing. If either tag points to a different commit, the command fails to avoid silently moving rollback points.
+
+Before tagging, verify:
+
+- `main` matches the intended release-preparation merge commit;
+- GitHub Actions passed for the release-preparation pull request;
+- the working tree is clean;
+- the tag does not already exist at a different commit;
+- release notes identify the included milestone and known limitations.
 
 ---
 
@@ -107,7 +117,7 @@ The workflow tag command is safe to re-run. If the local and remote tags already
 To inspect a previous beta build:
 
 ```powershell
-git checkout v0.1.0-beta.1
+git checkout v0.1.0-beta.16
 ```
 
 This puts Git into detached HEAD mode. That is normal when checking out a tag.
@@ -125,8 +135,8 @@ git checkout main
 If a future build breaks badly and we need to recover from a known-good beta:
 
 ```powershell
-git checkout -b rollback/v0.1.0-beta.1 v0.1.0-beta.1
-git push origin rollback/v0.1.0-beta.1
+git checkout -b rollback/v0.1.0-beta.16 v0.1.0-beta.16
+git push origin rollback/v0.1.0-beta.16
 ```
 
 This creates a branch from the safe beta tag.
@@ -168,6 +178,8 @@ git commit -m "feat: example change"
 git push origin feature/example-branch
 ```
 
+Use explicit staging for release work where unrelated local files may exist.
+
 ---
 
 ## Current Development Principle
@@ -179,6 +191,6 @@ Work should be:
 - Recoverable
 - Verified locally
 - Verified by GitHub Actions
-- Documented in `CHANGELOG.md` and `PROGRESS.md`
+- Documented in `CHANGELOG.md`, `PROGRESS.md`, and `docs/releases/` for release milestones
 
 Every important working build should have a rollback path.
