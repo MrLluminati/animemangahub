@@ -6,26 +6,33 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 
 ## Current Status
 
-**Active Phase:** Phase 1 website development and AniManga Wire rebrand completion
-**Current stable website beta:** `v0.1.0-beta.15`
-**Current repo checkpoint:** `main` includes AniManga Wire brand integration and Shorts workspace setup after the beta tag
-**Next website milestone:** `v0.1.0-beta.16`
-**Website Status:** Fully resumed
-**Shorts Status:** Separate local-only production workstream excluded from GitHub
-**Review branch:** `chore/review-local-amw-updates`
-**Local commits:** `1bdf9f7 chore: keep shorts workspace local-only`; `1e8f12e fix: complete detail layout and footer social links`
-**Commit integration status:** Both commits exist locally only; neither has been pushed, merged, released, or included in a tag.
-**Next Up:** Correct blocked transparent branding assets and complete the remaining `v0.1.0-beta.16` validation matrix.
+**Active Phase:** Phase 1 — MVP Catalog and UI/Product Polish  
+**Previous stable website beta:** `v0.1.0-beta.15`  
+**Release candidate:** `v0.1.0-beta.16`  
+**Verified pre-release main commit:** `708e2d4186096ba61df080dd5f0e5b094e20d384`  
+**Release-preparation branch:** `release/v0.1.0-beta.16`  
+**Website Status:** Fully resumed  
+**Shorts Status:** Separate local-only production workstream excluded from GitHub  
+**Deployment Status:** Disabled until hosting and production secrets are configured  
+**Next Up:** Merge the beta.16 release-preparation pull request after CI, then create the annotated tag at its merge commit.
 
-### Repository Hygiene Review — 2026-07-18
+### beta.16 Release Review — 2026-07-19
 
-- [x] Website development is fully resumed; Shorts/Reels remains separate and local-only.
-- [x] Local commit `1bdf9f7` excludes the Shorts workspace while versioning only the approved unified frame; not pushed.
-- [x] Local commit `1e8f12e` implements Hero → Availability → Related ordering and footer social links; not pushed.
-- [x] Anime ↔ manga cross-references remain implemented in `v0.1.0-beta.15`.
-- [ ] Failed transparent branding candidates remain blocked and must not be committed until corrected and revalidated.
-- [x] Current project documentation is synchronized for local review.
-- [ ] Remaining `v0.1.0-beta.16` release validation remains pending.
+- [x] PR #36 merged: Shorts/Reels production workspace excluded from Git except the approved unified frame.
+- [x] PR #37 merged: AniManga Wire website rebrand completion, detail ordering, social links, mobile overflow fix, and search accessibility fixes.
+- [x] PR #38 merged: validated transparent branding masters, derivatives, aliases, and theme-aware surface selection.
+- [x] Anime ↔ manga cross-references remain implemented from `v0.1.0-beta.15`.
+- [x] Frontend type-check, lint, and production build passed.
+- [x] Backend type-check passed in GitHub Actions.
+- [x] Desktop/mobile browser QA passed in light and dark themes.
+- [x] Search input, Search button, native keyboard activation, suggestion navigation, theme persistence, and zero-overflow checks passed.
+- [x] Corrected PNG decoding, alpha, border, geometry, and alias-integrity gates passed.
+- [x] `main` verified identical to `708e2d4186096ba61df080dd5f0e5b094e20d384` before release preparation.
+- [x] No open pull requests remained when release preparation began.
+- [x] `v0.1.0-beta.16` verified absent before release preparation.
+- [x] Jikan public v4 anime endpoints returned populated JSON again on July 19 after the July 18 upstream failures.
+- [ ] Merge the release-preparation pull request after CI and final scope review.
+- [ ] Create the annotated `v0.1.0-beta.16` tag at the release-preparation merge commit.
 
 ---
 
@@ -69,8 +76,8 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] Anime trending route added at `/api/anime/trending`
 - [x] Manga top route added at `/api/manga/top`
 - [x] Homepage created with anime and manga sections
-- [x] Anime listing page created
-- [x] Manga listing page created
+- [x] Anime listing page added
+- [x] Manga listing page added
 - [x] Header/footer layout added
 - [x] Initial Prisma schema defined
 
@@ -113,21 +120,27 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 - [x] AniManga Wire ink-paper brand shell
 - [x] Ranked search suggestions
 - [x] Search sort modes: relevance, popularity, score, and year
-- [x] Search UI polish for portal suggestions, dropdown width, scroll behavior, and sort dropdown
+- [x] Search UI polish for dropdown width, scroll behavior, DOM order, and sort controls
 - [x] Dev-console cleanup for favicon and LCP image priority warnings
+- [x] Anime ↔ manga cross-reference display
+- [x] Reorder anime and manga detail sections to Hero → Availability → Related Titles
+- [x] Add accessible footer links for official YouTube and Instagram profiles
+- [x] Complete website rebrand maintenance for the `v0.1.0-beta.16` candidate
+- [x] Run backend-supported anime and manga detail-page smoke tests
+- [x] Complete dark-theme, light-theme, mobile, search, image, availability-link, and related-title-link validation
+- [x] Resolve mobile page-wide horizontal overflow
+- [x] Replace contaminated transparent branding assets with validated light/dark/red masters and deterministic derivatives
+- [x] Integrate theme-aware branding aliases and public assets
+- [x] Verify a clean remote release scope through PR #38 and post-merge checks
 
 ### To Build Next
-- [x] Anime ↔ Manga cross-reference display
-- [x] Reorder anime and manga detail sections to Hero → Availability → Related Titles (`1e8f12e`, local only)
-- [x] Add accessible footer links for the official YouTube and Instagram profiles (`1e8f12e`, local only)
-- [ ] Complete website rebrand maintenance for the `v0.1.0-beta.16` candidate
-- [ ] Run backend-supported anime and manga detail-page smoke tests
-- [ ] Complete final dark-theme, light-theme, mobile, search, image, availability-link, and related-title-link validation
-- [ ] Investigate pre-existing mobile page-wide horizontal overflow
-- [ ] Verify a clean release repository and tag `v0.1.0-beta.16`
-- [ ] Catalog pagination and sorting improvements
+- [ ] Merge the beta.16 release-preparation PR and create the annotated `v0.1.0-beta.16` tag
+- [ ] Catalog pagination improvements
+- [ ] Catalog sorting improvements beyond search-result sorting
 - [ ] Continue AniManga Wire visual polish across catalog and detail pages
-- [ ] Deployed to Vercel + Railway when hosting budget/secrets are ready
+- [ ] Consider dedicated Arrow Up/Down active-suggestion highlighting
+- [ ] Create a genuine editable/vector branding source
+- [ ] Deploy to Vercel + Railway when hosting budget and production secrets are ready
 
 > Website development is fully resumed. Shorts/Reels remains a separate local-only workstream; only `shorts/assets/frames/amw-shorts-unified-frame-v1.png` is versioned from inside `shorts/`.
 
@@ -225,6 +238,7 @@ A running log of what's been completed, decisions made, and what comes next. Upd
 | 2026-06-24 | Integrated locked AniManga Wire branding, public assets, metadata, and logo assets into the existing catalog app |
 | 2026-06-24 | Put website development on hold and created the Shorts/Reels workspace with first AMW sample render |
 | 2026-07-18 | Ended the historical website hold and fully resumed Phase 1 website work toward `v0.1.0-beta.16` |
-| 2026-07-18 | Created local unpushed commit `1bdf9f7` for the Shorts local-only policy and approved unified-frame exception |
-| 2026-07-18 | Created local unpushed commit `1e8f12e` for Hero → Availability → Related ordering and footer YouTube/Instagram links |
-| 2026-07-18 | Synchronized current project documentation while preserving unrelated local work |
+| 2026-07-18 | Merged PR #36 to keep Shorts production local-only while retaining the approved unified frame |
+| 2026-07-18 | Merged PR #37 to complete the website rebrand, detail ordering, social links, responsive fixes, and search accessibility |
+| 2026-07-19 | Merged PR #38 with corrected transparent branding masters, derivatives, aliases, and theme-aware logo selection |
+| 2026-07-19 | Verified post-merge release scope, Jikan endpoint recovery, and prepared `v0.1.0-beta.16` release documentation |
